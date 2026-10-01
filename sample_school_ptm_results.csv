@@ -1,0 +1,7 @@
+student_id,name,class,section,roll_no,exam_name,session,attendance,Mathematics,Science,English,Hindi,Social Science,Computer,Physics,Chemistry,Computer Science,Accountancy,Business Studies,Economics
+CCS-2026-9B-01,Rahul Sharma,9,B,14,Annual Term Evaluation,2025-2026,92,71,82,86,79,54,91,,,,,,
+CCS-2026-10A-01,Ananya Verma,10,A,3,Annual Term Evaluation,2025-2026,98,96,94,92,90,95,99,,,,,,
+CCS-2026-8A-02,Vihaan Gupta,8,A,19,Annual Term Evaluation,2025-2026,84,48,52,64,60,42,70,,,,,,
+CCS-2026-7C-03,Diya Patel,7,C,7,Annual Term Evaluation,2025-2026,91,88,84,89,82,78,95,,,,,,
+CCS-2026-11A-04,Kabir Singh,11,A,12,Annual Term Evaluation,2025-2026,76,38,,74,,,,58,62,80,,,
+CCS-2026-12B-05,Priya Mehta,12,B,22,Annual Term Evaluation,2025-2026,95,79,,89,,,,,,,91,88,86
