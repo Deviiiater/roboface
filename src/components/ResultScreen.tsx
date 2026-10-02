@@ -153,14 +153,14 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
       }
     } else {
       const script = spokenText[language];
-      voiceService.speak(script, language);
+      voiceService.speak(script, language, undefined, spokenText.hinglish);
     }
   };
 
   const handleReplayVoice = () => {
     sounds.playClick();
     const script = spokenText[language];
-    voiceService.speak(script, language);
+    voiceService.speak(script, language, undefined, spokenText.hinglish);
   };
 
   const handleSpeedToggle = () => {
@@ -235,9 +235,9 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
   }[tier];
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-black text-white flex flex-col p-3 sm:p-6 lg:p-8">
       {/* Top Floating Kiosk Status Bar */}
-      <div className="w-full max-w-6xl mx-auto flex items-center justify-between pb-4 border-b border-slate-800 gap-3">
+      <div className="w-full max-w-6xl mx-auto flex items-center justify-between pb-4 border-b border-white/15 gap-3">
         <div className="flex items-center gap-2">
           <button
             onClick={() => {
@@ -245,7 +245,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
               voiceService.stop();
               onBackToSearch();
             }}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-semibold text-slate-300 hover:text-white transition-all"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-black/90 hover:bg-neutral-900 border border-white/20 text-xs font-semibold text-neutral-300 hover:text-white transition-all active:scale-95"
           >
             <ChevronLeft className="w-4 h-4" />
             <span>Search</span>
@@ -254,7 +254,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
           {/* Inactivity Auto-Reset Indicator */}
           <div
             onClick={resetInactivityTimer}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-900/90 border border-cyan-500/30 text-xs font-mono text-cyan-300 cursor-pointer hover:bg-slate-800"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-black/90 border border-cyan-500/30 text-xs font-mono text-cyan-300 cursor-pointer hover:bg-neutral-900"
             title="Tap to stay on screen"
           >
             <Clock className="w-3.5 h-3.5 text-cyan-400 animate-spin" style={{ animationDuration: '8s' }} />
@@ -283,7 +283,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
               sounds.playClick();
               setShowPrintModal(true);
             }}
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-200 hover:text-cyan-300 transition-all shadow-sm"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-black/90 hover:bg-neutral-900 border border-white/20 text-xs font-bold text-neutral-200 hover:text-cyan-300 transition-all shadow-sm active:scale-95"
           >
             <Printer className="w-4 h-4 text-cyan-400" />
             <span className="hidden sm:inline">Print Result Card</span>
@@ -336,11 +336,11 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
 
           {/* Language Switcher & Audio Controls */}
           <div className="flex flex-wrap items-center gap-2 shrink-0 w-full md:w-auto justify-end">
-            <div className="bg-slate-900 p-1 rounded-xl border border-slate-800 flex items-center gap-1">
+            <div className="bg-black/90 p-1 rounded-xl border border-white/20 flex items-center gap-1">
               <button
                 onClick={() => handleLangSwitch('hinglish')}
                 className={`px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                  language === 'hinglish' ? 'bg-cyan-500 text-white' : 'text-slate-400 hover:text-white'
+                  language === 'hinglish' ? 'bg-cyan-500 text-white' : 'text-neutral-400 hover:text-white'
                 }`}
               >
                 Hinglish
@@ -348,7 +348,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
               <button
                 onClick={() => handleLangSwitch('en')}
                 className={`px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                  language === 'en' ? 'bg-cyan-500 text-white' : 'text-slate-400 hover:text-white'
+                  language === 'en' ? 'bg-cyan-500 text-white' : 'text-neutral-400 hover:text-white'
                 }`}
               >
                 English
@@ -356,7 +356,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
               <button
                 onClick={() => handleLangSwitch('hi')}
                 className={`px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                  language === 'hi' ? 'bg-cyan-500 text-white' : 'text-slate-400 hover:text-white'
+                  language === 'hi' ? 'bg-cyan-500 text-white' : 'text-neutral-400 hover:text-white'
                 }`}
               >
                 हिंदी
@@ -366,21 +366,21 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
             <div className="flex items-center gap-1.5">
               <button
                 onClick={handleToggleVoice}
-                className="p-2 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 transition-all"
+                className="p-2 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 transition-all active:scale-95"
                 title={isSpeaking && !isPaused ? 'Pause Voice' : 'Play Voice'}
               >
                 {isSpeaking && !isPaused ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
               </button>
               <button
                 onClick={handleReplayVoice}
-                className="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700 transition-all"
+                className="p-2 rounded-xl bg-black/90 hover:bg-neutral-900 text-neutral-300 border border-white/20 transition-all active:scale-95"
                 title="Replay Voice Summary"
               >
                 <RotateCcw className="w-4 h-4" />
               </button>
               <button
                 onClick={handleSpeedToggle}
-                className="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700 text-xs font-bold font-mono transition-all"
+                className="px-2.5 py-1.5 rounded-xl bg-black/90 hover:bg-neutral-900 text-neutral-300 border border-white/20 text-xs font-bold font-mono transition-all active:scale-95"
                 title="Voice Speed"
               >
                 {speechSpeed}x
@@ -394,7 +394,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
           {/* Left Column: Student Details & Overall Score (5 Cols) */}
           <div className="lg:col-span-5 flex flex-col gap-4">
             {/* Student Info Card */}
-            <div className="glass-card p-5 rounded-3xl border border-slate-800 flex items-start justify-between">
+            <div className="glass-card p-5 rounded-3xl border border-white/15 flex items-start justify-between">
               <div>
                 <span className="text-[11px] font-bold text-cyan-400 uppercase tracking-wider">
                   Verified Student Record
@@ -406,14 +406,14 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                   <span className="px-2.5 py-1 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-300 text-xs font-bold">
                     Class {student.class} - {student.section}
                   </span>
-                  <span className="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs font-semibold">
+                  <span className="px-2.5 py-1 rounded-lg bg-neutral-900 border border-white/10 text-neutral-300 text-xs font-semibold">
                     Roll #{student.roll_code || student.roll_no}
                   </span>
-                  <span className="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-400 text-xs font-mono">
+                  <span className="px-2.5 py-1 rounded-lg bg-neutral-900 border border-white/10 text-neutral-400 text-xs font-mono">
                     {student.student_id}
                   </span>
                 </div>
-                <p className="text-xs text-slate-400 mt-2">
+                <p className="text-xs text-neutral-400 mt-2">
                   {student.exam_name} • Session {student.session} • Attendance: {student.attendance_percentage}%
                 </p>
               </div>
@@ -446,7 +446,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                 </div>
               </div>
 
-              <div className="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 text-xs text-slate-300">
+              <div className="p-3.5 rounded-2xl bg-black/90 border border-white/15 text-xs text-neutral-300">
                 <span className="font-bold text-white block mb-0.5">Faculty Assessment:</span>
                 {tierGuidance}
               </div>
@@ -461,7 +461,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                 </div>
                 <div className="space-y-1">
                   {strengths.map(s => (
-                    <div key={s.subject} className="text-xs text-slate-200 font-semibold flex justify-between">
+                    <div key={s.subject} className="text-xs text-neutral-200 font-semibold flex justify-between">
                       <span>{s.subject}</span>
                       <span className="text-emerald-400">{s.marks}%</span>
                     </div>
@@ -477,13 +477,13 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                 <div className="space-y-1">
                   {weakSubjects.length > 0 ? (
                     weakSubjects.map(w => (
-                      <div key={w.subject} className="text-xs text-slate-200 font-semibold flex justify-between">
+                      <div key={w.subject} className="text-xs text-neutral-200 font-semibold flex justify-between">
                         <span>{w.subject}</span>
                         <span className="text-amber-400">{w.marks}%</span>
                       </div>
                     ))
                   ) : (
-                    <span className="text-xs text-slate-400 italic">No low subjects</span>
+                    <span className="text-xs text-neutral-400 italic">No low subjects</span>
                   )}
                 </div>
               </div>
@@ -493,13 +493,13 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
           {/* Right Column: Subject-Wise Marks & Improvement Tips (7 Cols) */}
           <div className="lg:col-span-7 flex flex-col gap-4">
             {/* Subject Marks Table / Cards */}
-            <div className="glass-card p-5 rounded-3xl border border-slate-800">
+            <div className="glass-card p-5 rounded-3xl border border-white/15">
               <div className="flex items-center justify-between mb-4">
-                <h4 className="text-sm font-bold uppercase tracking-wider text-slate-300 flex items-center gap-2">
+                <h4 className="text-sm font-bold uppercase tracking-wider text-neutral-300 flex items-center gap-2">
                   <BookOpen className="w-4 h-4 text-cyan-400" />
                   Subject-Wise Performance
                 </h4>
-                <span className="text-xs text-slate-400">Class Average Baseline: 70%</span>
+                <span className="text-xs text-neutral-400">Class Average Baseline: 70%</span>
               </div>
 
               <div className="space-y-3">
@@ -515,7 +515,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                           ? 'bg-amber-950/20 border-amber-500/30'
                           : isTop
                           ? 'bg-emerald-950/20 border-emerald-500/30'
-                          : 'bg-slate-900/60 border-slate-800'
+                          : 'bg-black/80 border-white/10'
                       }`}
                     >
                       <div className="flex items-center justify-between text-xs sm:text-sm font-bold mb-1.5">
@@ -544,7 +544,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                       </div>
 
                       {/* Progress Bar */}
-                      <div className="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                      <div className="w-full bg-neutral-900 h-2.5 rounded-full overflow-hidden border border-white/5">
                         <div
                           className={`h-full rounded-full transition-all duration-700 ${
                             isLow
@@ -584,7 +584,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                   {weakSubjects.map(ws => (
                     <div
                       key={ws.subject}
-                      className="p-3 rounded-2xl bg-slate-900/90 border border-amber-500/30 flex items-start gap-3"
+                      className="p-3 rounded-2xl bg-black/90 border border-amber-500/30 flex items-start gap-3"
                     >
                       <div className="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                         {ws.marks}

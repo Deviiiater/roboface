@@ -127,7 +127,7 @@ export const SearchScreen: React.FC<VoiceAssistantScreenProps> = ({
   };
 
   const getFallbackPrompt = (lang: Language = language) => {
-    return lang === 'hi' ? 'अपना नाम, कक्षा, और सेक्शन बताएं।' : 'Tell me your name, class, and section.';
+    return lang === 'hi' ? 'Apna naam, class aur section bataiye.' : 'Tell me your name, class, and section.';
   };
 
   // Switch language anytime (English <-> Hindi)

@@ -157,7 +157,9 @@ export function App() {
         height: '100vw',
         transform: 'translate(-50%, -50%) rotate(90deg)',
         transformOrigin: 'center center',
-        overflow: 'auto',
+        overflowY: 'auto',
+        overflowX: 'hidden',
+        backgroundColor: '#000000',
       };
     }
     if (rotation === 180) {
@@ -168,7 +170,9 @@ export function App() {
         height: '100vh',
         transform: 'rotate(180deg)',
         transformOrigin: 'center center',
-        overflow: 'auto',
+        overflowY: 'auto',
+        overflowX: 'hidden',
+        backgroundColor: '#000000',
       };
     }
     if (rotation === 270) {
@@ -180,16 +184,22 @@ export function App() {
         height: '100vw',
         transform: 'translate(-50%, -50%) rotate(270deg)',
         transformOrigin: 'center center',
-        overflow: 'auto',
+        overflowY: 'auto',
+        overflowX: 'hidden',
+        backgroundColor: '#000000',
       };
     }
-    return {};
+    return {
+      backgroundColor: '#000000',
+      minHeight: '100vh',
+      width: '100%',
+    };
   };
 
   return (
     <div
       style={getRotationStyle()}
-      className="min-h-screen bg-slate-950 font-sans text-slate-100 selection:bg-cyan-500 selection:text-white"
+      className="min-h-screen w-full bg-black font-sans text-white selection:bg-cyan-500 selection:text-white"
     >
       {screen === 'home' && (
         <HomeScreen

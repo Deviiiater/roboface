@@ -143,7 +143,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   };
 
   return (
-    <div className={`relative min-h-screen w-full bg-slate-950 text-slate-100 flex flex-col justify-between items-center p-3 sm:p-6 overflow-hidden select-none ${
+    <div className={`relative min-h-screen w-full bg-black text-white flex flex-col justify-between items-center p-3 sm:p-6 overflow-hidden select-none ${
       isFullscreen ? 'h-screen overflow-hidden' : ''
     }`}>
       {/* Top Bar with Prominent Fullscreen Robo Face Option */}
@@ -154,8 +154,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             onClick={toggleFullscreen}
             className={`flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs font-bold transition-all border ${
               isFullscreen
-                ? 'bg-slate-900 text-slate-300 border-slate-700 hover:text-white'
-                : 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-300 border-cyan-500/40 hover:bg-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.2)] animate-pulse'
+                ? 'bg-black/90 text-neutral-300 border-white/30 hover:text-white'
+                : 'bg-cyan-500/20 text-cyan-300 border-cyan-500/50 hover:bg-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.3)] animate-pulse'
             }`}
             title="Use screen as physical Robo Face"
           >
@@ -195,13 +195,13 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
         <div className="flex items-center gap-2">
           {/* Language selector chips */}
-          <div className="flex items-center bg-slate-900/90 border border-slate-800 rounded-xl p-1 text-xs">
+          <div className="flex items-center bg-black/90 border border-white/20 rounded-xl p-1 text-xs">
             <button
               onClick={() => handleLanguageChange('hi')}
               className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
                 language === 'hi'
-                  ? 'bg-cyan-500 text-white shadow-md'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'bg-white text-black shadow-md'
+                  : 'text-neutral-400 hover:text-white'
               }`}
             >
               हिंदी
@@ -210,8 +210,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               onClick={() => handleLanguageChange('hinglish')}
               className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
                 language === 'hinglish'
-                  ? 'bg-cyan-500 text-white shadow-md'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'bg-white text-black shadow-md'
+                  : 'text-neutral-400 hover:text-white'
               }`}
             >
               Hinglish
@@ -220,8 +220,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               onClick={() => handleLanguageChange('en')}
               className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
                 language === 'en'
-                  ? 'bg-cyan-500 text-white shadow-md'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'bg-white text-black shadow-md'
+                  : 'text-neutral-400 hover:text-white'
               }`}
             >
               English
@@ -230,7 +230,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
           <button
             onClick={toggleSound}
-            className="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white"
+            className="p-2 rounded-xl bg-black/90 border border-white/20 text-neutral-300 hover:text-white"
             title={soundMuted ? 'Unmute' : 'Mute'}
           >
             {soundMuted ? <VolumeX className="w-4 h-4 text-rose-400" /> : <Volume2 className="w-4 h-4 text-cyan-400" />}
@@ -241,7 +241,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               sounds.playClick();
               onOpenAdmin();
             }}
-            className="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400"
+            className="p-2 rounded-xl bg-black/90 border border-white/20 text-neutral-400 hover:text-cyan-400"
             title="Teacher Admin Panel"
           >
             <Settings className="w-4 h-4" />
@@ -286,7 +286,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
               <button
                 onClick={handleFaceTap}
-                className="w-full py-2.5 px-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-white text-xs font-semibold flex items-center justify-center gap-2 transition-colors"
+                className="w-full py-2.5 px-4 rounded-xl bg-black/90 hover:bg-neutral-900 border border-white/20 text-neutral-300 hover:text-white text-xs font-semibold flex items-center justify-center gap-2 transition-colors"
               >
                 <RotateCcw className="w-3.5 h-3.5 text-cyan-400" />
                 <span>{language === 'hi' ? 'दोबारा सुनें' : 'Hear greeting again'}</span>
@@ -296,7 +296,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
           {/* Quick test student links */}
           {onQuickSelectStudent && (
-            <div className="mt-1 flex items-center justify-center gap-2 text-xs text-slate-500">
+            <div className="mt-1 flex items-center justify-center gap-2 text-xs text-neutral-500">
               <span>Quick Test:</span>
               <button
                 onClick={() => onQuickSelectStudent('Naman Sharma', '2')}
@@ -317,7 +317,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       </main>
 
       {/* Subtle footer */}
-      <footer className="w-full text-center text-[11px] text-slate-600 z-10 pb-2">
+      <footer className="w-full text-center text-[11px] text-neutral-500 z-10 pb-2">
         {language === 'hi'
           ? 'बोलने के लिए आंखों या मुंह पर टैप करें • फुल स्क्रीन पर रोबो फेस की तरह इस्तेमाल करें'
           : 'Tap eyes & mouth to speak • Use Full Screen for physical Robo Face mounting'}

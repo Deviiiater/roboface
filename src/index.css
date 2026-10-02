@@ -7,25 +7,35 @@
   letter-spacing: -0.01em;
 }
 
-/* Glassmorphism helpers */
+html, body, #root {
+  background-color: #000000 !important;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+/* OLED Pure Black styling helpers */
 .glass-panel {
-  background: rgba(30, 41, 59, 0.7);
+  background: rgba(0, 0, 0, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .glass-card {
-  background: rgba(15, 23, 42, 0.75);
+  background: rgba(8, 8, 8, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .glass-card-glow {
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
-  border: 1px solid rgba(56, 189, 248, 0.25);
-  box-shadow: 0 0 25px -5px rgba(56, 189, 248, 0.15);
+  background: rgba(4, 4, 4, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 25px -5px rgba(255, 255, 255, 0.1);
 }
 
 /* Kiosk touch enhancement */
