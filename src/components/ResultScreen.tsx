@@ -12,6 +12,7 @@ import {
   Play,
   Pause,
   RotateCcw,
+  RotateCw,
   Sparkles,
   Award,
   CheckCircle2,
@@ -31,6 +32,8 @@ interface ResultScreenProps {
   onReset: () => void;
   onBackToSearch: () => void;
   inactivityTimeoutSeconds?: number;
+  onRotate?: () => void;
+  rotation?: number;
 }
 
 export const ResultScreen: React.FC<ResultScreenProps> = ({
@@ -40,6 +43,8 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
   onReset,
   onBackToSearch,
   inactivityTimeoutSeconds = 60,
+  onRotate,
+  rotation = 0,
 }) => {
   const { student, percentage, grade, tier, tierGuidance, strengths, weakSubjects, subjectAnalyses, spokenText } = analysis;
 
@@ -257,8 +262,22 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
           </div>
         </div>
 
-        {/* Action Buttons: Print Card & Finish Session */}
+        {/* Action Buttons: Screen Rotate, Print Card & Finish Session */}
         <div className="flex items-center gap-2">
+          {onRotate && (
+            <button
+              onClick={() => {
+                sounds.playClick();
+                onRotate();
+              }}
+              className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-500/40 text-xs font-bold text-indigo-300 transition-all shadow-sm active:scale-95"
+              title="Rotate screen orientation (0°, 90°, 180°, 270°) for physical robot mounting"
+            >
+              <RotateCw className="w-4 h-4 text-indigo-400" />
+              <span>Rotate ({rotation}°)</span>
+            </button>
+          )}
+
           <button
             onClick={() => {
               sounds.playClick();

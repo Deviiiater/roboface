@@ -3,7 +3,7 @@ import { RobotFace, EyeMood } from './RobotFace';
 import type { Language } from '../types';
 import { sounds } from '../services/soundEffects';
 import { voiceService } from '../services/voiceService';
-import { Volume2, VolumeX, Settings, Sparkles, ArrowRight, RotateCcw, Maximize2, Minimize2, Download } from 'lucide-react';
+import { Volume2, VolumeX, Settings, Sparkles, ArrowRight, RotateCcw, RotateCw, Maximize2, Minimize2, Download } from 'lucide-react';
 
 interface HomeScreenProps {
   language: Language;
@@ -11,6 +11,8 @@ interface HomeScreenProps {
   onStart: () => void;
   onOpenAdmin: () => void;
   onQuickSelectStudent?: (studentName: string, studentClass: string) => void;
+  onRotate?: () => void;
+  rotation?: number;
 }
 
 export const HomeScreen: React.FC<HomeScreenProps> = ({
@@ -19,6 +21,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   onStart,
   onOpenAdmin,
   onQuickSelectStudent,
+  onRotate,
+  rotation = 0,
 }) => {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [hasSpokenOnce, setHasSpokenOnce] = useState(false);
@@ -160,6 +164,21 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               {isFullscreen ? 'Exit Full Screen' : 'Full Screen (Robo Face Mode)'}
             </span>
           </button>
+
+          {/* Screen Rotate Button for Tablet Robot Mount */}
+          {onRotate && (
+            <button
+              onClick={() => {
+                sounds.playClick();
+                onRotate();
+              }}
+              className="flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs font-bold transition-all bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 hover:bg-indigo-500/30 shadow-[0_0_15px_rgba(99,102,241,0.2)] active:scale-95"
+              title="Rotate screen orientation (0°, 90°, 180°, 270°) for physical robot mounting"
+            >
+              <RotateCw className="w-3.5 h-3.5 text-indigo-400" />
+              <span>Rotate ({rotation}°)</span>
+            </button>
+          )}
 
           {/* PWA Install Button */}
           {deferredPrompt && (

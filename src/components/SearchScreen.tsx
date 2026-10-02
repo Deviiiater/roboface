@@ -9,6 +9,7 @@ import {
   Mic,
   ArrowLeft,
   RotateCcw,
+  RotateCw,
   Search,
   Keyboard,
   AlertCircle,
@@ -25,6 +26,8 @@ interface VoiceAssistantScreenProps {
   onSelectStudent: (student: StudentRecord) => void;
   onBack: () => void;
   initialQuery?: string;
+  onRotate?: () => void;
+  rotation?: number;
 }
 
 export const SearchScreen: React.FC<VoiceAssistantScreenProps> = ({
@@ -34,6 +37,8 @@ export const SearchScreen: React.FC<VoiceAssistantScreenProps> = ({
   onSelectStudent,
   onBack,
   initialQuery = '',
+  onRotate,
+  rotation = 0,
 }) => {
   const [isSpeakingPrompt, setIsSpeakingPrompt] = useState(false);
   const [isListening, setIsListening] = useState(false);
@@ -474,6 +479,21 @@ export const SearchScreen: React.FC<VoiceAssistantScreenProps> = ({
               <span>हिंदी</span>
             </button>
           </div>
+
+          {/* Screen Rotate Button for Tablet Robot Mount */}
+          {onRotate && (
+            <button
+              onClick={() => {
+                sounds.playClick();
+                onRotate();
+              }}
+              className="p-2 sm:px-3 sm:py-2 rounded-2xl bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-500/40 text-indigo-300 backdrop-blur-md transition-all text-xs font-bold active:scale-95 shadow-md flex items-center gap-1.5"
+              title="Rotate screen orientation (0°, 90°, 180°, 270°) for physical robot mounting"
+            >
+              <RotateCw className="w-4 h-4 text-indigo-400" />
+              <span>{rotation}°</span>
+            </button>
+          )}
 
           {/* Fullscreen Button for Tablet */}
           <button

@@ -56,6 +56,27 @@ export function App() {
   const [currentAnalysis, setCurrentAnalysis] = useState<StudentAnalysis | null>(null);
   const [isAdminOpen, setIsAdminOpen] = useState(false);
 
+  // Screen rotation state (0, 90, 180, 270 degrees) for physical tablet robot mounting
+  const [rotation, setRotation] = useState<number>(() => {
+    try {
+      const saved = localStorage.getItem('ptm_screen_rotation');
+      if (saved) return Number(saved) % 360;
+    } catch {
+      // ignore
+    }
+    return 0;
+  });
+
+  const handleRotate = () => {
+    const nextRotation = (rotation + 90) % 360;
+    setRotation(nextRotation);
+    try {
+      localStorage.setItem('ptm_screen_rotation', String(nextRotation));
+    } catch {
+      // ignore
+    }
+  };
+
   // Search pre-fill states
   const [searchQuery, setSearchQuery] = useState('');
   const [searchClass, setSearchClass] = useState('all');
@@ -126,8 +147,50 @@ export function App() {
     setScreen('search');
   };
 
+  const getRotationStyle = (): React.CSSProperties => {
+    if (rotation === 90) {
+      return {
+        position: 'fixed',
+        left: '50%',
+        top: '50%',
+        width: '100vh',
+        height: '100vw',
+        transform: 'translate(-50%, -50%) rotate(90deg)',
+        transformOrigin: 'center center',
+        overflow: 'auto',
+      };
+    }
+    if (rotation === 180) {
+      return {
+        position: 'fixed',
+        inset: 0,
+        width: '100vw',
+        height: '100vh',
+        transform: 'rotate(180deg)',
+        transformOrigin: 'center center',
+        overflow: 'auto',
+      };
+    }
+    if (rotation === 270) {
+      return {
+        position: 'fixed',
+        left: '50%',
+        top: '50%',
+        width: '100vh',
+        height: '100vw',
+        transform: 'translate(-50%, -50%) rotate(270deg)',
+        transformOrigin: 'center center',
+        overflow: 'auto',
+      };
+    }
+    return {};
+  };
+
   return (
-    <div className="min-h-screen bg-slate-950 font-sans text-slate-100 selection:bg-cyan-500 selection:text-white">
+    <div
+      style={getRotationStyle()}
+      className="min-h-screen bg-slate-950 font-sans text-slate-100 selection:bg-cyan-500 selection:text-white"
+    >
       {screen === 'home' && (
         <HomeScreen
           language={language}
@@ -135,6 +198,8 @@ export function App() {
           onStart={handleStart}
           onOpenAdmin={() => setIsAdminOpen(true)}
           onQuickSelectStudent={handleQuickSelectStudent}
+          onRotate={handleRotate}
+          rotation={rotation}
         />
       )}
 
@@ -146,6 +211,8 @@ export function App() {
           initialQuery={searchQuery}
           onSelectStudent={handleSelectStudent}
           onBack={handleResetKiosk}
+          onRotate={handleRotate}
+          rotation={rotation}
         />
       )}
 
@@ -157,6 +224,8 @@ export function App() {
           onReset={handleResetKiosk}
           onBackToSearch={handleBackToSearch}
           inactivityTimeoutSeconds={inactivityTimeout}
+          onRotate={handleRotate}
+          rotation={rotation}
         />
       )}
 
