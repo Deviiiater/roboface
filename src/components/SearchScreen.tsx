@@ -14,6 +14,7 @@ import {
   AlertCircle,
   Maximize2,
   Minimize2,
+  Download,
   X
 } from 'lucide-react';
 
@@ -47,6 +48,27 @@ export const SearchScreen: React.FC<VoiceAssistantScreenProps> = ({
   const [manualInput, setManualInput] = useState('');
   const [showManualInput, setShowManualInput] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+
+  // Listen for PWA installation prompt
+  useEffect(() => {
+    const handleBeforeInstall = (e: any) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+    };
+    window.addEventListener('beforeinstallprompt', handleBeforeInstall);
+    return () => window.removeEventListener('beforeinstallprompt', handleBeforeInstall);
+  }, []);
+
+  const handleInstallClick = async () => {
+    sounds.playClick();
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === 'accepted') {
+      setDeferredPrompt(null);
+    }
+  };
 
   // Voice stream refs
   const debounceSearchTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -470,6 +492,18 @@ export const SearchScreen: React.FC<VoiceAssistantScreenProps> = ({
           >
             <Keyboard className="w-4 h-4" />
           </button>
+
+          {/* PWA Install Button */}
+          {deferredPrompt && (
+            <button
+              onClick={handleInstallClick}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-2xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30 shadow-[0_0_15px_rgba(16,185,129,0.3)] animate-pulse text-xs font-bold active:scale-95"
+              title="Install App as PWA on Home Screen"
+            >
+              <Download className="w-3.5 h-3.5 text-emerald-400" />
+              <span>Install</span>
+            </button>
+          )}
         </div>
       </header>
 

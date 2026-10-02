@@ -3,7 +3,7 @@ import { RobotFace, EyeMood } from './RobotFace';
 import type { Language } from '../types';
 import { sounds } from '../services/soundEffects';
 import { voiceService } from '../services/voiceService';
-import { Volume2, VolumeX, Settings, Sparkles, ArrowRight, RotateCcw, Maximize2, Minimize2 } from 'lucide-react';
+import { Volume2, VolumeX, Settings, Sparkles, ArrowRight, RotateCcw, Maximize2, Minimize2, Download } from 'lucide-react';
 
 interface HomeScreenProps {
   language: Language;
@@ -26,6 +26,27 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   const [soundMuted, setSoundMuted] = useState(false);
   const [mood, setMood] = useState<EyeMood>('idle');
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+
+  // Listen for PWA installation prompt
+  useEffect(() => {
+    const handleBeforeInstall = (e: any) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+    };
+    window.addEventListener('beforeinstallprompt', handleBeforeInstall);
+    return () => window.removeEventListener('beforeinstallprompt', handleBeforeInstall);
+  }, []);
+
+  const handleInstallClick = async () => {
+    sounds.playClick();
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === 'accepted') {
+      setDeferredPrompt(null);
+    }
+  };
 
   // Monitor fullscreen change events
   useEffect(() => {
@@ -139,6 +160,18 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               {isFullscreen ? 'Exit Full Screen' : 'Full Screen (Robo Face Mode)'}
             </span>
           </button>
+
+          {/* PWA Install Button */}
+          {deferredPrompt && (
+            <button
+              onClick={handleInstallClick}
+              className="flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs font-extrabold transition-all bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30 shadow-[0_0_15px_rgba(16,185,129,0.3)] animate-pulse"
+              title="Install App as PWA on Home Screen"
+            >
+              <Download className="w-3.5 h-3.5 text-emerald-400" />
+              <span>Install App</span>
+            </button>
+          )}
         </div>
 
         <div className="flex items-center gap-2">
