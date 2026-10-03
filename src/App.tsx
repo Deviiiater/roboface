@@ -11,7 +11,7 @@ type AppScreen = 'home' | 'search' | 'result';
 
 export function App() {
   const [screen, setScreen] = useState<AppScreen>('home');
-  const DATASET_VERSION = 'v3_empty_clean_slate';
+  const DATASET_VERSION = 'v4_pdf_485_records';
   const [students, setStudents] = useState<StudentRecord[]>(() => {
     try {
       const savedVersion = localStorage.getItem('ptm_students_version');
@@ -19,11 +19,11 @@ export function App() {
         const saved = localStorage.getItem('ptm_students_data');
         if (saved) {
           const parsed = JSON.parse(saved);
-          if (Array.isArray(parsed)) return parsed;
+          if (Array.isArray(parsed) && parsed.length > 0) return parsed;
         }
       } else {
         localStorage.setItem('ptm_students_version', DATASET_VERSION);
-        localStorage.removeItem('ptm_students_data');
+        localStorage.setItem('ptm_students_data', JSON.stringify(INITIAL_STUDENTS_DATA));
       }
     } catch {
       // fallback
