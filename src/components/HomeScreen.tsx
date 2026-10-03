@@ -13,6 +13,7 @@ interface HomeScreenProps {
   onQuickSelectStudent?: (studentName: string, studentClass: string) => void;
   onRotate?: () => void;
   rotation?: number;
+  studentsCount?: number;
 }
 
 export const HomeScreen: React.FC<HomeScreenProps> = ({
@@ -23,6 +24,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   onQuickSelectStudent,
   onRotate,
   rotation = 0,
+  studentsCount = 0,
 }) => {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [hasSpokenOnce, setHasSpokenOnce] = useState(false);
@@ -294,25 +296,26 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             </div>
           )}
 
-          {/* Quick test student links */}
-          {onQuickSelectStudent && (
-            <div className="mt-1 flex items-center justify-center gap-2 text-xs text-neutral-500">
-              <span>Quick Test:</span>
+          {/* Student Database Status */}
+          <div className="mt-2 flex items-center justify-center gap-2 text-xs">
+            {studentsCount === 0 ? (
               <button
-                onClick={() => onQuickSelectStudent('Naman Sharma', '2')}
-                className="text-cyan-400 hover:underline"
+                onClick={() => {
+                  sounds.playClick();
+                  onOpenAdmin();
+                }}
+                className="px-3 py-1 rounded-full bg-neutral-900 border border-white/20 text-neutral-400 hover:text-white hover:border-cyan-400 transition-all flex items-center gap-1.5"
+                title="Open Admin to upload Excel/CSV"
               >
-                Naman Sharma (2-A)
+                <Settings className="w-3 h-3 text-cyan-400" />
+                <span>{language === 'hi' ? 'कोई रिकॉर्ड नहीं • ⚙️ दबाकर नया डेटा अपलोड करें' : 'No records loaded • Tap ⚙️ to upload new data'}</span>
               </button>
-              <span>•</span>
-              <button
-                onClick={() => onQuickSelectStudent('Utkarsh Singh Bhadouriya', '4')}
-                className="text-amber-400 hover:underline"
-              >
-                Utkarsh (4-B)
-              </button>
-            </div>
-          )}
+            ) : (
+              <span className="px-3 py-0.5 rounded-full bg-neutral-900/80 border border-white/10 text-neutral-400 text-[11px]">
+                {studentsCount} {language === 'hi' ? 'छात्र रिकॉर्ड सक्रिय' : 'student records loaded'}
+              </span>
+            )}
+          </div>
         </div>
       </main>
 

@@ -408,7 +408,11 @@ export const SearchScreen: React.FC<VoiceAssistantScreenProps> = ({
 
         const isMissingClassOrSec = !query.rollNo && (!query.studentClass || !query.section);
         let notFoundSpoken = '';
-        if (isMissingClassOrSec) {
+        if (students.length === 0) {
+          notFoundSpoken = language === 'hi'
+            ? 'कोई छात्र रिकॉर्ड अपलोड नहीं है। कृपया एडमिन पैनल से नया डेटा अपलोड करें।'
+            : 'No student records loaded. Please upload student records from the Admin Panel.';
+        } else if (isMissingClassOrSec) {
           notFoundSpoken = language === 'hi'
             ? 'रिजल्ट नहीं मिला। कृपया छात्र का नाम, कक्षा और सेक्शन तीनों बताएं।'
             : 'Result not found. Please provide student Name, Class, and Section.';
@@ -418,7 +422,7 @@ export const SearchScreen: React.FC<VoiceAssistantScreenProps> = ({
             : 'Result not found. No matching record found for this student in the specified class and section.';
         }
 
-        voiceService.speak(notFoundSpoken, language, undefined, 'Result not found. Record nahi mila.');
+        voiceService.speak(notFoundSpoken, language, undefined, 'Record nahi mila. Please upload student data in Admin panel.');
       }
     }, 1300);
   };
