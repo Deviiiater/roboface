@@ -3,6 +3,7 @@ import { RobotFace, EyeMood } from './RobotFace';
 import type { Language } from '../types';
 import { sounds } from '../services/soundEffects';
 import { voiceService } from '../services/voiceService';
+import { speechRecognitionService } from '../services/speechRecognitionService';
 import { Volume2, VolumeX, Settings, Sparkles, ArrowRight, RotateCcw, RotateCw, Maximize2, Minimize2, Download } from 'lucide-react';
 
 interface HomeScreenProps {
@@ -278,6 +279,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 onClick={() => {
                   sounds.playRobotGreet();
                   voiceService.stop();
+                  speechRecognitionService.prime();
                   onStart();
                 }}
                 className="w-full py-4 px-8 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-extrabold text-lg tracking-wide shadow-[0_0_35px_rgba(6,182,212,0.5)] hover:shadow-[0_0_50px_rgba(6,182,212,0.7)] transition-all transform active:scale-95 flex items-center justify-center gap-3 border border-cyan-300/40"

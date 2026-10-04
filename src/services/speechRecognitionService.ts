@@ -26,6 +26,22 @@ class SpeechRecognitionService {
     return this.isListeningState;
   }
 
+  // Pre-authorize microphone access on user gesture (e.g. tapping 'YES! CHECK RESULT')
+  public prime() {
+    if (typeof window === 'undefined') return;
+    try {
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ audio: true })
+          .then(stream => {
+            stream.getTracks().forEach(t => t.stop());
+          })
+          .catch(() => {});
+      }
+    } catch {
+      // ignore
+    }
+  }
+
   public startListening(
     onResult: SpeechCallback,
     onError?: ErrorCallback,

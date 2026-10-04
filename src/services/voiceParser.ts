@@ -44,17 +44,16 @@ const CLASS_WORDS: Record<string, string> = {
   'बारह': '12', 'बारहवीं': '12', 'ट्वेल्व': '12',
 };
 
-// Map of spoken section variations (handles "bhi", "भी", "bee", "be", sound-alikes like "8", "3", etc.)
+// Map of spoken section variations (handles "bhi", "भी", "bee", "be", sound-alikes, avoiding class number clashes)
 const SECTION_NORMALIZER: Record<string, string> = {
   // Section A
-  'a': 'A', 'ay': 'A', 'ae': 'A', 'eh': 'A', 'hey': 'A', 'eight': 'A', '8': 'A', 'ate': 'A', 'one': 'A', '1': 'A', 'apple': 'A', 'ए': 'A', 'अ': 'A',
+  'a': 'A', 'ay': 'A', 'ae': 'A', 'eh': 'A', 'hey': 'A', 'apple': 'A', 'ए': 'A', 'अ': 'A',
   // Section B (CRITICAL: Speech engines frequently transcribe "B" as "bhi", "भी", "bee", "be", "bi")
-  'b': 'B', 'bhi': 'B', 'भी': 'B', 'बी': 'B', 'ब': 'B', 'bee': 'B', 'be': 'B', 'bi': 'B', 'bhee': 'B', 'two': 'B', '2': 'B', 'ball': 'B', 'boy': 'B',
+  'b': 'B', 'bhi': 'B', 'भी': 'B', 'बी': 'B', 'ब': 'B', 'bee': 'B', 'be': 'B', 'bi': 'B', 'bhee': 'B', 'ball': 'B', 'boy': 'B',
   // Section C
-  'c': 'C', 'सी': 'C', 'स': 'C', 'see': 'C', 'sea': 'C', 'si': 'C', 'three': 'C', '3': 'C', 'cat': 'C',
-  // Section D
-  'd': 'D', 'डी': 'D', 'dee': 'D', 'four': 'D', '4': 'D', 'dog': 'D',
+  'c': 'C', 'सी': 'C', 'स': 'C', 'see': 'C', 'sea': 'C', 'si': 'C', 'cat': 'C',
 };
+
 
 // Fast Devanagari to Latin phonetic transliteration map
 const DEVANAGARI_CONSONANTS: Record<string, string> = {
@@ -132,6 +131,7 @@ const COMMON_HINDI_NAMES: Record<string, string> = {
   'श्लोक': 'shlok', 'शौर्य': 'shorya', 'कटारे': 'katare',
   'सृष्टि': 'srashti', 'सूर्यांश': 'suryansh', 'श्रीवास्तव': 'shrivastav',
   'अभि': 'abhi', 'अभिनव': 'abhinav', 'अक्षत': 'akshit',
+  'गौतम': 'gotam', 'गोतम': 'gotam', 'दाक्षित': 'dakshit', 'दाक्षिश': 'dakshit',
   'दीक्षित': 'dixit', 'अनमोल': 'anmol', 'चिराग': 'chirag',
   'देबू': 'debu', 'देविका': 'devika', 'गोविंद': 'govind',
   'हार्दिक': 'hardik', 'शुक्ला': 'shukla', 'लवकुश': 'lavkush',
@@ -299,10 +299,10 @@ export function parseVoiceInput(transcript: string): ParsedVoiceQuery {
   if (rollMatch) {
     rollNo = parseInt(rollMatch[1], 10);
   } else {
-    // Standalone 4-digit roll number (all roll numbers in school dataset are 6000-9999)
-    const standalone4Digit = text.match(/\b([6-9]\d{3})\b/);
-    if (standalone4Digit) {
-      rollNo = parseInt(standalone4Digit[1], 10);
+    // Standalone 4-digit or 5-digit roll number (all roll numbers in school dataset are 6000-10500)
+    const standaloneRoll = text.match(/\b([6-9]\d{3}|1\d{4})\b/);
+    if (standaloneRoll) {
+      rollNo = parseInt(standaloneRoll[1], 10);
     }
   }
 
@@ -401,9 +401,10 @@ export function parseVoiceInput(transcript: string): ParsedVoiceQuery {
 
   // 8. Clean text thoroughly to isolate the Student Name
   let cleaned = text
-    // Remove conversational phrases
-    .replace(/^(my\s+name\s+is|i\s+am|mera\s+naam|student\s+name\s+is|मेरा\s+नाम|मेरे\s+बेटे\s+का\s+नाम|बच्चे\s+का\s+नाम|विद्यार्थी\s+का\s+नाम|छात्र\s+का\s+नाम|विद्यार्थी|छात्र)\s+/gi, '')
-    .replace(/\s+(hai|है|ka\s+result|का\s+परिणाम|का\s+रिजल्ट|की\s+मार्कशीट)\s*$/gi, '')
+    // Remove conversational prefixes (English & Hindi)
+    .replace(/^(please\s+)?(tell\s+me|show\s+me|show|check|find|search|get)?\s*(the\s+)?(result|marksheet|report\s+card|details|record)?\s*(of|for)?\s*/gi, '')
+    .replace(/^(my\s+name\s+is|i\s+am|mera\s+naam|student\s+name\s+is|name\s+is|naam\s+hai)\s*/gi, '')
+    .replace(/^(कृपया\s+)?(मुझे\s+)?(छात्र\s+का\s+नाम|बच्चे\s+का\s+नाम|विद्यार्थी\s+का\s+नाम|विद्यार्थी|छात्र|मेरा\s+नाम|नाम)\s*/gi, '')
     // Remove roll numbers
     .replace(/(?:roll\s*(?:no|number)?|रोल\s*(?:नंबर)?|क्रमांक|number|नंबर)\s*[:\-]?\s*\d+/gi, '')
     // Remove class phrases
@@ -411,8 +412,8 @@ export function parseVoiceInput(transcript: string): ParsedVoiceQuery {
     .replace(/(?:first|second|third|fourth|fifth|2nd|3rd|4th|5th|दूसरी|तीसरी|चौथी|पांचवीं)\s*(?:class|grade|standard|kaksha|कक्षा|क्लास|वर्ग)/gi, '')
     .replace(/(?:class|grade|standard|kaksha|कक्षा|क्लास|वर्ग|std)/gi, '')
     // Remove section phrases
-    .replace(/(?:section|sec|session|selection|action|सेक्शन|वर्ग|भाग)\s*[:\-]?\s*(?:bhi|भी|बी|ब|bee|be|bi|bhee|b|ay|ae|a|ए|अ|see|sea|si|c|सी|स|d|dee|डी|eight|8|three|3|two|2|one|1)?/gi, '')
-    .replace(/(?:bhi|भी|बी|ब|bee|be|bi|bhee|b|ay|ae|a|ए|अ|see|sea|si|c|सी|स|d|dee|डी)\s*(?:section|sec|session|selection|action|सेक्शन|वर्ग|भाग)/gi, '')
+    .replace(/(?:section|sec|session|selection|action|सेक्शन|वर्ग|भाग)\s*[:\-]?\s*(?:bhi|भी|बी|ब|bee|be|bi|bhee|b|ay|ae|a|ए|अ|see|sea|si|c|सी|स)?/gi, '')
+    .replace(/(?:bhi|भी|बी|ब|bee|be|bi|bhee|b|ay|ae|a|ए|अ|see|sea|si|c|सी|स)\s*(?:section|sec|session|selection|action|सेक्शन|वर्ग|भाग)/gi, '')
     .replace(/(?:^|\s)(?:bhi|भी|बी|bee|be|bi|bhee|ay|ae|see|sea|si)(?:\s|$)/gi, ' ');
 
   // If section was detected, cleanly remove section letters from name
@@ -424,8 +425,13 @@ export function parseVoiceInput(transcript: string): ParsedVoiceQuery {
     cleaned = cleaned.replace(new RegExp(`\\b${studentClass}(?:th|st|nd|rd|वीं|वी)?\\b`, 'gi'), ' ');
   }
 
+  // Remove conversational suffixes
+  for (let i = 0; i < 3; i++) {
+    cleaned = cleaned.replace(/\s+(ka\s+result|ki\s+marksheet|ka\s+parinam|का\s+रिजल्ट|का\s+परिणाम|की\s+मार्कशीट|का\s+नतीजा|दिखाओ|दिखाइए|बताओ|बताइए|check\s+karo|batao|bataiye|dikhao|dikhaiye|hai|हूँ|है)\s*$/gi, '');
+  }
+
   cleaned = cleaned
-    .replace(/(?:^|\s)[a-dA-Dए-सीबअ]\s*$/gi, ' ')
+    .replace(/(?:^|\s)[a-cA-Cए-सीबअ]\s*$/gi, ' ')
     // Remove standalone digits
     .replace(/(?:^|\s)(?:[1-9]|1[0-2])(?:th|st|nd|rd|वीं|वी)?(?:\s|$)/gi, ' ')
     .replace(/\d+/g, '')
@@ -453,19 +459,43 @@ export function parseVoiceInput(transcript: string): ParsedVoiceQuery {
   };
 }
 
+// Phonetic sound-alike normalizer for Indian school names (handles Gotam <-> Gautam, Tomer <-> Tomar, etc.)
+function normalizePhonetic(str: string): string {
+  return str.toLowerCase()
+    .replace(/aa/g, 'a')
+    .replace(/ee/g, 'i')
+    .replace(/oo/g, 'u')
+    .replace(/ou/g, 'u')
+    .replace(/au/g, 'o')
+    .replace(/aw/g, 'o')
+    .replace(/sh/g, 's')
+    .replace(/v/g, 'w')
+    .replace(/th/g, 't')
+    .replace(/dh/g, 'd')
+    .replace(/bh/g, 'b')
+    .replace(/kh/g, 'k')
+    .replace(/gh/g, 'g')
+    .replace(/ph/g, 'f')
+    .replace(/[^a-z0-9]/g, '');
+}
+
 export function findStudentByVoice(
   query: ParsedVoiceQuery,
   students: StudentRecord[]
 ): { student: StudentRecord | null; confidence: number; matches: StudentRecord[] } {
   const normName = query.name.toLowerCase().trim();
   const rawTranscript = query.rawTranscript.toLowerCase().trim();
+  const studentClass = query.studentClass;
+  const section = query.section ? query.section.toUpperCase() : undefined;
 
   // 1. Match by Roll Number if spoken
   if (query.rollNo) {
     const rollMatches = students.filter(s => {
-      if (s.roll_no !== query.rollNo) return false;
-      if (query.studentClass && s.class !== query.studentClass) return false;
-      if (query.section && s.section.toUpperCase() !== query.section.toUpperCase()) return false;
+      const matchRollNo = s.roll_no === query.rollNo;
+      const matchRollCode = Boolean(s.roll_code && s.roll_code.includes(String(query.rollNo)));
+      if (!matchRollNo && !matchRollCode) return false;
+      if (studentClass && s.class !== studentClass) return false;
+      if (section && s.section.toUpperCase() !== section) return false;
       return true;
     });
     if (rollMatches.length === 1) {
@@ -476,7 +506,7 @@ export function findStudentByVoice(
         const nameMatch = rollMatches.find(s => s.name.toLowerCase().includes(normName) || normName.includes(s.name.toLowerCase()));
         if (nameMatch) return { student: nameMatch, confidence: 1.0, matches: [nameMatch] };
       }
-      return { student: rollMatches[0], confidence: 0.9, matches: rollMatches };
+      return { student: rollMatches[0], confidence: 0.95, matches: rollMatches };
     }
   }
 
@@ -484,61 +514,85 @@ export function findStudentByVoice(
     return { student: null, confidence: 0, matches: [] };
   }
 
-  // 2. Strict Requirement: Both Class and Section are mandatory alongside Name (unless Roll No is provided)
-  if (!query.studentClass || !query.section) {
-    // Cannot search without both Class and Section: return no result
-    return { student: null, confidence: 0, matches: [] };
-  }
+  // Internal matching algorithm within a specified candidate pool
+  const matchInPool = (pool: StudentRecord[]) => {
+    if (pool.length === 0) return { student: null, confidence: 0, matches: [] };
 
-  // 3. Strictly search within the specified Class & Section
-  const scopedStudents = students.filter(
-    s => s.class === query.studentClass && s.section.toUpperCase() === query.section?.toUpperCase()
-  );
+    // A. Exact full name match
+    const exact = pool.filter(s => s.name.toLowerCase() === normName);
+    if (exact.length === 1) return { student: exact[0], confidence: 1.0, matches: exact };
+    if (exact.length > 1) return { student: exact[0], confidence: 0.95, matches: exact };
 
-  if (scopedStudents.length === 0) {
-    // Specified class & section has no students
-    return { student: null, confidence: 0, matches: [] };
-  }
+    // B. All query words match inside student name
+    const queryParts = normName.split(/\s+/).filter(p => p.length >= 2);
+    if (queryParts.length > 0) {
+      const allPartsMatch = pool.filter(s => {
+        const sName = s.name.toLowerCase();
+        return queryParts.every(part => sName.includes(part));
+      });
+      if (allPartsMatch.length === 1) return { student: allPartsMatch[0], confidence: 0.95, matches: allPartsMatch };
+      if (allPartsMatch.length > 1) return { student: allPartsMatch[0], confidence: 0.85, matches: allPartsMatch };
+    }
 
-  // Exact full name match in specified class & section
-  const exactName = scopedStudents.find(s => s.name.toLowerCase() === normName);
-  if (exactName) {
-    return { student: exactName, confidence: 1.0, matches: [exactName] };
-  }
+    // C. Phonetic sound-alike match (e.g. "Abhi Gautam" <-> "Abhi Gotam", "Tomer" <-> "Tomar")
+    const normPhon = normalizePhonetic(normName);
+    if (normPhon.length >= 4) {
+      const phonMatches = pool.filter(s => {
+        const sPhon = normalizePhonetic(s.name);
+        return sPhon === normPhon || sPhon.includes(normPhon) || normPhon.includes(sPhon);
+      });
+      if (phonMatches.length === 1) return { student: phonMatches[0], confidence: 0.9, matches: phonMatches };
+      if (phonMatches.length > 1) return { student: phonMatches[0], confidence: 0.8, matches: phonMatches };
+    }
 
-  // All query words match inside student's name
-  const queryParts = normName.split(' ').filter(p => p.length >= 2);
-  if (queryParts.length > 0) {
-    const allPartsMatch = scopedStudents.filter(s => {
+    // D. Substring match (either query contains student name or student name contains query)
+    const substringMatches = pool.filter(s => {
       const sName = s.name.toLowerCase();
-      return queryParts.every(part => sName.includes(part));
+      return (normName.length >= 3 && sName.includes(normName)) || (sName.length >= 3 && normName.includes(sName));
     });
-    if (allPartsMatch.length === 1) {
-      return { student: allPartsMatch[0], confidence: 0.95, matches: allPartsMatch };
+    if (substringMatches.length === 1) return { student: substringMatches[0], confidence: 0.85, matches: substringMatches };
+    if (substringMatches.length > 1) return { student: substringMatches[0], confidence: 0.75, matches: substringMatches };
+
+    // E. First name match
+    if (queryParts.length > 0 && queryParts[0].length >= 3) {
+      const firstWord = queryParts[0];
+      const firstNameMatches = pool.filter(s => s.name.toLowerCase().startsWith(firstWord));
+      if (firstNameMatches.length === 1) return { student: firstNameMatches[0], confidence: 0.8, matches: firstNameMatches };
+      if (firstNameMatches.length > 1) return { student: firstNameMatches[0], confidence: 0.7, matches: firstNameMatches };
     }
+
+    return { student: null, confidence: 0, matches: [] };
+  };
+
+  // Tier 1: Search within specified Class AND Section (if both provided)
+  if (studentClass && section) {
+    const classSecPool = students.filter(
+      s => s.class === studentClass && s.section.toUpperCase() === section
+    );
+    const result = matchInPool(classSecPool);
+    if (result.student) return result;
   }
 
-  // Substring match (either query contains student name or student name contains query)
-  const substringMatches = scopedStudents.filter(s => {
-    const sName = s.name.toLowerCase();
-    return (normName.length >= 3 && sName.includes(normName)) || (sName.length >= 3 && normName.includes(sName));
-  });
-  if (substringMatches.length === 1) {
-    return { student: substringMatches[0], confidence: 0.9, matches: substringMatches };
+  // Tier 2: Search within specified Class (if class provided without section)
+  if (studentClass) {
+    const classPool = students.filter(s => s.class === studentClass);
+    const result = matchInPool(classPool);
+    if (result.student) return result;
   }
 
-  // First name match within this specific section (if unique in this section)
-  if (normName.length >= 3) {
-    const firstWord = normName.split(' ')[0];
-    if (firstWord.length >= 3) {
-      const firstNameMatches = scopedStudents.filter(s => s.name.toLowerCase().startsWith(firstWord));
-      if (firstNameMatches.length === 1) {
-        return { student: firstNameMatches[0], confidence: 0.85, matches: firstNameMatches };
-      }
-    }
+  // Tier 3: Search within specified Section (if section provided without class)
+  if (section) {
+    const secPool = students.filter(s => s.section.toUpperCase() === section);
+    const result = matchInPool(secPool);
+    if (result.student) return result;
   }
 
-  // Strict: No student found matching this name in the given class and section
+  // Tier 4: Search across the entire student body (handles unique names, full names without class)
+  const schoolWideResult = matchInPool(students);
+  if (schoolWideResult.student) {
+    return schoolWideResult;
+  }
+
   return { student: null, confidence: 0, matches: [] };
 }
 

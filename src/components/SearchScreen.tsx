@@ -226,20 +226,13 @@ export const SearchScreen: React.FC<VoiceAssistantScreenProps> = ({
           rollNo: parsed.rollNo,
         });
 
-        const isComplete = (hasName && hasClass && hasSection) || hasRoll;
-
-        if (isComplete) {
-          // ALL CRITERIA PRESENT!
+        // Smart Adaptive Debounce Search:
+        // 1. All criteria present (or Roll Number): 500ms debounce
+        // 2. Name + Class present: 1200ms debounce
+        // 3. Name only present: 1600ms debounce
+        if ((hasName && hasClass && hasSection) || hasRoll) {
           setGuidanceTip(null);
-          if (guidanceTimerRef.current) {
-            clearTimeout(guidanceTimerRef.current);
-            guidanceTimerRef.current = null;
-          }
-
-          // Debounce 650ms to allow user to finish the word, then automatically search!
-          if (debounceSearchTimerRef.current) {
-            clearTimeout(debounceSearchTimerRef.current);
-          }
+          if (debounceSearchTimerRef.current) clearTimeout(debounceSearchTimerRef.current);
           debounceSearchTimerRef.current = setTimeout(() => {
             if (!hasProcessedQueryRef.current) {
               hasProcessedQueryRef.current = true;
@@ -248,56 +241,63 @@ export const SearchScreen: React.FC<VoiceAssistantScreenProps> = ({
               setIsListening(false);
               handleVoiceQueryProcessed(combined);
             }
-          }, 650);
-        } else {
-          // STILL WAITING for Name, Class, or Section: DO NOT TRIGGER SEARCH!
-          if (debounceSearchTimerRef.current) {
-            clearTimeout(debounceSearchTimerRef.current);
-            debounceSearchTimerRef.current = null;
-          }
-
-          // Helpful guidance if paused
-          if (guidanceTimerRef.current) {
-            clearTimeout(guidanceTimerRef.current);
-          }
-          guidanceTimerRef.current = setTimeout(() => {
-            if (isListeningRef.current && !hasProcessedQueryRef.current) {
-              if (hasName && !hasClass && !hasSection) {
-                setGuidanceTip(
-                  activeLang === 'hi'
-                    ? `नाम: "${parsed.name}"। कृपया कक्षा और सेक्शन भी बताएं...`
-                    : `Name: "${parsed.name}". Please also say Class and Section...`
-                );
-              } else if (hasName && hasClass && !hasSection) {
-                setGuidanceTip(
-                  activeLang === 'hi'
-                    ? `कक्षा ${parsed.studentClass} मिल गई। कृपया सेक्शन बोलें (A, B या C)...`
-                    : `Class ${parsed.studentClass} received. Please also say Section (A, B or C)...`
-                );
-              } else if (!hasName && (hasClass || hasSection)) {
-                setGuidanceTip(
-                  activeLang === 'hi'
-                    ? 'कृपया छात्र का नाम भी बताएं...'
-                    : 'Please also say the student name...'
-                );
-              }
+          }, 500);
+        } else if (hasName && hasClass) {
+          setGuidanceTip(
+            activeLang === 'hi'
+              ? `कक्षा ${parsed.studentClass} मिली। सेक्शन बोलें, या रुकें...`
+              : `Class ${parsed.studentClass} detected. Say Section or wait...`
+          );
+          if (debounceSearchTimerRef.current) clearTimeout(debounceSearchTimerRef.current);
+          debounceSearchTimerRef.current = setTimeout(() => {
+            if (!hasProcessedQueryRef.current) {
+              hasProcessedQueryRef.current = true;
+              isListeningRef.current = false;
+              speechRecognitionService.stopListening();
+              setIsListening(false);
+              handleVoiceQueryProcessed(combined);
             }
-          }, 2200);
+          }, 1200);
+        } else if (hasName) {
+          if (debounceSearchTimerRef.current) clearTimeout(debounceSearchTimerRef.current);
+          debounceSearchTimerRef.current = setTimeout(() => {
+            if (!hasProcessedQueryRef.current) {
+              hasProcessedQueryRef.current = true;
+              isListeningRef.current = false;
+              speechRecognitionService.stopListening();
+              setIsListening(false);
+              handleVoiceQueryProcessed(combined);
+            }
+          }, 1600);
         }
       },
       (error) => {
+        // If microphone error happens, check if user had already spoken a name or roll number
+        const currentText = latestTranscriptRef.current || accumulatedTranscriptRef.current;
+        const parsed = parseVoiceInput(currentText);
+        if ((parsed.name && parsed.name.length >= 2) || parsed.rollNo) {
+          if (!hasProcessedQueryRef.current) {
+            hasProcessedQueryRef.current = true;
+            isListeningRef.current = false;
+            setIsListening(false);
+            speechRecognitionService.stopListening();
+            handleVoiceQueryProcessed(currentText);
+            return;
+          }
+        }
+
         if (error === 'not-allowed' || error === 'service-not-allowed') {
           setIsListening(false);
           isListeningRef.current = false;
           setNotFoundMsg(
             activeLang === 'hi'
-              ? 'माइक्रोफ़ोन की अनुमति चाहिए। स्क्रीन पर टैप करके अनुमति दें।'
-              : 'Microphone permission required. Tap the screen to allow microphone.'
+              ? 'बोलने के लिए स्क्रीन पर टैप करें।'
+              : 'Tap the screen or face to speak.'
           );
           return;
         }
 
-        // If criteria incomplete, continue listening seamlessly without dropping accumulated transcript
+        // Seamless auto-restart on non-fatal pause
         if (isListeningRef.current && !hasProcessedQueryRef.current) {
           setTimeout(() => {
             if (isListeningRef.current && !hasProcessedQueryRef.current) {
@@ -311,26 +311,31 @@ export const SearchScreen: React.FC<VoiceAssistantScreenProps> = ({
       },
       activeLang === 'hi' ? 'hi-IN' : 'en-IN',
       (finalText) => {
-        // If mic stream ended on tablet pause, save words into accumulated buffer and keep listening!
+        // When speech recognition ends (user paused speaking on tablet):
         if (isListeningRef.current && !hasProcessedQueryRef.current) {
           const currentText = mergeSpokenText(accumulatedTranscriptRef.current, finalText || latestTranscriptRef.current);
           accumulatedTranscriptRef.current = currentText;
           latestTranscriptRef.current = currentText;
 
           const parsed = parseVoiceInput(currentText);
-          const isComplete = (parsed.name && parsed.studentClass && parsed.section) || parsed.rollNo;
+          const hasName = Boolean(parsed.name && parsed.name.trim().length >= 2);
+          const hasRoll = Boolean(parsed.rollNo);
 
-          if (isComplete) {
+          // If the user spoke a student name or roll number, they finished their request!
+          // Trigger the search immediately instead of getting stuck in a deaf loop!
+          if (hasName || hasRoll) {
             hasProcessedQueryRef.current = true;
             isListeningRef.current = false;
             setIsListening(false);
+            speechRecognitionService.stopListening();
             handleVoiceQueryProcessed(currentText);
           } else {
+            // Nothing was spoken yet: restart listening stream so robot remains ready
             setTimeout(() => {
               if (isListeningRef.current && !hasProcessedQueryRef.current) {
                 listenStream(activeLang);
               }
-            }, 100);
+            }, 150);
           }
         }
       }
@@ -366,12 +371,13 @@ export const SearchScreen: React.FC<VoiceAssistantScreenProps> = ({
       prompt,
       language,
       () => {
-        setTimeout(safeStart, 200);
+        setTimeout(safeStart, 100);
       },
       getFallbackPrompt()
     );
 
-    const safetyTimer = setTimeout(safeStart, 3200);
+    // Fast safety fallback: mic opens within 1.8s so user never waits
+    const safetyTimer = setTimeout(safeStart, 1800);
 
     return () => clearTimeout(safetyTimer);
   }, []);
@@ -406,23 +412,18 @@ export const SearchScreen: React.FC<VoiceAssistantScreenProps> = ({
         setDataNotFound(true);
         setFailedQuery(displayName);
 
-        const isMissingClassOrSec = !query.rollNo && (!query.studentClass || !query.section);
         let notFoundSpoken = '';
         if (students.length === 0) {
           notFoundSpoken = language === 'hi'
             ? 'कोई छात्र रिकॉर्ड अपलोड नहीं है। कृपया एडमिन पैनल से नया डेटा अपलोड करें।'
             : 'No student records loaded. Please upload student records from the Admin Panel.';
-        } else if (isMissingClassOrSec) {
-          notFoundSpoken = language === 'hi'
-            ? 'रिजल्ट नहीं मिला। कृपया छात्र का नाम, कक्षा और सेक्शन तीनों बताएं।'
-            : 'Result not found. Please provide student Name, Class, and Section.';
         } else {
           notFoundSpoken = language === 'hi'
-            ? 'रिजल्ट नहीं मिला। इस कक्षा और सेक्शन में यह रिकॉर्ड मौजूद नहीं है।'
-            : 'Result not found. No matching record found for this student in the specified class and section.';
+            ? `रिजल्ट नहीं मिला। ${query.name ? '"' + query.name + '"' : 'यह'} रिकॉर्ड मौजूद नहीं है।`
+            : `Result not found. No record found for ${query.name ? '"' + query.name + '"' : 'this student'}.`;
         }
 
-        voiceService.speak(notFoundSpoken, language, undefined, 'Record nahi mila. Please upload student data in Admin panel.');
+        voiceService.speak(notFoundSpoken, language, undefined, 'Result not found. Record nahi mila.');
       }
     }, 1300);
   };
