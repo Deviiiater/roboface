@@ -564,35 +564,21 @@ export function findStudentByVoice(
     return { student: null, confidence: 0, matches: [] };
   };
 
-  // Tier 1: Search within specified Class AND Section (if both provided)
-  if (studentClass && section) {
-    const classSecPool = students.filter(
-      s => s.class === studentClass && s.section.toUpperCase() === section
-    );
-    const result = matchInPool(classSecPool);
-    if (result.student) return result;
+  // 2. STRICT REQUIREMENT: ALL THREE (NAME, CLASS, SECTION) ARE MANDATORY!
+  // Unless Roll Number is provided, result CANNOT be retrieved without all three: Name, Class, and Section.
+  if (!normName || !studentClass || !section) {
+    return { student: null, confidence: 0, matches: [] };
   }
 
-  // Tier 2: Search within specified Class (if class provided without section)
-  if (studentClass) {
-    const classPool = students.filter(s => s.class === studentClass);
-    const result = matchInPool(classPool);
-    if (result.student) return result;
+  // 3. Strictly search within the specified Class & Section ONLY
+  const classSecPool = students.filter(
+    s => s.class === studentClass && s.section.toUpperCase() === section
+  );
+
+  if (classSecPool.length === 0) {
+    return { student: null, confidence: 0, matches: [] };
   }
 
-  // Tier 3: Search within specified Section (if section provided without class)
-  if (section) {
-    const secPool = students.filter(s => s.section.toUpperCase() === section);
-    const result = matchInPool(secPool);
-    if (result.student) return result;
-  }
-
-  // Tier 4: Search across the entire student body (handles unique names, full names without class)
-  const schoolWideResult = matchInPool(students);
-  if (schoolWideResult.student) {
-    return schoolWideResult;
-  }
-
-  return { student: null, confidence: 0, matches: [] };
+  return matchInPool(classSecPool);
 }
 
