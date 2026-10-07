@@ -52,6 +52,10 @@ const SECTION_NORMALIZER: Record<string, string> = {
   'b': 'B', 'bhi': 'B', 'भी': 'B', 'बी': 'B', 'ब': 'B', 'bee': 'B', 'be': 'B', 'bi': 'B', 'bhee': 'B', 'ball': 'B', 'boy': 'B',
   // Section C
   'c': 'C', 'सी': 'C', 'स': 'C', 'see': 'C', 'sea': 'C', 'si': 'C', 'cat': 'C',
+  // Section D
+  'd': 'D', 'dee': 'D', 'di': 'D', 'डी': 'D', 'द': 'D', 'dog': 'D',
+  // Section E
+  'e': 'E', 'ee': 'E', 'ई': 'E', 'इ': 'E', 'elephant': 'E',
 };
 
 

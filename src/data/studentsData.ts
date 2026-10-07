@@ -1,4 +1,23040 @@
 import { StudentRecord } from '../types';
 
-// Clean slate student database - ready for fresh data upload via Admin Panel or Excel/CSV import
-export const INITIAL_STUDENTS_DATA: StudentRecord[] = [];
+// Evaluation dataset for 829 students (Classes 6-10) from official school register
+// Subject rules: Max marks = 80 per subject
+// - Classes 6-8: English, Hindi, Mathematics, Science, Social Science, Computer, Sanskrit (560 max)
+// - Class 9: English, Hindi, Mathematics, Science, Social Science, Sanskrit (480 max; no Computer)
+// - Class 10: English, Hindi, Mathematics, Science, Social Science (400 max; no Computer, no Sanskrit)
+export const INITIAL_STUDENTS_DATA: StudentRecord[] = [
+  {
+    "student_id": "CCS-6A-6944/026",
+    "name": "Abhay Singh",
+    "class": "6",
+    "section": "A",
+    "roll_no": 6944,
+    "roll_code": "6944/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 48,
+      "Mathematics": 35,
+      "Science": 27,
+      "Social Science": 46,
+      "Computer": 61,
+      "Sanskrit": 34
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-9973/026",
+    "name": "Adheesh Jain",
+    "class": "6",
+    "section": "A",
+    "roll_no": 9973,
+    "roll_code": "9973/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 22,
+      "Hindi": 16,
+      "Mathematics": 9,
+      "Science": 10,
+      "Social Science": 16,
+      "Computer": 53,
+      "Sanskrit": 12
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-9378/026",
+    "name": "Aditya",
+    "class": "6",
+    "section": "A",
+    "roll_no": 9378,
+    "roll_code": "9378/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 54,
+      "Mathematics": 35,
+      "Science": 35,
+      "Social Science": 53,
+      "Computer": 74,
+      "Sanskrit": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-8047/026",
+    "name": "Akshit Sharma",
+    "class": "6",
+    "section": "A",
+    "roll_no": 8047,
+    "roll_code": "8047/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Hindi": 27,
+      "Mathematics": 27,
+      "Science": 16,
+      "Social Science": 12,
+      "Computer": 48,
+      "Sanskrit": 19
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-6930/026",
+    "name": "Aman Dixit",
+    "class": "6",
+    "section": "A",
+    "roll_no": 6930,
+    "roll_code": "6930/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 20,
+      "Mathematics": 14,
+      "Science": 9,
+      "Social Science": 5,
+      "Computer": 41,
+      "Sanskrit": 12
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-9559/026",
+    "name": "Amit Singh",
+    "class": "6",
+    "section": "A",
+    "roll_no": 9559,
+    "roll_code": "9559/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 27,
+      "Hindi": 0,
+      "Mathematics": 27,
+      "Science": 15,
+      "Social Science": 23,
+      "Computer": 53,
+      "Sanskrit": 17
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-9422/026",
+    "name": "Anant Joshi",
+    "class": "6",
+    "section": "A",
+    "roll_no": 9422,
+    "roll_code": "9422/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 43,
+      "Hindi": 34,
+      "Mathematics": 38,
+      "Science": 30,
+      "Social Science": 46,
+      "Computer": 68,
+      "Sanskrit": 30
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-9956/026",
+    "name": "Anay Tiwari",
+    "class": "6",
+    "section": "A",
+    "roll_no": 9956,
+    "roll_code": "9956/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 31,
+      "Hindi": 28,
+      "Mathematics": 48,
+      "Science": 19,
+      "Social Science": 24,
+      "Computer": 55,
+      "Sanskrit": 30
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-9301/026",
+    "name": "Ankush",
+    "class": "6",
+    "section": "A",
+    "roll_no": 9301,
+    "roll_code": "9301/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 9,
+      "Hindi": 8,
+      "Mathematics": 17,
+      "Science": 1,
+      "Social Science": 7,
+      "Computer": 37,
+      "Sanskrit": 21
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-6925/026",
+    "name": "Ansh Jain",
+    "class": "6",
+    "section": "A",
+    "roll_no": 6925,
+    "roll_code": "6925/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Hindi": 44,
+      "Mathematics": 40,
+      "Science": 27,
+      "Social Science": 34,
+      "Computer": 68,
+      "Sanskrit": 56
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-9702/026",
+    "name": "Ansh Jain",
+    "class": "6",
+    "section": "A",
+    "roll_no": 9702,
+    "roll_code": "9702/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 47,
+      "Mathematics": 64,
+      "Science": 55,
+      "Social Science": 60,
+      "Computer": 72,
+      "Sanskrit": 50
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-9052/026",
+    "name": "Ansh Mishra",
+    "class": "6",
+    "section": "A",
+    "roll_no": 9052,
+    "roll_code": "9052/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 69,
+      "Hindi": 69,
+      "Mathematics": 74,
+      "Science": 70,
+      "Social Science": 69,
+      "Computer": 80,
+      "Sanskrit": 69
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-10231/026",
+    "name": "Ansh Nirala",
+    "class": "6",
+    "section": "A",
+    "roll_no": 10231,
+    "roll_code": "10231/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 14,
+      "Hindi": 33,
+      "Mathematics": 16,
+      "Science": 5,
+      "Social Science": 9,
+      "Computer": 45,
+      "Sanskrit": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-8540/026",
+    "name": "Ansh Sharma",
+    "class": "6",
+    "section": "A",
+    "roll_no": 8540,
+    "roll_code": "8540/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0,
+      "Computer": 0,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-8564/026",
+    "name": "Ansh Sharma",
+    "class": "6",
+    "section": "A",
+    "roll_no": 8564,
+    "roll_code": "8564/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 42,
+      "Mathematics": 60,
+      "Science": 45,
+      "Social Science": 69,
+      "Computer": 78,
+      "Sanskrit": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-10322/026",
+    "name": "Anvay Sharma",
+    "class": "6",
+    "section": "A",
+    "roll_no": 10322,
+    "roll_code": "10322/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Hindi": 42,
+      "Mathematics": 56,
+      "Science": 49,
+      "Social Science": 55,
+      "Computer": 73,
+      "Sanskrit": 30
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-6946/026",
+    "name": "Arav Sharma",
+    "class": "6",
+    "section": "A",
+    "roll_no": 6946,
+    "roll_code": "6946/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 78,
+      "Hindi": 73,
+      "Mathematics": 75,
+      "Science": 77,
+      "Social Science": 73,
+      "Computer": 80,
+      "Sanskrit": 64
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-9494/026",
+    "name": "Aryaman Dubey",
+    "class": "6",
+    "section": "A",
+    "roll_no": 9494,
+    "roll_code": "9494/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Hindi": 45,
+      "Mathematics": 65,
+      "Science": 50,
+      "Social Science": 61,
+      "Computer": 75,
+      "Sanskrit": 47
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-6541/026",
+    "name": "Aryan Bhadouriya",
+    "class": "6",
+    "section": "A",
+    "roll_no": 6541,
+    "roll_code": "6541/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 23,
+      "Hindi": 28,
+      "Mathematics": 52,
+      "Science": 11,
+      "Social Science": 8,
+      "Computer": 49,
+      "Sanskrit": 22
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-8474/026",
+    "name": "Ashutosh Sharma",
+    "class": "6",
+    "section": "A",
+    "roll_no": 8474,
+    "roll_code": "8474/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 69,
+      "Hindi": 54,
+      "Mathematics": 73,
+      "Science": 67,
+      "Social Science": 57,
+      "Computer": 70,
+      "Sanskrit": 62
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-9290/026",
+    "name": "Atharv Sharma",
+    "class": "6",
+    "section": "A",
+    "roll_no": 9290,
+    "roll_code": "9290/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0,
+      "Computer": 0,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-9592/026",
+    "name": "Avinash Singh",
+    "class": "6",
+    "section": "A",
+    "roll_no": 9592,
+    "roll_code": "9592/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 36,
+      "Hindi": 47,
+      "Mathematics": 47,
+      "Science": 19,
+      "Social Science": 37,
+      "Computer": 58,
+      "Sanskrit": 33
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-8314/026",
+    "name": "Ayush Sharma",
+    "class": "6",
+    "section": "A",
+    "roll_no": 8314,
+    "roll_code": "8314/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 71,
+      "Hindi": 64,
+      "Mathematics": 73,
+      "Science": 59,
+      "Social Science": 70,
+      "Computer": 77,
+      "Sanskrit": 66
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-6379/026",
+    "name": "Devanshu Katare",
+    "class": "6",
+    "section": "A",
+    "roll_no": 6379,
+    "roll_code": "6379/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 40,
+      "Mathematics": 53,
+      "Science": 38,
+      "Social Science": 41,
+      "Computer": 65,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-8409/026",
+    "name": "Divy Pratap Singh",
+    "class": "6",
+    "section": "A",
+    "roll_no": 8409,
+    "roll_code": "8409/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 18,
+      "Hindi": 15,
+      "Mathematics": 27,
+      "Science": 8,
+      "Social Science": 16,
+      "Computer": 46,
+      "Sanskrit": 14
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-8806/026",
+    "name": "Divyansh Sharma",
+    "class": "6",
+    "section": "A",
+    "roll_no": 8806,
+    "roll_code": "8806/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 19,
+      "Mathematics": 34,
+      "Science": 27,
+      "Social Science": 21,
+      "Computer": 59,
+      "Sanskrit": 23
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-6418/026",
+    "name": "Harsh Dubey",
+    "class": "6",
+    "section": "A",
+    "roll_no": 6418,
+    "roll_code": "6418/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Hindi": 56,
+      "Mathematics": 47,
+      "Science": 44,
+      "Social Science": 44,
+      "Computer": 69,
+      "Sanskrit": 49
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-8298/026",
+    "name": "Hemant Purohit",
+    "class": "6",
+    "section": "A",
+    "roll_no": 8298,
+    "roll_code": "8298/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 39,
+      "Hindi": 56,
+      "Mathematics": 55,
+      "Science": 30,
+      "Social Science": 53,
+      "Computer": 75,
+      "Sanskrit": 51
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-6537/026",
+    "name": "Lavkush Baghel",
+    "class": "6",
+    "section": "A",
+    "roll_no": 6537,
+    "roll_code": "6537/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 22,
+      "Hindi": 0,
+      "Mathematics": 17,
+      "Science": 14,
+      "Social Science": 24,
+      "Computer": 43,
+      "Sanskrit": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-9078/026",
+    "name": "Madhav Barua",
+    "class": "6",
+    "section": "A",
+    "roll_no": 9078,
+    "roll_code": "9078/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 35,
+      "Hindi": 54,
+      "Mathematics": 46,
+      "Science": 40,
+      "Social Science": 56,
+      "Computer": 65,
+      "Sanskrit": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-10064/026",
+    "name": "Madhav Joshi",
+    "class": "6",
+    "section": "A",
+    "roll_no": 10064,
+    "roll_code": "10064/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 50,
+      "Hindi": 44,
+      "Mathematics": 45,
+      "Science": 58,
+      "Social Science": 54,
+      "Computer": 65,
+      "Sanskrit": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-10256/026",
+    "name": "Manish Shrivas",
+    "class": "6",
+    "section": "A",
+    "roll_no": 10256,
+    "roll_code": "10256/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 62,
+      "Mathematics": 42,
+      "Science": 46,
+      "Social Science": 65,
+      "Computer": 65,
+      "Sanskrit": 54
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-6913/026",
+    "name": "Naveen Sharma",
+    "class": "6",
+    "section": "A",
+    "roll_no": 6913,
+    "roll_code": "6913/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 54,
+      "Hindi": 45,
+      "Mathematics": 45,
+      "Science": 44,
+      "Social Science": 44,
+      "Computer": 70,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-6929/026",
+    "name": "Puspendra Singh Bhadouriya",
+    "class": "6",
+    "section": "A",
+    "roll_no": 6929,
+    "roll_code": "6929/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 34,
+      "Hindi": 49,
+      "Mathematics": 29,
+      "Science": 27,
+      "Social Science": 48,
+      "Computer": 60,
+      "Sanskrit": 34
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-10201/026",
+    "name": "Raj",
+    "class": "6",
+    "section": "A",
+    "roll_no": 10201,
+    "roll_code": "10201/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 33,
+      "Hindi": 53,
+      "Mathematics": 50,
+      "Science": 27,
+      "Social Science": 56,
+      "Computer": 68,
+      "Sanskrit": 35
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-10312/026",
+    "name": "Rishabh",
+    "class": "6",
+    "section": "A",
+    "roll_no": 10312,
+    "roll_code": "10312/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 28,
+      "Mathematics": 31,
+      "Science": 15,
+      "Social Science": 27,
+      "Computer": 58,
+      "Sanskrit": 18
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-9588/026",
+    "name": "Riyansh Singh",
+    "class": "6",
+    "section": "A",
+    "roll_no": 9588,
+    "roll_code": "9588/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 50,
+      "Mathematics": 47,
+      "Science": 38,
+      "Social Science": 55,
+      "Computer": 60,
+      "Sanskrit": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-8345/026",
+    "name": "Rudra Pratap Purohit",
+    "class": "6",
+    "section": "A",
+    "roll_no": 8345,
+    "roll_code": "8345/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 29,
+      "Mathematics": 54,
+      "Science": 37,
+      "Social Science": 61,
+      "Computer": 69,
+      "Sanskrit": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-9742/026",
+    "name": "Rudranarayan Mishra",
+    "class": "6",
+    "section": "A",
+    "roll_no": 9742,
+    "roll_code": "9742/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Hindi": 52,
+      "Mathematics": 63,
+      "Science": 29,
+      "Social Science": 54,
+      "Computer": 71,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-10127/026",
+    "name": "Sahiv Singh",
+    "class": "6",
+    "section": "A",
+    "roll_no": 10127,
+    "roll_code": "10127/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 24,
+      "Mathematics": 27,
+      "Science": 11,
+      "Social Science": 14,
+      "Computer": 47,
+      "Sanskrit": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-9521/026",
+    "name": "Salman Khan",
+    "class": "6",
+    "section": "A",
+    "roll_no": 9521,
+    "roll_code": "9521/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 20,
+      "Mathematics": 16,
+      "Science": 6,
+      "Social Science": 13,
+      "Computer": 41,
+      "Sanskrit": 9
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-10150/026",
+    "name": "Shiv Pratap Singh Yadav",
+    "class": "6",
+    "section": "A",
+    "roll_no": 10150,
+    "roll_code": "10150/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 37,
+      "Hindi": 38,
+      "Mathematics": 39,
+      "Science": 29,
+      "Social Science": 48,
+      "Computer": 60,
+      "Sanskrit": 33
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-9772/026",
+    "name": "Shivakar",
+    "class": "6",
+    "section": "A",
+    "roll_no": 9772,
+    "roll_code": "9772/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 38,
+      "Mathematics": 28,
+      "Science": 10,
+      "Social Science": 9,
+      "Computer": 43,
+      "Sanskrit": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-10047/026",
+    "name": "Shivansh Chaudhary",
+    "class": "6",
+    "section": "A",
+    "roll_no": 10047,
+    "roll_code": "10047/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 62,
+      "Mathematics": 71,
+      "Science": 69,
+      "Social Science": 65,
+      "Computer": 73,
+      "Sanskrit": 55
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-10162/026",
+    "name": "Shivansh Yadav",
+    "class": "6",
+    "section": "A",
+    "roll_no": 10162,
+    "roll_code": "10162/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 66,
+      "Hindi": 53,
+      "Mathematics": 57,
+      "Science": 64,
+      "Social Science": 48,
+      "Computer": 71,
+      "Sanskrit": 46
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-10257/026",
+    "name": "Sumit",
+    "class": "6",
+    "section": "A",
+    "roll_no": 10257,
+    "roll_code": "10257/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 13,
+      "Hindi": 18,
+      "Mathematics": 7,
+      "Science": 6,
+      "Social Science": 21,
+      "Computer": 39,
+      "Sanskrit": 4
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-10082/026",
+    "name": "Sumukh Sharma",
+    "class": "6",
+    "section": "A",
+    "roll_no": 10082,
+    "roll_code": "10082/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 72,
+      "Hindi": 63,
+      "Mathematics": 63,
+      "Science": 71,
+      "Social Science": 72,
+      "Computer": 75,
+      "Sanskrit": 61
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6A-8190/026",
+    "name": "Yashvardhan Singh",
+    "class": "6",
+    "section": "A",
+    "roll_no": 8190,
+    "roll_code": "8190/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 39,
+      "Hindi": 30,
+      "Mathematics": 38,
+      "Science": 27,
+      "Social Science": 30,
+      "Computer": 61,
+      "Sanskrit": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-6875/026",
+    "name": "Aarush Bhadouriya",
+    "class": "6",
+    "section": "B",
+    "roll_no": 6875,
+    "roll_code": "6875/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 69,
+      "Hindi": 70,
+      "Mathematics": 70,
+      "Science": 74,
+      "Social Science": 63,
+      "Computer": 48,
+      "Sanskrit": 63
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-10186/026",
+    "name": "Abhay Singh",
+    "class": "6",
+    "section": "B",
+    "roll_no": 10186,
+    "roll_code": "10186/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 32,
+      "Hindi": 32,
+      "Mathematics": 46,
+      "Science": 27,
+      "Social Science": 23,
+      "Computer": 67,
+      "Sanskrit": 34
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-6751/026",
+    "name": "Abhijit Singh Bhadauriya",
+    "class": "6",
+    "section": "B",
+    "roll_no": 6751,
+    "roll_code": "6751/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Hindi": 57,
+      "Mathematics": 63,
+      "Science": 51,
+      "Social Science": 41,
+      "Computer": 72,
+      "Sanskrit": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-10121/026",
+    "name": "Anshu Singh Baraiya",
+    "class": "6",
+    "section": "B",
+    "roll_no": 10121,
+    "roll_code": "10121/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Hindi": 48,
+      "Mathematics": 51,
+      "Science": 38,
+      "Social Science": 30,
+      "Computer": 58,
+      "Sanskrit": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-8968/026",
+    "name": "Anuj",
+    "class": "6",
+    "section": "B",
+    "roll_no": 8968,
+    "roll_code": "8968/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Hindi": 62,
+      "Mathematics": 72,
+      "Science": 53,
+      "Social Science": 57,
+      "Computer": 72,
+      "Sanskrit": 53
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-9731/026",
+    "name": "Arav",
+    "class": "6",
+    "section": "B",
+    "roll_no": 9731,
+    "roll_code": "9731/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 47,
+      "Hindi": 40,
+      "Mathematics": 47,
+      "Science": 0,
+      "Social Science": 33,
+      "Computer": 56,
+      "Sanskrit": 10
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-9753/026",
+    "name": "Arpit Sharma",
+    "class": "6",
+    "section": "B",
+    "roll_no": 9753,
+    "roll_code": "9753/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 54,
+      "Hindi": 42,
+      "Mathematics": 42,
+      "Science": 52,
+      "Social Science": 46,
+      "Computer": 56,
+      "Sanskrit": 40
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-8697/026",
+    "name": "Aryan Pathak",
+    "class": "6",
+    "section": "B",
+    "roll_no": 8697,
+    "roll_code": "8697/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 32,
+      "Hindi": 40,
+      "Mathematics": 42,
+      "Science": 16,
+      "Social Science": 22,
+      "Computer": 60,
+      "Sanskrit": 16
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-10296/026",
+    "name": "Ashish",
+    "class": "6",
+    "section": "B",
+    "roll_no": 10296,
+    "roll_code": "10296/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0,
+      "Computer": 0,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-10105/026",
+    "name": "Ashutosh",
+    "class": "6",
+    "section": "B",
+    "roll_no": 10105,
+    "roll_code": "10105/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 8,
+      "Hindi": 14,
+      "Mathematics": 7,
+      "Science": 7,
+      "Social Science": 3,
+      "Computer": 35,
+      "Sanskrit": 5
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-9830/026",
+    "name": "Ayush Sharma",
+    "class": "6",
+    "section": "B",
+    "roll_no": 9830,
+    "roll_code": "9830/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 25,
+      "Hindi": 0,
+      "Mathematics": 36,
+      "Science": 11,
+      "Social Science": 28,
+      "Computer": 58,
+      "Sanskrit": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-8599/026",
+    "name": "Ayush Singh Bhadouriya",
+    "class": "6",
+    "section": "B",
+    "roll_no": 8599,
+    "roll_code": "8599/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 76,
+      "Hindi": 66,
+      "Mathematics": 62,
+      "Science": 54,
+      "Social Science": 67,
+      "Computer": 74,
+      "Sanskrit": 52
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-8431/026",
+    "name": "Bhupendra Baghel",
+    "class": "6",
+    "section": "B",
+    "roll_no": 8431,
+    "roll_code": "8431/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 60,
+      "Mathematics": 62,
+      "Science": 62,
+      "Social Science": 68,
+      "Computer": 70,
+      "Sanskrit": 40
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-10028/026",
+    "name": "Devansh Bhadouriya",
+    "class": "6",
+    "section": "B",
+    "roll_no": 10028,
+    "roll_code": "10028/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Hindi": 50,
+      "Mathematics": 28,
+      "Science": 27,
+      "Social Science": 25,
+      "Computer": 53,
+      "Sanskrit": 26
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-6948/026",
+    "name": "Harshit Yadav",
+    "class": "6",
+    "section": "B",
+    "roll_no": 6948,
+    "roll_code": "6948/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 33,
+      "Hindi": 40,
+      "Mathematics": 20,
+      "Science": 10,
+      "Social Science": 15,
+      "Computer": 61,
+      "Sanskrit": 13
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-6977/026",
+    "name": "Jigar Singh",
+    "class": "6",
+    "section": "B",
+    "roll_no": 6977,
+    "roll_code": "6977/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 50,
+      "Hindi": 0,
+      "Mathematics": 54,
+      "Science": 13,
+      "Social Science": 32,
+      "Computer": 64,
+      "Sanskrit": 13
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-9749/026",
+    "name": "Kartik Sharma",
+    "class": "6",
+    "section": "B",
+    "roll_no": 9749,
+    "roll_code": "9749/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 75,
+      "Hindi": 72,
+      "Mathematics": 71,
+      "Science": 77,
+      "Social Science": 73,
+      "Computer": 78,
+      "Sanskrit": 65
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-9826/026",
+    "name": "Krishna Bhadouriya",
+    "class": "6",
+    "section": "B",
+    "roll_no": 9826,
+    "roll_code": "9826/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 32,
+      "Hindi": 27,
+      "Mathematics": 38,
+      "Science": 16,
+      "Social Science": 23,
+      "Computer": 55,
+      "Sanskrit": 3
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-8349/026",
+    "name": "Krishna Singh",
+    "class": "6",
+    "section": "B",
+    "roll_no": 8349,
+    "roll_code": "8349/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 36,
+      "Mathematics": 35,
+      "Science": 12,
+      "Social Science": 15,
+      "Computer": 46,
+      "Sanskrit": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-9977/026",
+    "name": "Manish",
+    "class": "6",
+    "section": "B",
+    "roll_no": 9977,
+    "roll_code": "9977/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 38,
+      "Mathematics": 44,
+      "Science": 18,
+      "Social Science": 27,
+      "Computer": 57,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-10062/026",
+    "name": "Mohit Singh Narwariya",
+    "class": "6",
+    "section": "B",
+    "roll_no": 10062,
+    "roll_code": "10062/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Hindi": 45,
+      "Mathematics": 58,
+      "Science": 45,
+      "Social Science": 40,
+      "Computer": 65,
+      "Sanskrit": 30
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-9176/026",
+    "name": "Parth Singh",
+    "class": "6",
+    "section": "B",
+    "roll_no": 9176,
+    "roll_code": "9176/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 77,
+      "Hindi": 70,
+      "Mathematics": 66,
+      "Science": 69,
+      "Social Science": 71,
+      "Computer": 78,
+      "Sanskrit": 62
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-10138/026",
+    "name": "Prateek Singh",
+    "class": "6",
+    "section": "B",
+    "roll_no": 10138,
+    "roll_code": "10138/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 33,
+      "Hindi": 50,
+      "Mathematics": 44,
+      "Science": 27,
+      "Social Science": 29,
+      "Computer": 56,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-10110/026",
+    "name": "Prince",
+    "class": "6",
+    "section": "B",
+    "roll_no": 10110,
+    "roll_code": "10110/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Hindi": 31,
+      "Mathematics": 51,
+      "Science": 14,
+      "Social Science": 24,
+      "Computer": 55,
+      "Sanskrit": 18
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-10095/026",
+    "name": "Prince Narwariya",
+    "class": "6",
+    "section": "B",
+    "roll_no": 10095,
+    "roll_code": "10095/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 11,
+      "Hindi": 40,
+      "Mathematics": 33,
+      "Science": 7,
+      "Social Science": 19,
+      "Computer": 42,
+      "Sanskrit": 16
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-6545/026",
+    "name": "Prince Tomar",
+    "class": "6",
+    "section": "B",
+    "roll_no": 6545,
+    "roll_code": "6545/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Hindi": 40,
+      "Mathematics": 44,
+      "Science": 27,
+      "Social Science": 27,
+      "Computer": 61,
+      "Sanskrit": 33
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-8180/026",
+    "name": "Prince Yadav",
+    "class": "6",
+    "section": "B",
+    "roll_no": 8180,
+    "roll_code": "8180/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 55,
+      "Mathematics": 66,
+      "Science": 55,
+      "Social Science": 43,
+      "Computer": 72,
+      "Sanskrit": 39
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-8486/026",
+    "name": "Priyanshu Soni",
+    "class": "6",
+    "section": "B",
+    "roll_no": 8486,
+    "roll_code": "8486/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 71,
+      "Mathematics": 54,
+      "Science": 58,
+      "Social Science": 52,
+      "Computer": 73,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-6402/026",
+    "name": "Rishabh",
+    "class": "6",
+    "section": "B",
+    "roll_no": 6402,
+    "roll_code": "6402/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 51,
+      "Mathematics": 56,
+      "Science": 27,
+      "Social Science": 41,
+      "Computer": 67,
+      "Sanskrit": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-10042/026",
+    "name": "Rishabh",
+    "class": "6",
+    "section": "B",
+    "roll_no": 10042,
+    "roll_code": "10042/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 43,
+      "Hindi": 50,
+      "Mathematics": 40,
+      "Science": 40,
+      "Social Science": 51,
+      "Computer": 64,
+      "Sanskrit": 17
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-9582/026",
+    "name": "Rishabh Bheruya",
+    "class": "6",
+    "section": "B",
+    "roll_no": 9582,
+    "roll_code": "9582/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 31,
+      "Hindi": 33,
+      "Mathematics": 30,
+      "Science": 14,
+      "Social Science": 29,
+      "Computer": 51,
+      "Sanskrit": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-9551/026",
+    "name": "Ritik Singh Bhadoriya",
+    "class": "6",
+    "section": "B",
+    "roll_no": 9551,
+    "roll_code": "9551/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 42,
+      "Hindi": 55,
+      "Mathematics": 41,
+      "Science": 18,
+      "Social Science": 37,
+      "Computer": 60,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-8365/026",
+    "name": "Rudra Tripathi",
+    "class": "6",
+    "section": "B",
+    "roll_no": 8365,
+    "roll_code": "8365/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 33,
+      "Hindi": 42,
+      "Mathematics": 16,
+      "Science": 18,
+      "Social Science": 30,
+      "Computer": 56,
+      "Sanskrit": 14
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-8600/026",
+    "name": "Satyam Singh",
+    "class": "6",
+    "section": "B",
+    "roll_no": 8600,
+    "roll_code": "8600/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 40,
+      "Mathematics": 39,
+      "Science": 43,
+      "Social Science": 58,
+      "Computer": 59,
+      "Sanskrit": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-10137/026",
+    "name": "Satyam Yadav",
+    "class": "6",
+    "section": "B",
+    "roll_no": 10137,
+    "roll_code": "10137/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 35,
+      "Mathematics": 32,
+      "Science": 10,
+      "Social Science": 20,
+      "Computer": 48,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-10008/026",
+    "name": "Sauhardra",
+    "class": "6",
+    "section": "B",
+    "roll_no": 10008,
+    "roll_code": "10008/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 51,
+      "Mathematics": 56,
+      "Science": 32,
+      "Social Science": 42,
+      "Computer": 53,
+      "Sanskrit": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-6735/026",
+    "name": "Shivansh Mishra",
+    "class": "6",
+    "section": "B",
+    "roll_no": 6735,
+    "roll_code": "6735/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 58,
+      "Hindi": 45,
+      "Mathematics": 46,
+      "Science": 27,
+      "Social Science": 29,
+      "Computer": 64,
+      "Sanskrit": 49
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-6673/026",
+    "name": "Shivansh Singh Kushwah",
+    "class": "6",
+    "section": "B",
+    "roll_no": 6673,
+    "roll_code": "6673/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Hindi": 55,
+      "Mathematics": 60,
+      "Science": 52,
+      "Social Science": 48,
+      "Computer": 70,
+      "Sanskrit": 43
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-8199/026",
+    "name": "Shivansh Trivedi",
+    "class": "6",
+    "section": "B",
+    "roll_no": 8199,
+    "roll_code": "8199/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Hindi": 32,
+      "Mathematics": 35,
+      "Science": 51,
+      "Social Science": 46,
+      "Computer": 65,
+      "Sanskrit": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-6472/026",
+    "name": "Sourabh Singh Rajawat",
+    "class": "6",
+    "section": "B",
+    "roll_no": 6472,
+    "roll_code": "6472/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 44,
+      "Mathematics": 45,
+      "Science": 28,
+      "Social Science": 24,
+      "Computer": 67,
+      "Sanskrit": 40
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-6671/026",
+    "name": "Vansh",
+    "class": "6",
+    "section": "B",
+    "roll_no": 6671,
+    "roll_code": "6671/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 27,
+      "Mathematics": 42,
+      "Science": 9,
+      "Social Science": 13,
+      "Computer": 51,
+      "Sanskrit": 17
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-6805/026",
+    "name": "Vansh Singh",
+    "class": "6",
+    "section": "B",
+    "roll_no": 6805,
+    "roll_code": "6805/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 70,
+      "Hindi": 67,
+      "Mathematics": 66,
+      "Science": 69,
+      "Social Science": 71,
+      "Computer": 78,
+      "Sanskrit": 67
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-9116/026",
+    "name": "Vivek",
+    "class": "6",
+    "section": "B",
+    "roll_no": 9116,
+    "roll_code": "9116/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 15,
+      "Hindi": 27,
+      "Mathematics": 6,
+      "Science": 8,
+      "Social Science": 3,
+      "Computer": 46,
+      "Sanskrit": 9
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-10131/026",
+    "name": "Vivek Ojha",
+    "class": "6",
+    "section": "B",
+    "roll_no": 10131,
+    "roll_code": "10131/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 62,
+      "Mathematics": 62,
+      "Science": 72,
+      "Social Science": 52,
+      "Computer": 67,
+      "Sanskrit": 52
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-9614/026",
+    "name": "Yash Sharma",
+    "class": "6",
+    "section": "B",
+    "roll_no": 9614,
+    "roll_code": "9614/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 18,
+      "Hindi": 27,
+      "Mathematics": 32,
+      "Science": 14,
+      "Social Science": 12,
+      "Computer": 49,
+      "Sanskrit": 14
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-8473/026",
+    "name": "Yashraj Singh Haroliya",
+    "class": "6",
+    "section": "B",
+    "roll_no": 8473,
+    "roll_code": "8473/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 52,
+      "Mathematics": 65,
+      "Science": 47,
+      "Social Science": 48,
+      "Computer": 68,
+      "Sanskrit": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6B-9320/026",
+    "name": "Yuvraj Singh",
+    "class": "6",
+    "section": "B",
+    "roll_no": 9320,
+    "roll_code": "9320/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Hindi": 35,
+      "Mathematics": 45,
+      "Science": 23,
+      "Social Science": 43,
+      "Computer": 56,
+      "Sanskrit": 18
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-9998/026",
+    "name": "Aadithi Ojha",
+    "class": "6",
+    "section": "D",
+    "roll_no": 9998,
+    "roll_code": "9998/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 73,
+      "Hindi": 60,
+      "Mathematics": 68,
+      "Science": 65,
+      "Social Science": 66,
+      "Computer": 79,
+      "Sanskrit": 63
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-9207/026",
+    "name": "Aaradhya Sharma",
+    "class": "6",
+    "section": "D",
+    "roll_no": 9207,
+    "roll_code": "9207/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 72,
+      "Hindi": 63,
+      "Mathematics": 75,
+      "Science": 78,
+      "Social Science": 70,
+      "Computer": 80,
+      "Sanskrit": 67
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-6554/026",
+    "name": "Aaradhya Tiwari",
+    "class": "6",
+    "section": "D",
+    "roll_no": 6554,
+    "roll_code": "6554/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 78,
+      "Hindi": 56,
+      "Mathematics": 68,
+      "Science": 71,
+      "Social Science": 69,
+      "Computer": 72,
+      "Sanskrit": 61
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-10128/026",
+    "name": "Aashi Sharma",
+    "class": "6",
+    "section": "D",
+    "roll_no": 10128,
+    "roll_code": "10128/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Hindi": 49,
+      "Mathematics": 39,
+      "Science": 34,
+      "Social Science": 39,
+      "Computer": 67,
+      "Sanskrit": 42
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-8217/026",
+    "name": "Aditi Sharma",
+    "class": "6",
+    "section": "D",
+    "roll_no": 8217,
+    "roll_code": "8217/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Hindi": 63,
+      "Mathematics": 64,
+      "Science": 60,
+      "Social Science": 56,
+      "Computer": 47,
+      "Sanskrit": 55
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-8866/026",
+    "name": "Akrti Sharma",
+    "class": "6",
+    "section": "D",
+    "roll_no": 8866,
+    "roll_code": "8866/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Hindi": 21,
+      "Mathematics": 27,
+      "Science": 27,
+      "Social Science": 17,
+      "Computer": 50,
+      "Sanskrit": 18
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-6513/026",
+    "name": "Amrta Yadav",
+    "class": "6",
+    "section": "D",
+    "roll_no": 6513,
+    "roll_code": "6513/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 54,
+      "Mathematics": 61,
+      "Science": 60,
+      "Social Science": 71,
+      "Computer": 70,
+      "Sanskrit": 49
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-9989/026",
+    "name": "Anshika Baghel",
+    "class": "6",
+    "section": "D",
+    "roll_no": 9989,
+    "roll_code": "9989/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 51,
+      "Hindi": 60,
+      "Mathematics": 61,
+      "Science": 51,
+      "Social Science": 60,
+      "Computer": 71,
+      "Sanskrit": 40
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-6928/026",
+    "name": "Anshika Sharma",
+    "class": "6",
+    "section": "D",
+    "roll_no": 6928,
+    "roll_code": "6928/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 51,
+      "Mathematics": 39,
+      "Science": 45,
+      "Social Science": 58,
+      "Computer": 65,
+      "Sanskrit": 46
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-10243/026",
+    "name": "Anuradha",
+    "class": "6",
+    "section": "D",
+    "roll_no": 10243,
+    "roll_code": "10243/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 37,
+      "Hindi": 52,
+      "Mathematics": 49,
+      "Science": 42,
+      "Social Science": 52,
+      "Computer": 72,
+      "Sanskrit": 40
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-9667/026",
+    "name": "Anvi Agrawal",
+    "class": "6",
+    "section": "D",
+    "roll_no": 9667,
+    "roll_code": "9667/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 50,
+      "Mathematics": 48,
+      "Science": 27,
+      "Social Science": 51,
+      "Computer": 67,
+      "Sanskrit": 41
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-10016/026",
+    "name": "Aradhya Balothiya",
+    "class": "6",
+    "section": "D",
+    "roll_no": 10016,
+    "roll_code": "10016/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Hindi": 55,
+      "Mathematics": 50,
+      "Science": 38,
+      "Social Science": 47,
+      "Computer": 63,
+      "Sanskrit": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-10020/026",
+    "name": "Aradhya Jain",
+    "class": "6",
+    "section": "D",
+    "roll_no": 10020,
+    "roll_code": "10020/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 53,
+      "Mathematics": 55,
+      "Science": 54,
+      "Social Science": 60,
+      "Computer": 70,
+      "Sanskrit": 33
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-9992/026",
+    "name": "Aradhya Sengar",
+    "class": "6",
+    "section": "D",
+    "roll_no": 9992,
+    "roll_code": "9992/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Hindi": 59,
+      "Mathematics": 49,
+      "Science": 35,
+      "Social Science": 48,
+      "Computer": 62,
+      "Sanskrit": 48
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-6809/026",
+    "name": "Aradhya Sharma",
+    "class": "6",
+    "section": "D",
+    "roll_no": 6809,
+    "roll_code": "6809/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 78,
+      "Hindi": 75,
+      "Mathematics": 79,
+      "Science": 72,
+      "Social Science": 71,
+      "Computer": 80,
+      "Sanskrit": 76
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-8172/026",
+    "name": "Aradhya Sharma",
+    "class": "6",
+    "section": "D",
+    "roll_no": 8172,
+    "roll_code": "8172/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 35,
+      "Hindi": 34,
+      "Mathematics": 33,
+      "Science": 27,
+      "Social Science": 17,
+      "Computer": 59,
+      "Sanskrit": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-8402/026",
+    "name": "Arya Jadaun",
+    "class": "6",
+    "section": "D",
+    "roll_no": 8402,
+    "roll_code": "8402/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 51,
+      "Hindi": 57,
+      "Mathematics": 53,
+      "Science": 29,
+      "Social Science": 56,
+      "Computer": 67,
+      "Sanskrit": 35
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-9195/026",
+    "name": "Ashi",
+    "class": "6",
+    "section": "D",
+    "roll_no": 9195,
+    "roll_code": "9195/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 57,
+      "Mathematics": 61,
+      "Science": 62,
+      "Social Science": 67,
+      "Computer": 72,
+      "Sanskrit": 50
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-6649/026",
+    "name": "Avni Shivhare",
+    "class": "6",
+    "section": "D",
+    "roll_no": 6649,
+    "roll_code": "6649/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Hindi": 49,
+      "Mathematics": 59,
+      "Science": 64,
+      "Social Science": 54,
+      "Computer": 66,
+      "Sanskrit": 42
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-10043/026",
+    "name": "Bhoomika",
+    "class": "6",
+    "section": "D",
+    "roll_no": 10043,
+    "roll_code": "10043/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 19,
+      "Hindi": 20,
+      "Mathematics": 12,
+      "Science": 8,
+      "Social Science": 17,
+      "Computer": 46,
+      "Sanskrit": 20
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-10207/026",
+    "name": "Damini",
+    "class": "6",
+    "section": "D",
+    "roll_no": 10207,
+    "roll_code": "10207/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 42,
+      "Hindi": 52,
+      "Mathematics": 42,
+      "Science": 49,
+      "Social Science": 59,
+      "Computer": 62,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-6518/026",
+    "name": "Dhruvika Singh",
+    "class": "6",
+    "section": "D",
+    "roll_no": 6518,
+    "roll_code": "6518/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 44,
+      "Mathematics": 65,
+      "Science": 45,
+      "Social Science": 45,
+      "Computer": 62,
+      "Sanskrit": 21
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-8281/026",
+    "name": "Garima",
+    "class": "6",
+    "section": "D",
+    "roll_no": 8281,
+    "roll_code": "8281/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 49,
+      "Computer": 0,
+      "Sanskrit": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-9459/026",
+    "name": "Gunjan",
+    "class": "6",
+    "section": "D",
+    "roll_no": 9459,
+    "roll_code": "9459/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 37,
+      "Hindi": 37,
+      "Mathematics": 27,
+      "Science": 27,
+      "Social Science": 25,
+      "Computer": 49,
+      "Sanskrit": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-6927/026",
+    "name": "Lali",
+    "class": "6",
+    "section": "D",
+    "roll_no": 6927,
+    "roll_code": "6927/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 16,
+      "Hindi": 28,
+      "Mathematics": 11,
+      "Science": 3,
+      "Social Science": 21,
+      "Computer": 49,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-6803/026",
+    "name": "Mahak",
+    "class": "6",
+    "section": "D",
+    "roll_no": 6803,
+    "roll_code": "6803/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Hindi": 65,
+      "Mathematics": 42,
+      "Science": 53,
+      "Social Science": 50,
+      "Computer": 73,
+      "Sanskrit": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-7018/026",
+    "name": "Manasvi Sharma",
+    "class": "6",
+    "section": "D",
+    "roll_no": 7018,
+    "roll_code": "7018/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 50,
+      "Mathematics": 63,
+      "Science": 52,
+      "Social Science": 45,
+      "Computer": 65,
+      "Sanskrit": 49
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-6440/026",
+    "name": "Manigya Shrivas",
+    "class": "6",
+    "section": "D",
+    "roll_no": 6440,
+    "roll_code": "6440/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 63,
+      "Mathematics": 58,
+      "Science": 60,
+      "Social Science": 58,
+      "Computer": 73,
+      "Sanskrit": 61
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-10061/026",
+    "name": "Neelam Lodhi",
+    "class": "6",
+    "section": "D",
+    "roll_no": 10061,
+    "roll_code": "10061/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 19,
+      "Hindi": 0,
+      "Mathematics": 14,
+      "Science": 15,
+      "Social Science": 7,
+      "Computer": 41,
+      "Sanskrit": 20
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-8363/026",
+    "name": "Neeshu",
+    "class": "6",
+    "section": "D",
+    "roll_no": 8363,
+    "roll_code": "8363/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 37,
+      "Hindi": 40,
+      "Mathematics": 41,
+      "Science": 34,
+      "Social Science": 27,
+      "Computer": 56,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-10273/026",
+    "name": "Niharika Pathak",
+    "class": "6",
+    "section": "D",
+    "roll_no": 10273,
+    "roll_code": "10273/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 72,
+      "Hindi": 60,
+      "Mathematics": 62,
+      "Science": 67,
+      "Social Science": 61,
+      "Computer": 76,
+      "Sanskrit": 53
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-9688/026",
+    "name": "Nitya",
+    "class": "6",
+    "section": "D",
+    "roll_no": 9688,
+    "roll_code": "9688/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 24,
+      "Hindi": 29,
+      "Mathematics": 18,
+      "Science": 10,
+      "Social Science": 15,
+      "Computer": 47,
+      "Sanskrit": 17
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-8432/026",
+    "name": "Palak Sharma",
+    "class": "6",
+    "section": "D",
+    "roll_no": 8432,
+    "roll_code": "8432/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 70,
+      "Hindi": 66,
+      "Mathematics": 57,
+      "Science": 69,
+      "Social Science": 66,
+      "Computer": 75,
+      "Sanskrit": 52
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-10013/026",
+    "name": "Palak Yadav",
+    "class": "6",
+    "section": "D",
+    "roll_no": 10013,
+    "roll_code": "10013/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Hindi": 55,
+      "Mathematics": 55,
+      "Science": 59,
+      "Social Science": 46,
+      "Computer": 62,
+      "Sanskrit": 58
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-6926/026",
+    "name": "Priya",
+    "class": "6",
+    "section": "D",
+    "roll_no": 6926,
+    "roll_code": "6926/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 37,
+      "Hindi": 45,
+      "Mathematics": 15,
+      "Science": 27,
+      "Social Science": 23,
+      "Computer": 45,
+      "Sanskrit": 22
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-8309/026",
+    "name": "Ragini",
+    "class": "6",
+    "section": "D",
+    "roll_no": 8309,
+    "roll_code": "8309/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 51,
+      "Mathematics": 56,
+      "Science": 46,
+      "Social Science": 59,
+      "Computer": 73,
+      "Sanskrit": 40
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-9876/026",
+    "name": "Ravina",
+    "class": "6",
+    "section": "D",
+    "roll_no": 9876,
+    "roll_code": "9876/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 39,
+      "Hindi": 45,
+      "Mathematics": 42,
+      "Science": 27,
+      "Social Science": 25,
+      "Computer": 46,
+      "Sanskrit": 14
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-6704/026",
+    "name": "Rishika Dixit",
+    "class": "6",
+    "section": "D",
+    "roll_no": 6704,
+    "roll_code": "6704/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 71,
+      "Hindi": 58,
+      "Mathematics": 68,
+      "Science": 64,
+      "Social Science": 71,
+      "Computer": 73,
+      "Sanskrit": 36
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-9036/026",
+    "name": "Seenu",
+    "class": "6",
+    "section": "D",
+    "roll_no": 9036,
+    "roll_code": "9036/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 40,
+      "Mathematics": 34,
+      "Science": 7,
+      "Social Science": 71,
+      "Computer": 47,
+      "Sanskrit": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-8673/026",
+    "name": "Shivanya Bhadouria",
+    "class": "6",
+    "section": "D",
+    "roll_no": 8673,
+    "roll_code": "8673/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0,
+      "Computer": 0,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-9216/026",
+    "name": "Shivi",
+    "class": "6",
+    "section": "D",
+    "roll_no": 9216,
+    "roll_code": "9216/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 55,
+      "Mathematics": 55,
+      "Science": 56,
+      "Social Science": 54,
+      "Computer": 59,
+      "Sanskrit": 33
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-9021/026",
+    "name": "Swati Narwariya",
+    "class": "6",
+    "section": "D",
+    "roll_no": 9021,
+    "roll_code": "9021/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 71,
+      "Hindi": 65,
+      "Mathematics": 58,
+      "Science": 67,
+      "Social Science": 68,
+      "Computer": 72,
+      "Sanskrit": 70
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-6931/026",
+    "name": "Ujala",
+    "class": "6",
+    "section": "D",
+    "roll_no": 6931,
+    "roll_code": "6931/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 16,
+      "Mathematics": 7,
+      "Science": 3,
+      "Social Science": 11,
+      "Computer": 34,
+      "Sanskrit": 7
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-9374/026",
+    "name": "Vaishnavi",
+    "class": "6",
+    "section": "D",
+    "roll_no": 9374,
+    "roll_code": "9374/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 30,
+      "Mathematics": 19,
+      "Science": 16,
+      "Social Science": 19,
+      "Computer": 40,
+      "Sanskrit": 16
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-9793/026",
+    "name": "Vaishnavi",
+    "class": "6",
+    "section": "D",
+    "roll_no": 9793,
+    "roll_code": "9793/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Hindi": 41,
+      "Mathematics": 37,
+      "Science": 28,
+      "Social Science": 32,
+      "Computer": 63,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-10178/026",
+    "name": "Vaishnavi",
+    "class": "6",
+    "section": "D",
+    "roll_no": 10178,
+    "roll_code": "10178/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 30,
+      "Hindi": 45,
+      "Mathematics": 29,
+      "Science": 27,
+      "Social Science": 60,
+      "Computer": 53,
+      "Sanskrit": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-8725/026",
+    "name": "Vaishnavi Sharma",
+    "class": "6",
+    "section": "D",
+    "roll_no": 8725,
+    "roll_code": "8725/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 54,
+      "Mathematics": 52,
+      "Science": 48,
+      "Social Science": 49,
+      "Computer": 71,
+      "Sanskrit": 43
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-8175/026",
+    "name": "Vanshika",
+    "class": "6",
+    "section": "D",
+    "roll_no": 8175,
+    "roll_code": "8175/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 54,
+      "Hindi": 0,
+      "Mathematics": 43,
+      "Science": 45,
+      "Social Science": 64,
+      "Computer": 67,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-8350/026",
+    "name": "Yashi Parihar",
+    "class": "6",
+    "section": "D",
+    "roll_no": 8350,
+    "roll_code": "8350/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 58,
+      "Hindi": 58,
+      "Mathematics": 54,
+      "Science": 44,
+      "Social Science": 62,
+      "Computer": 65,
+      "Sanskrit": 47
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-6D-9918/026",
+    "name": "Yogita Bhadouriya",
+    "class": "6",
+    "section": "D",
+    "roll_no": 9918,
+    "roll_code": "9918/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 59,
+      "Mathematics": 62,
+      "Science": 43,
+      "Social Science": 51,
+      "Computer": 74,
+      "Sanskrit": 68
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9294/026",
+    "name": "Abhay Dubey",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9294,
+    "roll_code": "9294/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 53,
+      "Mathematics": 41,
+      "Science": 37,
+      "Social Science": 39,
+      "Computer": 60,
+      "Sanskrit": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-8621/026",
+    "name": "Abhay Pratap Singh Bhadauria",
+    "class": "7",
+    "section": "A",
+    "roll_no": 8621,
+    "roll_code": "8621/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Hindi": 67,
+      "Mathematics": 32,
+      "Science": 47,
+      "Social Science": 37,
+      "Computer": 63,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-6304/026",
+    "name": "Abhi Yadav",
+    "class": "7",
+    "section": "A",
+    "roll_no": 6304,
+    "roll_code": "6304/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 35,
+      "Mathematics": 3,
+      "Science": 31,
+      "Social Science": 36,
+      "Computer": 59,
+      "Sanskrit": 12
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9860/026",
+    "name": "Akash Rajput",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9860,
+    "roll_code": "9860/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 36,
+      "Hindi": 50,
+      "Mathematics": 43,
+      "Science": 27,
+      "Social Science": 16,
+      "Computer": 65,
+      "Sanskrit": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9194/026",
+    "name": "Akshat Samadhiya",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9194,
+    "roll_code": "9194/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 62,
+      "Mathematics": 61,
+      "Science": 35,
+      "Social Science": 43,
+      "Computer": 74,
+      "Sanskrit": 36
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-10081/026",
+    "name": "Ankush",
+    "class": "7",
+    "section": "A",
+    "roll_no": 10081,
+    "roll_code": "10081/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 33,
+      "Hindi": 31,
+      "Mathematics": 36,
+      "Science": 29,
+      "Social Science": 28,
+      "Computer": 54,
+      "Sanskrit": 10
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9732/026",
+    "name": "Ansh Bhadauriya",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9732,
+    "roll_code": "9732/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 50,
+      "Hindi": 55,
+      "Mathematics": 41,
+      "Science": 37,
+      "Social Science": 30,
+      "Computer": 56,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-10277/026",
+    "name": "Ansh Sharma",
+    "class": "7",
+    "section": "A",
+    "roll_no": 10277,
+    "roll_code": "10277/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 7,
+      "Hindi": 5,
+      "Mathematics": 5,
+      "Science": 5,
+      "Social Science": 3,
+      "Computer": 38,
+      "Sanskrit": 13
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-6320/026",
+    "name": "Ansh Tomar",
+    "class": "7",
+    "section": "A",
+    "roll_no": 6320,
+    "roll_code": "6320/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 40,
+      "Hindi": 38,
+      "Mathematics": 22,
+      "Science": 26,
+      "Social Science": 0,
+      "Computer": 55,
+      "Sanskrit": 10
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-6676/026",
+    "name": "Anurag Sharma",
+    "class": "7",
+    "section": "A",
+    "roll_no": 6676,
+    "roll_code": "6676/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Hindi": 65,
+      "Mathematics": 39,
+      "Science": 53,
+      "Social Science": 43,
+      "Computer": 66,
+      "Sanskrit": 43
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9241/026",
+    "name": "Anurudh",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9241,
+    "roll_code": "9241/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 51,
+      "Mathematics": 42,
+      "Science": 17,
+      "Social Science": 23,
+      "Computer": 67,
+      "Sanskrit": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9775/026",
+    "name": "Arav Pratap Singh Bhadoria",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9775,
+    "roll_code": "9775/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 51,
+      "Mathematics": 52,
+      "Science": 57,
+      "Social Science": 45,
+      "Computer": 76,
+      "Sanskrit": 48
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9660/026",
+    "name": "Arav Singh",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9660,
+    "roll_code": "9660/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 40,
+      "Mathematics": 19,
+      "Science": 35,
+      "Social Science": 28,
+      "Computer": 58,
+      "Sanskrit": 30
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-8334/026",
+    "name": "Arnav Sharma",
+    "class": "7",
+    "section": "A",
+    "roll_no": 8334,
+    "roll_code": "8334/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 30,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 17,
+      "Computer": 53,
+      "Sanskrit": 22
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9938/026",
+    "name": "Aryan Tiwari",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9938,
+    "roll_code": "9938/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Hindi": 73,
+      "Mathematics": 52,
+      "Science": 61,
+      "Social Science": 55,
+      "Computer": 76,
+      "Sanskrit": 50
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-8756/026",
+    "name": "Ashutosh Singh",
+    "class": "7",
+    "section": "A",
+    "roll_no": 8756,
+    "roll_code": "8756/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Hindi": 56,
+      "Mathematics": 30,
+      "Science": 36,
+      "Social Science": 33,
+      "Computer": 64,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9048/026",
+    "name": "Ayush Singh Rajawat",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9048,
+    "roll_code": "9048/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Hindi": 54,
+      "Mathematics": 75,
+      "Science": 65,
+      "Social Science": 45,
+      "Computer": 66,
+      "Sanskrit": 50
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-10234/026",
+    "name": "Ayush Yadav",
+    "class": "7",
+    "section": "A",
+    "roll_no": 10234,
+    "roll_code": "10234/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 31,
+      "Hindi": 45,
+      "Mathematics": 30,
+      "Science": 28,
+      "Social Science": 27,
+      "Computer": 52,
+      "Sanskrit": 20
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9917/026",
+    "name": "Chirag Sharma",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9917,
+    "roll_code": "9917/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 43,
+      "Hindi": 50,
+      "Mathematics": 16,
+      "Science": 28,
+      "Social Science": 16,
+      "Computer": 43,
+      "Sanskrit": 7
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-8542/026",
+    "name": "Devansh Sharma",
+    "class": "7",
+    "section": "A",
+    "roll_no": 8542,
+    "roll_code": "8542/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 45,
+      "Hindi": 46,
+      "Mathematics": 24,
+      "Science": 15,
+      "Social Science": 14,
+      "Computer": 47,
+      "Sanskrit": 8
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9656/026",
+    "name": "Devansh Singh Bhadouriya",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9656,
+    "roll_code": "9656/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Hindi": 42,
+      "Mathematics": 40,
+      "Science": 28,
+      "Social Science": 30,
+      "Computer": 57,
+      "Sanskrit": 10
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-10026/026",
+    "name": "Devraj Tiwari",
+    "class": "7",
+    "section": "A",
+    "roll_no": 10026,
+    "roll_code": "10026/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 60,
+      "Hindi": 65,
+      "Mathematics": 62,
+      "Science": 69,
+      "Social Science": 55,
+      "Computer": 72,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-8876/026",
+    "name": "Divyam",
+    "class": "7",
+    "section": "A",
+    "roll_no": 8876,
+    "roll_code": "8876/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Hindi": 56,
+      "Mathematics": 55,
+      "Science": 68,
+      "Social Science": 57,
+      "Computer": 75,
+      "Sanskrit": 34
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-10089/026",
+    "name": "Divyansh Rawat",
+    "class": "7",
+    "section": "A",
+    "roll_no": 10089,
+    "roll_code": "10089/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 57,
+      "Mathematics": 29,
+      "Science": 29,
+      "Social Science": 34,
+      "Computer": 64,
+      "Sanskrit": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9722/026",
+    "name": "Durgesh Singh",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9722,
+    "roll_code": "9722/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 74,
+      "Mathematics": 56,
+      "Science": 36,
+      "Social Science": 60,
+      "Computer": 75,
+      "Sanskrit": 62
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-6345/026",
+    "name": "Gaurav Sharma",
+    "class": "7",
+    "section": "A",
+    "roll_no": 6345,
+    "roll_code": "6345/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 18,
+      "Hindi": 35,
+      "Mathematics": 19,
+      "Science": 17,
+      "Social Science": 10,
+      "Computer": 44,
+      "Sanskrit": 6
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9744/026",
+    "name": "Heera Singh",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9744,
+    "roll_code": "9744/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 40,
+      "Mathematics": 25,
+      "Science": 31,
+      "Social Science": 15,
+      "Computer": 47,
+      "Sanskrit": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-5893/026",
+    "name": "Hemant Vimal",
+    "class": "7",
+    "section": "A",
+    "roll_no": 5893,
+    "roll_code": "5893/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Hindi": 55,
+      "Mathematics": 73,
+      "Science": 60,
+      "Social Science": 51,
+      "Computer": 67,
+      "Sanskrit": 23
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9029/026",
+    "name": "Jayndra Singh",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9029,
+    "roll_code": "9029/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 66,
+      "Hindi": 73,
+      "Mathematics": 53,
+      "Science": 72,
+      "Social Science": 64,
+      "Computer": 63,
+      "Sanskrit": 57
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9987/026",
+    "name": "Kartik Sharma",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9987,
+    "roll_code": "9987/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Hindi": 43,
+      "Mathematics": 29,
+      "Science": 16,
+      "Social Science": 22,
+      "Computer": 42,
+      "Sanskrit": 24
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9315/026",
+    "name": "Madhav",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9315,
+    "roll_code": "9315/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 22,
+      "Hindi": 42,
+      "Mathematics": 15,
+      "Science": 35,
+      "Social Science": 19,
+      "Computer": 50,
+      "Sanskrit": 18
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-6401/026",
+    "name": "Manav Mishra",
+    "class": "7",
+    "section": "A",
+    "roll_no": 6401,
+    "roll_code": "6401/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 56,
+      "Mathematics": 35,
+      "Science": 50,
+      "Social Science": 41,
+      "Computer": 62,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9366/026",
+    "name": "Mohit",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9366,
+    "roll_code": "9366/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 34,
+      "Hindi": 56,
+      "Mathematics": 40,
+      "Science": 29,
+      "Social Science": 28,
+      "Computer": 56,
+      "Sanskrit": 17
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9640/026",
+    "name": "Nakul Shivhare",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9640,
+    "roll_code": "9640/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 30,
+      "Hindi": 40,
+      "Mathematics": 26,
+      "Science": 16,
+      "Social Science": 20,
+      "Computer": 47,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-8459/026",
+    "name": "Piyush Singh",
+    "class": "7",
+    "section": "A",
+    "roll_no": 8459,
+    "roll_code": "8459/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 24,
+      "Hindi": 35,
+      "Mathematics": 22,
+      "Science": 18,
+      "Social Science": 11,
+      "Computer": 48,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-10072/026",
+    "name": "Priyanshu Baghel",
+    "class": "7",
+    "section": "A",
+    "roll_no": 10072,
+    "roll_code": "10072/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 38,
+      "Hindi": 51,
+      "Mathematics": 71,
+      "Science": 53,
+      "Social Science": 38,
+      "Computer": 52,
+      "Sanskrit": 53
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-6806/026",
+    "name": "Sagar Singh",
+    "class": "7",
+    "section": "A",
+    "roll_no": 6806,
+    "roll_code": "6806/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 71,
+      "Hindi": 77,
+      "Mathematics": 60,
+      "Science": 69,
+      "Social Science": 70,
+      "Computer": 76,
+      "Sanskrit": 68
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-8598/026",
+    "name": "Samar Sharma",
+    "class": "7",
+    "section": "A",
+    "roll_no": 8598,
+    "roll_code": "8598/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 65,
+      "Mathematics": 42,
+      "Science": 60,
+      "Social Science": 36,
+      "Computer": 74,
+      "Sanskrit": 24
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-10041/026",
+    "name": "Samarth",
+    "class": "7",
+    "section": "A",
+    "roll_no": 10041,
+    "roll_code": "10041/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 34,
+      "Hindi": 45,
+      "Mathematics": 40,
+      "Science": 44,
+      "Social Science": 18,
+      "Computer": 46,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9652/026",
+    "name": "Samyak Jain",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9652,
+    "roll_code": "9652/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Hindi": 40,
+      "Mathematics": 56,
+      "Science": 42,
+      "Social Science": 46,
+      "Computer": 58,
+      "Sanskrit": 51
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9361/026",
+    "name": "Sanskar Sharma",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9361,
+    "roll_code": "9361/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 54,
+      "Hindi": 65,
+      "Mathematics": 73,
+      "Science": 51,
+      "Social Science": 42,
+      "Computer": 66,
+      "Sanskrit": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-10051/026",
+    "name": "Shivam Baghel",
+    "class": "7",
+    "section": "A",
+    "roll_no": 10051,
+    "roll_code": "10051/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 36,
+      "Hindi": 45,
+      "Mathematics": 38,
+      "Science": 35,
+      "Social Science": 30,
+      "Computer": 42,
+      "Sanskrit": 14
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-8962/026",
+    "name": "Shlok Singh Bhadoria",
+    "class": "7",
+    "section": "A",
+    "roll_no": 8962,
+    "roll_code": "8962/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 67,
+      "Hindi": 70,
+      "Mathematics": 69,
+      "Science": 56,
+      "Social Science": 62,
+      "Computer": 64,
+      "Sanskrit": 55
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9359/026",
+    "name": "Shourya Sharma",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9359,
+    "roll_code": "9359/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 54,
+      "Hindi": 62,
+      "Mathematics": 37,
+      "Science": 60,
+      "Social Science": 45,
+      "Computer": 63,
+      "Sanskrit": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-10038/026",
+    "name": "Shubh Barua",
+    "class": "7",
+    "section": "A",
+    "roll_no": 10038,
+    "roll_code": "10038/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Hindi": 70,
+      "Mathematics": 66,
+      "Science": 50,
+      "Social Science": 56,
+      "Computer": 71,
+      "Sanskrit": 49
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-10143/026",
+    "name": "Udhabhav Dixit",
+    "class": "7",
+    "section": "A",
+    "roll_no": 10143,
+    "roll_code": "10143/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 23,
+      "Hindi": 27,
+      "Mathematics": 40,
+      "Science": 12,
+      "Social Science": 18,
+      "Computer": 41,
+      "Sanskrit": 8
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7A-9579/026",
+    "name": "Uttam Rathor",
+    "class": "7",
+    "section": "A",
+    "roll_no": 9579,
+    "roll_code": "9579/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 31,
+      "Hindi": 50,
+      "Mathematics": 49,
+      "Science": 27,
+      "Social Science": 13,
+      "Computer": 42,
+      "Sanskrit": 20
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9495/026",
+    "name": "Abhinav Singh Rajawat",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9495,
+    "roll_code": "9495/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Hindi": 53,
+      "Mathematics": 68,
+      "Science": 57,
+      "Social Science": 62,
+      "Computer": 60,
+      "Sanskrit": 54
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9393/026",
+    "name": "Akshat Jain",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9393,
+    "roll_code": "9393/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Hindi": 52,
+      "Mathematics": 64,
+      "Science": 59,
+      "Social Science": 54,
+      "Computer": 67,
+      "Sanskrit": 34
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9158/026",
+    "name": "Aman Sharma",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9158,
+    "roll_code": "9158/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 66,
+      "Hindi": 55,
+      "Mathematics": 73,
+      "Science": 77,
+      "Social Science": 65,
+      "Computer": 74,
+      "Sanskrit": 53
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-10237/026",
+    "name": "Anand Singh",
+    "class": "7",
+    "section": "B",
+    "roll_no": 10237,
+    "roll_code": "10237/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 23,
+      "Hindi": 32,
+      "Mathematics": 39,
+      "Science": 20,
+      "Social Science": 7,
+      "Computer": 38,
+      "Sanskrit": 8
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9350/026",
+    "name": "Aniket Singh Rajawat",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9350,
+    "roll_code": "9350/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 39,
+      "Hindi": 22,
+      "Mathematics": 31,
+      "Science": 19,
+      "Social Science": 37,
+      "Computer": 49,
+      "Sanskrit": 8
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-10098/026",
+    "name": "Ansh",
+    "class": "7",
+    "section": "B",
+    "roll_no": 10098,
+    "roll_code": "10098/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 11,
+      "Hindi": 6,
+      "Mathematics": 14,
+      "Science": 13,
+      "Social Science": 1,
+      "Computer": 37,
+      "Sanskrit": 7
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9857/026",
+    "name": "Ansh Baghel",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9857,
+    "roll_code": "9857/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 29,
+      "Hindi": 32,
+      "Mathematics": 29,
+      "Science": 19,
+      "Social Science": 16,
+      "Computer": 45,
+      "Sanskrit": 7
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-6212/026",
+    "name": "Anshuman Singh",
+    "class": "7",
+    "section": "B",
+    "roll_no": 6212,
+    "roll_code": "6212/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Hindi": 62,
+      "Mathematics": 55,
+      "Science": 66,
+      "Social Science": 61,
+      "Computer": 69,
+      "Sanskrit": 56
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9695/026",
+    "name": "Anuj Yadav",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9695,
+    "roll_code": "9695/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 69,
+      "Hindi": 57,
+      "Mathematics": 67,
+      "Science": 48,
+      "Social Science": 58,
+      "Computer": 60,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-10288/026",
+    "name": "Arhan Shah",
+    "class": "7",
+    "section": "B",
+    "roll_no": 10288,
+    "roll_code": "10288/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 55,
+      "Mathematics": 52,
+      "Science": 66,
+      "Social Science": 67,
+      "Computer": 74,
+      "Sanskrit": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-8984/026",
+    "name": "Arpit Singh",
+    "class": "7",
+    "section": "B",
+    "roll_no": 8984,
+    "roll_code": "8984/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Hindi": 34,
+      "Mathematics": 31,
+      "Science": 46,
+      "Social Science": 38,
+      "Computer": 62,
+      "Sanskrit": 19
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9923/026",
+    "name": "Aryan Singh",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9923,
+    "roll_code": "9923/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 11,
+      "Mathematics": 27,
+      "Science": 7,
+      "Social Science": 15,
+      "Computer": 48,
+      "Sanskrit": 4
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9348/026",
+    "name": "Aryan Singh Sikarwar",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9348,
+    "roll_code": "9348/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 57,
+      "Mathematics": 62,
+      "Science": 64,
+      "Social Science": 54,
+      "Computer": 68,
+      "Sanskrit": 57
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-6793/026",
+    "name": "Ashutosh Bhadouriya",
+    "class": "7",
+    "section": "B",
+    "roll_no": 6793,
+    "roll_code": "6793/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 61,
+      "Mathematics": 59,
+      "Science": 61,
+      "Social Science": 64,
+      "Computer": 72,
+      "Sanskrit": 63
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-10124/026",
+    "name": "Balgovind Sharma",
+    "class": "7",
+    "section": "B",
+    "roll_no": 10124,
+    "roll_code": "10124/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 34,
+      "Hindi": 37,
+      "Mathematics": 48,
+      "Science": 15,
+      "Social Science": 35,
+      "Computer": 62,
+      "Sanskrit": 17
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-8424/026",
+    "name": "Bhanu",
+    "class": "7",
+    "section": "B",
+    "roll_no": 8424,
+    "roll_code": "8424/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 44,
+      "Mathematics": 47,
+      "Science": 34,
+      "Social Science": 52,
+      "Computer": 65,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9757/026",
+    "name": "Divyansh",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9757,
+    "roll_code": "9757/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Hindi": 44,
+      "Mathematics": 30,
+      "Science": 38,
+      "Social Science": 38,
+      "Computer": 63,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-10070/026",
+    "name": "Karan Singh",
+    "class": "7",
+    "section": "B",
+    "roll_no": 10070,
+    "roll_code": "10070/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 29,
+      "Hindi": 19,
+      "Mathematics": 27,
+      "Science": 11,
+      "Social Science": 21,
+      "Computer": 47,
+      "Sanskrit": 10
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9706/026",
+    "name": "Kartik Areley",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9706,
+    "roll_code": "9706/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 51,
+      "Hindi": 47,
+      "Mathematics": 70,
+      "Science": 53,
+      "Social Science": 45,
+      "Computer": 74,
+      "Sanskrit": 22
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-10266/026",
+    "name": "Krishna Shivhare",
+    "class": "7",
+    "section": "B",
+    "roll_no": 10266,
+    "roll_code": "10266/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 50,
+      "Hindi": 45,
+      "Mathematics": 55,
+      "Science": 64,
+      "Social Science": 47,
+      "Computer": 74,
+      "Sanskrit": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9303/026",
+    "name": "Mayank",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9303,
+    "roll_code": "9303/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 43,
+      "Mathematics": 39,
+      "Science": 46,
+      "Social Science": 54,
+      "Computer": 64,
+      "Sanskrit": 42
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9704/026",
+    "name": "Nishkrsh Guru",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9704,
+    "roll_code": "9704/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 69,
+      "Hindi": 79,
+      "Mathematics": 75,
+      "Science": 74,
+      "Social Science": 64,
+      "Computer": 74,
+      "Sanskrit": 72
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-6730/026",
+    "name": "Nitin Kaushal",
+    "class": "7",
+    "section": "B",
+    "roll_no": 6730,
+    "roll_code": "6730/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Hindi": 63,
+      "Mathematics": 38,
+      "Science": 27,
+      "Social Science": 40,
+      "Computer": 71,
+      "Sanskrit": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-10228/026",
+    "name": "Om Bhadouriya",
+    "class": "7",
+    "section": "B",
+    "roll_no": 10228,
+    "roll_code": "10228/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 70,
+      "Hindi": 55,
+      "Mathematics": 40,
+      "Science": 57,
+      "Social Science": 55,
+      "Computer": 69,
+      "Sanskrit": 39
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9253/026",
+    "name": "Om Ji Gurjar",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9253,
+    "roll_code": "9253/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 38,
+      "Hindi": 48,
+      "Mathematics": 63,
+      "Science": 41,
+      "Social Science": 35,
+      "Computer": 56,
+      "Sanskrit": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-6897/026",
+    "name": "Pranav Singh Bhadoriya",
+    "class": "7",
+    "section": "B",
+    "roll_no": 6897,
+    "roll_code": "6897/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Hindi": 54,
+      "Mathematics": 69,
+      "Science": 57,
+      "Social Science": 58,
+      "Computer": 73,
+      "Sanskrit": 41
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9816/026",
+    "name": "Prashant",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9816,
+    "roll_code": "9816/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 33,
+      "Hindi": 46,
+      "Mathematics": 27,
+      "Science": 32,
+      "Social Science": 21,
+      "Computer": 64,
+      "Sanskrit": 11
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-6399/026",
+    "name": "Praveet Singh",
+    "class": "7",
+    "section": "B",
+    "roll_no": 6399,
+    "roll_code": "6399/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Hindi": 61,
+      "Mathematics": 51,
+      "Science": 48,
+      "Social Science": 52,
+      "Computer": 79,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-10169/026",
+    "name": "Prince Sonkar",
+    "class": "7",
+    "section": "B",
+    "roll_no": 10169,
+    "roll_code": "10169/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 67,
+      "Hindi": 51,
+      "Mathematics": 68,
+      "Science": 53,
+      "Social Science": 58,
+      "Computer": 75,
+      "Sanskrit": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9411/026",
+    "name": "Raghav Sharma",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9411,
+    "roll_code": "9411/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 58,
+      "Mathematics": 56,
+      "Science": 38,
+      "Social Science": 49,
+      "Computer": 73,
+      "Sanskrit": 44
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9682/026",
+    "name": "Ramnarayan Singh Rajawat",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9682,
+    "roll_code": "9682/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 35,
+      "Hindi": 54,
+      "Mathematics": 58,
+      "Science": 28,
+      "Social Science": 32,
+      "Computer": 46,
+      "Sanskrit": 30
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-10211/026",
+    "name": "Rishav Rathor",
+    "class": "7",
+    "section": "B",
+    "roll_no": 10211,
+    "roll_code": "10211/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 27,
+      "Mathematics": 40,
+      "Science": 24,
+      "Social Science": 18,
+      "Computer": 46,
+      "Sanskrit": 12
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-8397/026",
+    "name": "Sahil Kaushal Poddar",
+    "class": "7",
+    "section": "B",
+    "roll_no": 8397,
+    "roll_code": "8397/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 61,
+      "Mathematics": 50,
+      "Science": 46,
+      "Social Science": 66,
+      "Computer": 66,
+      "Sanskrit": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9444/026",
+    "name": "Saketh E",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9444,
+    "roll_code": "9444/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 53,
+      "Mathematics": 54,
+      "Science": 66,
+      "Social Science": 62,
+      "Computer": 71,
+      "Sanskrit": 39
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-8969/026",
+    "name": "Satyaveer Singh",
+    "class": "7",
+    "section": "B",
+    "roll_no": 8969,
+    "roll_code": "8969/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Hindi": 39,
+      "Mathematics": 18,
+      "Science": 30,
+      "Social Science": 26,
+      "Computer": 52,
+      "Sanskrit": 12
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-10034/026",
+    "name": "Shiva Jain",
+    "class": "7",
+    "section": "B",
+    "roll_no": 10034,
+    "roll_code": "10034/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 45,
+      "Mathematics": 66,
+      "Science": 49,
+      "Social Science": 46,
+      "Computer": 64,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9726/026",
+    "name": "Shivam Joshi",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9726,
+    "roll_code": "9726/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Hindi": 49,
+      "Mathematics": 39,
+      "Science": 32,
+      "Social Science": 33,
+      "Computer": 43,
+      "Sanskrit": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9445/026",
+    "name": "Shubh Joshi",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9445,
+    "roll_code": "9445/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 54,
+      "Hindi": 36,
+      "Mathematics": 65,
+      "Science": 46,
+      "Social Science": 29,
+      "Computer": 62,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-8981/026",
+    "name": "Shubh Sharma",
+    "class": "7",
+    "section": "B",
+    "roll_no": 8981,
+    "roll_code": "8981/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 69,
+      "Mathematics": 63,
+      "Science": 49,
+      "Social Science": 64,
+      "Computer": 54,
+      "Sanskrit": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-8030/026",
+    "name": "Sumit Bhadouriya",
+    "class": "7",
+    "section": "B",
+    "roll_no": 8030,
+    "roll_code": "8030/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 50,
+      "Mathematics": 27,
+      "Science": 27,
+      "Social Science": 37,
+      "Computer": 59,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-6173/026",
+    "name": "Suryansh Sharma",
+    "class": "7",
+    "section": "B",
+    "roll_no": 6173,
+    "roll_code": "6173/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 36,
+      "Mathematics": 28,
+      "Science": 34,
+      "Social Science": 35,
+      "Computer": 57,
+      "Sanskrit": 33
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9373/026",
+    "name": "Utkarsh Pandey",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9373,
+    "roll_code": "9373/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 60,
+      "Mathematics": 64,
+      "Science": 63,
+      "Social Science": 60,
+      "Computer": 68,
+      "Sanskrit": 54
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9829/026",
+    "name": "Virat Bhadoriya",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9829,
+    "roll_code": "9829/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 59,
+      "Mathematics": 60,
+      "Science": 69,
+      "Social Science": 70,
+      "Computer": 76,
+      "Sanskrit": 51
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-6882/026",
+    "name": "Virat Soni",
+    "class": "7",
+    "section": "B",
+    "roll_no": 6882,
+    "roll_code": "6882/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 56,
+      "Mathematics": 55,
+      "Science": 59,
+      "Social Science": 65,
+      "Computer": 71,
+      "Sanskrit": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9538/026",
+    "name": "Virat Tripathi",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9538,
+    "roll_code": "9538/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 50,
+      "Mathematics": 35,
+      "Science": 62,
+      "Social Science": 60,
+      "Computer": 68,
+      "Sanskrit": 34
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9372/026",
+    "name": "Vishal",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9372,
+    "roll_code": "9372/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 52,
+      "Mathematics": 55,
+      "Science": 32,
+      "Social Science": 28,
+      "Computer": 68,
+      "Sanskrit": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7B-9571/026",
+    "name": "Yash Bhadauriya",
+    "class": "7",
+    "section": "B",
+    "roll_no": 9571,
+    "roll_code": "9571/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 51,
+      "Hindi": 41,
+      "Mathematics": 21,
+      "Science": 47,
+      "Social Science": 44,
+      "Computer": 76,
+      "Sanskrit": 44
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-6210/026",
+    "name": "Abhay Pratap Singh",
+    "class": "7",
+    "section": "C",
+    "roll_no": 6210,
+    "roll_code": "6210/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 22,
+      "Hindi": 27,
+      "Mathematics": 60,
+      "Science": 28,
+      "Social Science": 18,
+      "Computer": 46,
+      "Sanskrit": 10
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-6463/026",
+    "name": "Abhishek Sharma",
+    "class": "7",
+    "section": "C",
+    "roll_no": 6463,
+    "roll_code": "6463/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Hindi": 9,
+      "Mathematics": 14,
+      "Science": 11,
+      "Social Science": 12,
+      "Computer": 37,
+      "Sanskrit": 7
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-9887/026",
+    "name": "Amit",
+    "class": "7",
+    "section": "C",
+    "roll_no": 9887,
+    "roll_code": "9887/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 39,
+      "Hindi": 30,
+      "Mathematics": 46,
+      "Science": 22,
+      "Social Science": 15,
+      "Computer": 65,
+      "Sanskrit": 12
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-9032/026",
+    "name": "Anand",
+    "class": "7",
+    "section": "C",
+    "roll_no": 9032,
+    "roll_code": "9032/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Hindi": 46,
+      "Mathematics": 34,
+      "Science": 40,
+      "Social Science": 21,
+      "Computer": 64,
+      "Sanskrit": 33
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-8311/026",
+    "name": "Anand Singh Bhadauria",
+    "class": "7",
+    "section": "C",
+    "roll_no": 8311,
+    "roll_code": "8311/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 16,
+      "Hindi": 19,
+      "Mathematics": 37,
+      "Science": 15,
+      "Social Science": 6,
+      "Computer": 46,
+      "Sanskrit": 16
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-9006/026",
+    "name": "Anmol Yadav",
+    "class": "7",
+    "section": "C",
+    "roll_no": 9006,
+    "roll_code": "9006/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 16,
+      "Hindi": 28,
+      "Mathematics": 9,
+      "Science": 8,
+      "Social Science": 4,
+      "Computer": 40,
+      "Sanskrit": 16
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-6526/026",
+    "name": "Ansh Singh",
+    "class": "7",
+    "section": "C",
+    "roll_no": 6526,
+    "roll_code": "6526/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 28,
+      "Hindi": 0,
+      "Mathematics": 5,
+      "Science": 9,
+      "Social Science": 0,
+      "Computer": 33,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-10216/026",
+    "name": "Anshu Baghel",
+    "class": "7",
+    "section": "C",
+    "roll_no": 10216,
+    "roll_code": "10216/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 23,
+      "Hindi": 41,
+      "Mathematics": 52,
+      "Science": 22,
+      "Social Science": 4,
+      "Computer": 55,
+      "Sanskrit": 6
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-6631/026",
+    "name": "Anuj Kumar",
+    "class": "7",
+    "section": "C",
+    "roll_no": 6631,
+    "roll_code": "6631/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 17,
+      "Hindi": 15,
+      "Mathematics": 26,
+      "Science": 8,
+      "Social Science": 17,
+      "Computer": 51,
+      "Sanskrit": 7
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-9733/026",
+    "name": "Aryan",
+    "class": "7",
+    "section": "C",
+    "roll_no": 9733,
+    "roll_code": "9733/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 24,
+      "Hindi": 35,
+      "Mathematics": 23,
+      "Science": 25,
+      "Social Science": 32,
+      "Computer": 55,
+      "Sanskrit": 11
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-9178/026",
+    "name": "Ashwik",
+    "class": "7",
+    "section": "C",
+    "roll_no": 9178,
+    "roll_code": "9178/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 11,
+      "Hindi": 27,
+      "Mathematics": 18,
+      "Science": 19,
+      "Social Science": 6,
+      "Computer": 38,
+      "Sanskrit": 7
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-9355/026",
+    "name": "Ashwin Kumar",
+    "class": "7",
+    "section": "C",
+    "roll_no": 9355,
+    "roll_code": "9355/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 18,
+      "Hindi": 20,
+      "Mathematics": 19,
+      "Science": 27,
+      "Social Science": 8,
+      "Computer": 38,
+      "Sanskrit": 8
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-10194/026",
+    "name": "Ayush Yadav",
+    "class": "7",
+    "section": "C",
+    "roll_no": 10194,
+    "roll_code": "10194/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 23,
+      "Hindi": 32,
+      "Mathematics": 37,
+      "Science": 30,
+      "Social Science": 22,
+      "Computer": 49,
+      "Sanskrit": 13
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-9869/026",
+    "name": "Ayush Yadav",
+    "class": "7",
+    "section": "C",
+    "roll_no": 9869,
+    "roll_code": "9869/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 32,
+      "Hindi": 34,
+      "Mathematics": 55,
+      "Science": 28,
+      "Social Science": 15,
+      "Computer": 47,
+      "Sanskrit": 13
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-10255/026",
+    "name": "Ayushman Yadav",
+    "class": "7",
+    "section": "C",
+    "roll_no": 10255,
+    "roll_code": "10255/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 50,
+      "Mathematics": 61,
+      "Science": 32,
+      "Social Science": 47,
+      "Computer": 54,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-9944/026",
+    "name": "Durgesh Yadav",
+    "class": "7",
+    "section": "C",
+    "roll_no": 9944,
+    "roll_code": "9944/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Hindi": 34,
+      "Mathematics": 75,
+      "Science": 36,
+      "Social Science": 28,
+      "Computer": 53,
+      "Sanskrit": 25
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-6450/026",
+    "name": "Harsh Singh Bhadoria",
+    "class": "7",
+    "section": "C",
+    "roll_no": 6450,
+    "roll_code": "6450/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 11,
+      "Hindi": 4,
+      "Mathematics": 6,
+      "Science": 5,
+      "Social Science": 3,
+      "Computer": 39,
+      "Sanskrit": 6
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-9954/026",
+    "name": "Nitin",
+    "class": "7",
+    "section": "C",
+    "roll_no": 9954,
+    "roll_code": "9954/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 24,
+      "Hindi": 29,
+      "Mathematics": 73,
+      "Science": 12,
+      "Social Science": 15,
+      "Computer": 39,
+      "Sanskrit": 11
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-9900/026",
+    "name": "Nitin Singh",
+    "class": "7",
+    "section": "C",
+    "roll_no": 9900,
+    "roll_code": "9900/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 16,
+      "Hindi": 10,
+      "Mathematics": 20,
+      "Science": 12,
+      "Social Science": 24,
+      "Computer": 46,
+      "Sanskrit": 9
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-9384/026",
+    "name": "Puneet Parmar",
+    "class": "7",
+    "section": "C",
+    "roll_no": 9384,
+    "roll_code": "9384/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0,
+      "Computer": 0,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-10258/026",
+    "name": "Pushpraj Singh",
+    "class": "7",
+    "section": "C",
+    "roll_no": 10258,
+    "roll_code": "10258/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Hindi": 29,
+      "Mathematics": 46,
+      "Science": 35,
+      "Social Science": 36,
+      "Computer": 57,
+      "Sanskrit": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-10287/026",
+    "name": "Raj",
+    "class": "7",
+    "section": "C",
+    "roll_no": 10287,
+    "roll_code": "10287/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Hindi": 48,
+      "Mathematics": 58,
+      "Science": 41,
+      "Social Science": 37,
+      "Computer": 60,
+      "Sanskrit": 35
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-6174/026",
+    "name": "Raj Yadav",
+    "class": "7",
+    "section": "C",
+    "roll_no": 6174,
+    "roll_code": "6174/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 30,
+      "Hindi": 27,
+      "Mathematics": 34,
+      "Science": 35,
+      "Social Science": 40,
+      "Computer": 62,
+      "Sanskrit": 16
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-9075/026",
+    "name": "Rudra Pratap",
+    "class": "7",
+    "section": "C",
+    "roll_no": 9075,
+    "roll_code": "9075/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 33,
+      "Hindi": 44,
+      "Mathematics": 38,
+      "Science": 30,
+      "Social Science": 47,
+      "Computer": 76,
+      "Sanskrit": 30
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-8931/026",
+    "name": "Samir Khan",
+    "class": "7",
+    "section": "C",
+    "roll_no": 8931,
+    "roll_code": "8931/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 19,
+      "Hindi": 12,
+      "Mathematics": 15,
+      "Science": 20,
+      "Social Science": 18,
+      "Computer": 40,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-9975/026",
+    "name": "Utkarsh Baghel",
+    "class": "7",
+    "section": "C",
+    "roll_no": 9975,
+    "roll_code": "9975/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 54,
+      "Hindi": 49,
+      "Mathematics": 66,
+      "Science": 38,
+      "Social Science": 38,
+      "Computer": 62,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7C-9865/026",
+    "name": "Vivek Baghel",
+    "class": "7",
+    "section": "C",
+    "roll_no": 9865,
+    "roll_code": "9865/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Hindi": 27,
+      "Mathematics": 70,
+      "Science": 33,
+      "Social Science": 23,
+      "Computer": 58,
+      "Sanskrit": 12
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-8888/026",
+    "name": "Aadhya Yadav",
+    "class": "7",
+    "section": "D",
+    "roll_no": 8888,
+    "roll_code": "8888/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 66,
+      "Hindi": 70,
+      "Mathematics": 65,
+      "Science": 56,
+      "Social Science": 49,
+      "Computer": 67,
+      "Sanskrit": 43
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-9835/026",
+    "name": "Aastha",
+    "class": "7",
+    "section": "D",
+    "roll_no": 9835,
+    "roll_code": "9835/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 44,
+      "Hindi": 55,
+      "Mathematics": 28,
+      "Science": 35,
+      "Social Science": 41,
+      "Computer": 0,
+      "Sanskrit": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-8346/026",
+    "name": "Akanksha Sharma",
+    "class": "7",
+    "section": "D",
+    "roll_no": 8346,
+    "roll_code": "8346/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 72,
+      "Hindi": 72,
+      "Mathematics": 57,
+      "Science": 66,
+      "Social Science": 62,
+      "Computer": 77,
+      "Sanskrit": 40
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-10103/026",
+    "name": "Aparna Yadav",
+    "class": "7",
+    "section": "D",
+    "roll_no": 10103,
+    "roll_code": "10103/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 60,
+      "Mathematics": 27,
+      "Science": 31,
+      "Social Science": 39,
+      "Computer": 46,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-9678/026",
+    "name": "Aradhya Dwivedi",
+    "class": "7",
+    "section": "D",
+    "roll_no": 9678,
+    "roll_code": "9678/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Hindi": 50,
+      "Mathematics": 27,
+      "Science": 18,
+      "Social Science": 22,
+      "Computer": 58,
+      "Sanskrit": 7
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-9324/026",
+    "name": "Arohi Chauhan",
+    "class": "7",
+    "section": "D",
+    "roll_no": 9324,
+    "roll_code": "9324/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 70,
+      "Hindi": 73,
+      "Mathematics": 69,
+      "Science": 68,
+      "Social Science": 59,
+      "Computer": 72,
+      "Sanskrit": 55
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-8304/026",
+    "name": "Atiksha Chauhan",
+    "class": "7",
+    "section": "D",
+    "roll_no": 8304,
+    "roll_code": "8304/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Hindi": 66,
+      "Mathematics": 34,
+      "Science": 52,
+      "Social Science": 42,
+      "Computer": 61,
+      "Sanskrit": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-6223/026",
+    "name": "Avni Panday",
+    "class": "7",
+    "section": "D",
+    "roll_no": 6223,
+    "roll_code": "6223/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 50,
+      "Hindi": 40,
+      "Mathematics": 31,
+      "Science": 43,
+      "Social Science": 33,
+      "Computer": 63,
+      "Sanskrit": 11
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-8862/026",
+    "name": "Ayushi Samadhiya",
+    "class": "7",
+    "section": "D",
+    "roll_no": 8862,
+    "roll_code": "8862/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 72,
+      "Mathematics": 54,
+      "Science": 73,
+      "Social Science": 61,
+      "Computer": 76,
+      "Sanskrit": 43
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-6625/026",
+    "name": "Divyanshi",
+    "class": "7",
+    "section": "D",
+    "roll_no": 6625,
+    "roll_code": "6625/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 23,
+      "Hindi": 27,
+      "Mathematics": 20,
+      "Science": 16,
+      "Social Science": 8,
+      "Computer": 41,
+      "Sanskrit": 9
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-8653/026",
+    "name": "Gudiya Yadav",
+    "class": "7",
+    "section": "D",
+    "roll_no": 8653,
+    "roll_code": "8653/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 36,
+      "Hindi": 50,
+      "Mathematics": 20,
+      "Science": 23,
+      "Social Science": 27,
+      "Computer": 53,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-6736/026",
+    "name": "Ishita Mishra",
+    "class": "7",
+    "section": "D",
+    "roll_no": 6736,
+    "roll_code": "6736/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 35,
+      "Mathematics": 16,
+      "Science": 23,
+      "Social Science": 16,
+      "Computer": 55,
+      "Sanskrit": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-8647/026",
+    "name": "Janvi Kumari",
+    "class": "7",
+    "section": "D",
+    "roll_no": 8647,
+    "roll_code": "8647/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 22,
+      "Hindi": 27,
+      "Mathematics": 18,
+      "Science": 14,
+      "Social Science": 11,
+      "Computer": 42,
+      "Sanskrit": 14
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-8384/026",
+    "name": "Kavya",
+    "class": "7",
+    "section": "D",
+    "roll_no": 8384,
+    "roll_code": "8384/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 65,
+      "Mathematics": 54,
+      "Science": 58,
+      "Social Science": 52,
+      "Computer": 65,
+      "Sanskrit": 49
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-6104/026",
+    "name": "Khushi Sharma",
+    "class": "7",
+    "section": "D",
+    "roll_no": 6104,
+    "roll_code": "6104/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Hindi": 60,
+      "Mathematics": 50,
+      "Science": 50,
+      "Social Science": 47,
+      "Computer": 56,
+      "Sanskrit": 41
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-8463/026",
+    "name": "Krati Sharma",
+    "class": "7",
+    "section": "D",
+    "roll_no": 8463,
+    "roll_code": "8463/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 74,
+      "Mathematics": 62,
+      "Science": 67,
+      "Social Science": 59,
+      "Computer": 77,
+      "Sanskrit": 69
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-9173/026",
+    "name": "Manvi Sharma",
+    "class": "7",
+    "section": "D",
+    "roll_no": 9173,
+    "roll_code": "9173/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 45,
+      "Hindi": 38,
+      "Mathematics": 33,
+      "Science": 17,
+      "Social Science": 27,
+      "Computer": 54,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-9875/026",
+    "name": "Monika",
+    "class": "7",
+    "section": "D",
+    "roll_no": 9875,
+    "roll_code": "9875/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 39,
+      "Hindi": 41,
+      "Mathematics": 27,
+      "Science": 32,
+      "Social Science": 28,
+      "Computer": 55,
+      "Sanskrit": 16
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-8155/026",
+    "name": "Navya",
+    "class": "7",
+    "section": "D",
+    "roll_no": 8155,
+    "roll_code": "8155/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 71,
+      "Mathematics": 48,
+      "Science": 63,
+      "Social Science": 52,
+      "Computer": 74,
+      "Sanskrit": 55
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-8772/026",
+    "name": "Pari",
+    "class": "7",
+    "section": "D",
+    "roll_no": 8772,
+    "roll_code": "8772/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 52,
+      "Mathematics": 27,
+      "Science": 30,
+      "Social Science": 28,
+      "Computer": 52,
+      "Sanskrit": 13
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-8643/026",
+    "name": "Sajal Garg",
+    "class": "7",
+    "section": "D",
+    "roll_no": 8643,
+    "roll_code": "8643/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 70,
+      "Mathematics": 32,
+      "Science": 58,
+      "Social Science": 43,
+      "Computer": 65,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-9738/026",
+    "name": "Sanvi Gupta",
+    "class": "7",
+    "section": "D",
+    "roll_no": 9738,
+    "roll_code": "9738/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 70,
+      "Hindi": 76,
+      "Mathematics": 66,
+      "Science": 71,
+      "Social Science": 70,
+      "Computer": 74,
+      "Sanskrit": 70
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-6837/026",
+    "name": "Shraddha Sharma",
+    "class": "7",
+    "section": "D",
+    "roll_no": 6837,
+    "roll_code": "6837/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Hindi": 55,
+      "Mathematics": 20,
+      "Science": 42,
+      "Social Science": 31,
+      "Computer": 65,
+      "Sanskrit": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-10196/026",
+    "name": "Shrasti Tripathi",
+    "class": "7",
+    "section": "D",
+    "roll_no": 10196,
+    "roll_code": "10196/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 18,
+      "Hindi": 38,
+      "Mathematics": 17,
+      "Science": 12,
+      "Social Science": 17,
+      "Computer": 51,
+      "Sanskrit": 14
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-8308/026",
+    "name": "Somya Tomar",
+    "class": "7",
+    "section": "D",
+    "roll_no": 8308,
+    "roll_code": "8308/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 54,
+      "Mathematics": 15,
+      "Science": 28,
+      "Social Science": 15,
+      "Computer": 52,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-6593/026",
+    "name": "Tanishka Shukla",
+    "class": "7",
+    "section": "D",
+    "roll_no": 6593,
+    "roll_code": "6593/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Hindi": 62,
+      "Mathematics": 53,
+      "Science": 59,
+      "Social Science": 51,
+      "Computer": 60,
+      "Sanskrit": 42
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-10172/026",
+    "name": "Vaishali Hindoliya",
+    "class": "7",
+    "section": "D",
+    "roll_no": 10172,
+    "roll_code": "10172/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 31,
+      "Hindi": 57,
+      "Mathematics": 10,
+      "Science": 19,
+      "Social Science": 34,
+      "Computer": 42,
+      "Sanskrit": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-8325/026",
+    "name": "Varsha",
+    "class": "7",
+    "section": "D",
+    "roll_no": 8325,
+    "roll_code": "8325/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 65,
+      "Mathematics": 43,
+      "Science": 66,
+      "Social Science": 44,
+      "Computer": 70,
+      "Sanskrit": 34
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7D-9904/026",
+    "name": "Varshika",
+    "class": "7",
+    "section": "D",
+    "roll_no": 9904,
+    "roll_code": "9904/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Hindi": 60,
+      "Mathematics": 35,
+      "Science": 61,
+      "Social Science": 43,
+      "Computer": 70,
+      "Sanskrit": 30
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-6841/026",
+    "name": "Aadhya Jha",
+    "class": "7",
+    "section": "E",
+    "roll_no": 6841,
+    "roll_code": "6841/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 69,
+      "Hindi": 71,
+      "Mathematics": 57,
+      "Science": 70,
+      "Social Science": 67,
+      "Computer": 75,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-6629/026",
+    "name": "Agirta",
+    "class": "7",
+    "section": "E",
+    "roll_no": 6629,
+    "roll_code": "6629/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 67,
+      "Mathematics": 50,
+      "Science": 53,
+      "Social Science": 52,
+      "Computer": 70,
+      "Sanskrit": 48
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-6633/026",
+    "name": "Aliya Bano",
+    "class": "7",
+    "section": "E",
+    "roll_no": 6633,
+    "roll_code": "6633/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 54,
+      "Mathematics": 40,
+      "Science": 11,
+      "Social Science": 28,
+      "Computer": 59,
+      "Sanskrit": 14
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-10175/026",
+    "name": "Ananya Chauhan",
+    "class": "7",
+    "section": "E",
+    "roll_no": 10175,
+    "roll_code": "10175/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 47,
+      "Mathematics": 44,
+      "Science": 65,
+      "Social Science": 66,
+      "Computer": 58,
+      "Sanskrit": 39
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-9921/026",
+    "name": "Ananya Rajawat",
+    "class": "7",
+    "section": "E",
+    "roll_no": 9921,
+    "roll_code": "9921/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 57,
+      "Mathematics": 38,
+      "Science": 29,
+      "Social Science": 46,
+      "Computer": 67,
+      "Sanskrit": 35
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-6634/026",
+    "name": "Annavi",
+    "class": "7",
+    "section": "E",
+    "roll_no": 6634,
+    "roll_code": "6634/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 68,
+      "Mathematics": 50,
+      "Science": 63,
+      "Social Science": 61,
+      "Computer": 70,
+      "Sanskrit": 57
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-5887/026",
+    "name": "Anshika",
+    "class": "7",
+    "section": "E",
+    "roll_no": 5887,
+    "roll_code": "5887/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 67,
+      "Hindi": 56,
+      "Mathematics": 51,
+      "Science": 64,
+      "Social Science": 59,
+      "Computer": 72,
+      "Sanskrit": 55
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-9858/026",
+    "name": "Anshu Lodhi",
+    "class": "7",
+    "section": "E",
+    "roll_no": 9858,
+    "roll_code": "9858/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 51,
+      "Hindi": 48,
+      "Mathematics": 44,
+      "Science": 34,
+      "Social Science": 38,
+      "Computer": 58,
+      "Sanskrit": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-8475/026",
+    "name": "Anushka Sharma",
+    "class": "7",
+    "section": "E",
+    "roll_no": 8475,
+    "roll_code": "8475/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 60,
+      "Mathematics": 59,
+      "Science": 55,
+      "Social Science": 53,
+      "Computer": 69,
+      "Sanskrit": 49
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-6521/026",
+    "name": "Arohi Yadav",
+    "class": "7",
+    "section": "E",
+    "roll_no": 6521,
+    "roll_code": "6521/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 12,
+      "Hindi": 26,
+      "Mathematics": 10,
+      "Science": 3,
+      "Social Science": 5,
+      "Computer": 39,
+      "Sanskrit": 7
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-6557/026",
+    "name": "Ishita Dubey",
+    "class": "7",
+    "section": "E",
+    "roll_no": 6557,
+    "roll_code": "6557/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Hindi": 54,
+      "Mathematics": 32,
+      "Science": 49,
+      "Social Science": 34,
+      "Computer": 49,
+      "Sanskrit": 36
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-8536/026",
+    "name": "Janvi Yadav",
+    "class": "7",
+    "section": "E",
+    "roll_no": 8536,
+    "roll_code": "8536/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 68,
+      "Mathematics": 36,
+      "Science": 29,
+      "Social Science": 28,
+      "Computer": 60,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-8316/026",
+    "name": "Jyoti Bhadouriya",
+    "class": "7",
+    "section": "E",
+    "roll_no": 8316,
+    "roll_code": "8316/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 43,
+      "Mathematics": 43,
+      "Science": 62,
+      "Social Science": 56,
+      "Computer": 70,
+      "Sanskrit": 48
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-8519/026",
+    "name": "Kajal Saraswat",
+    "class": "7",
+    "section": "E",
+    "roll_no": 8519,
+    "roll_code": "8519/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 15,
+      "Hindi": 23,
+      "Mathematics": 19,
+      "Science": 14,
+      "Social Science": 15,
+      "Computer": 46,
+      "Sanskrit": 19
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-8911/026",
+    "name": "Kratika",
+    "class": "7",
+    "section": "E",
+    "roll_no": 8911,
+    "roll_code": "8911/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 66,
+      "Hindi": 60,
+      "Mathematics": 36,
+      "Science": 62,
+      "Social Science": 67,
+      "Computer": 66,
+      "Sanskrit": 59
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-6635/026",
+    "name": "Mohini Baghel",
+    "class": "7",
+    "section": "E",
+    "roll_no": 6635,
+    "roll_code": "6635/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 63,
+      "Mathematics": 27,
+      "Science": 27,
+      "Social Science": 28,
+      "Computer": 55,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-6708/026",
+    "name": "Nidhi Rajawat",
+    "class": "7",
+    "section": "E",
+    "roll_no": 6708,
+    "roll_code": "6708/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Hindi": 36,
+      "Mathematics": 31,
+      "Science": 22,
+      "Social Science": 27,
+      "Computer": 46,
+      "Sanskrit": 16
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-10279/026",
+    "name": "Radha Sharma",
+    "class": "7",
+    "section": "E",
+    "roll_no": 10279,
+    "roll_code": "10279/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 62,
+      "Mathematics": 48,
+      "Science": 58,
+      "Social Science": 67,
+      "Computer": 68,
+      "Sanskrit": 48
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-6380/026",
+    "name": "Sandhya Katare",
+    "class": "7",
+    "section": "E",
+    "roll_no": 6380,
+    "roll_code": "6380/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 34,
+      "Hindi": 38,
+      "Mathematics": 18,
+      "Science": 29,
+      "Social Science": 22,
+      "Computer": 58,
+      "Sanskrit": 16
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-10057/026",
+    "name": "Shanvi",
+    "class": "7",
+    "section": "E",
+    "roll_no": 10057,
+    "roll_code": "10057/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 48,
+      "Mathematics": 31,
+      "Science": 29,
+      "Social Science": 32,
+      "Computer": 57,
+      "Sanskrit": 26
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-6632/026",
+    "name": "Shejal",
+    "class": "7",
+    "section": "E",
+    "roll_no": 6632,
+    "roll_code": "6632/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0,
+      "Computer": 0,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-9517/026",
+    "name": "Somya Chourasiya",
+    "class": "7",
+    "section": "E",
+    "roll_no": 9517,
+    "roll_code": "9517/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Hindi": 48,
+      "Mathematics": 29,
+      "Science": 27,
+      "Social Science": 34,
+      "Computer": 45,
+      "Sanskrit": 23
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-6054/026",
+    "name": "Vaibhavi Verma",
+    "class": "7",
+    "section": "E",
+    "roll_no": 6054,
+    "roll_code": "6054/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 71,
+      "Mathematics": 33,
+      "Science": 53,
+      "Social Science": 50,
+      "Computer": 64,
+      "Sanskrit": 49
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-8941/026",
+    "name": "Vaishali Singh",
+    "class": "7",
+    "section": "E",
+    "roll_no": 8941,
+    "roll_code": "8941/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 43,
+      "Hindi": 29,
+      "Mathematics": 27,
+      "Science": 18,
+      "Social Science": 20,
+      "Computer": 50,
+      "Sanskrit": 10
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-6630/026",
+    "name": "Vaishnavi",
+    "class": "7",
+    "section": "E",
+    "roll_no": 6630,
+    "roll_code": "6630/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 38,
+      "Hindi": 36,
+      "Mathematics": 32,
+      "Science": 0,
+      "Social Science": 27,
+      "Computer": 45,
+      "Sanskrit": 30
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-7E-9794/026",
+    "name": "Yashvi",
+    "class": "7",
+    "section": "E",
+    "roll_no": 9794,
+    "roll_code": "9794/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 65,
+      "Mathematics": 29,
+      "Science": 57,
+      "Social Science": 52,
+      "Computer": 71,
+      "Sanskrit": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9418/026",
+    "name": "Abhay Jadaun",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9418,
+    "roll_code": "9418/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 69,
+      "Mathematics": 35,
+      "Science": 49,
+      "Social Science": 41,
+      "Computer": 56,
+      "Sanskrit": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9416/026",
+    "name": "Adarsh",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9416,
+    "roll_code": "9416/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 72,
+      "Hindi": 62,
+      "Mathematics": 45,
+      "Science": 50,
+      "Social Science": 60,
+      "Computer": 62,
+      "Sanskrit": 36
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-8525/026",
+    "name": "Adarsh Bhadouriya",
+    "class": "8",
+    "section": "A",
+    "roll_no": 8525,
+    "roll_code": "8525/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 45,
+      "Hindi": 45,
+      "Mathematics": 50,
+      "Science": 50,
+      "Social Science": 44,
+      "Computer": 63,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9313/026",
+    "name": "Agam Jain",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9313,
+    "roll_code": "9313/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 66,
+      "Hindi": 59,
+      "Mathematics": 46,
+      "Science": 67,
+      "Social Science": 51,
+      "Computer": 69,
+      "Sanskrit": 47
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-5582/026",
+    "name": "Akshat Shrivastava",
+    "class": "8",
+    "section": "A",
+    "roll_no": 5582,
+    "roll_code": "5582/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 54,
+      "Mathematics": 38,
+      "Science": 63,
+      "Social Science": 47,
+      "Computer": 59,
+      "Sanskrit": 25
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-8901/026",
+    "name": "Alok Singh",
+    "class": "8",
+    "section": "A",
+    "roll_no": 8901,
+    "roll_code": "8901/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 51,
+      "Mathematics": 60,
+      "Science": 65,
+      "Social Science": 45,
+      "Computer": 63,
+      "Sanskrit": 44
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-10053/026",
+    "name": "Aman Pal",
+    "class": "8",
+    "section": "A",
+    "roll_no": 10053,
+    "roll_code": "10053/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Hindi": 38,
+      "Mathematics": 18,
+      "Science": 53,
+      "Social Science": 32,
+      "Computer": 50,
+      "Sanskrit": 7
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9318/026",
+    "name": "Anant Singh Narwariya",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9318,
+    "roll_code": "9318/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Hindi": 61,
+      "Mathematics": 54,
+      "Science": 68,
+      "Social Science": 52,
+      "Computer": 73,
+      "Sanskrit": 43
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-8892/026",
+    "name": "Aradhya Singh Bhadouriya",
+    "class": "8",
+    "section": "A",
+    "roll_no": 8892,
+    "roll_code": "8892/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 23,
+      "Science": 0,
+      "Social Science": 30,
+      "Computer": 56,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9611/026",
+    "name": "Arush Samadhiya",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9611,
+    "roll_code": "9611/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 70,
+      "Hindi": 66,
+      "Mathematics": 74,
+      "Science": 78,
+      "Social Science": 67,
+      "Computer": 79,
+      "Sanskrit": 59
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9280/026",
+    "name": "Avnish Goyal",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9280,
+    "roll_code": "9280/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 73,
+      "Hindi": 71,
+      "Mathematics": 78,
+      "Science": 79,
+      "Social Science": 53,
+      "Computer": 78,
+      "Sanskrit": 69
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-10129/026",
+    "name": "Chetan Sharma",
+    "class": "8",
+    "section": "A",
+    "roll_no": 10129,
+    "roll_code": "10129/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 39,
+      "Hindi": 55,
+      "Mathematics": 54,
+      "Science": 62,
+      "Social Science": 27,
+      "Computer": 71,
+      "Sanskrit": 25
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-8793/026",
+    "name": "Dev Yadav",
+    "class": "8",
+    "section": "A",
+    "roll_no": 8793,
+    "roll_code": "8793/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 65,
+      "Mathematics": 60,
+      "Science": 69,
+      "Social Science": 55,
+      "Computer": 71,
+      "Sanskrit": 46
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-8908/026",
+    "name": "Devansh Sharma",
+    "class": "8",
+    "section": "A",
+    "roll_no": 8908,
+    "roll_code": "8908/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 53,
+      "Mathematics": 45,
+      "Science": 59,
+      "Social Science": 46,
+      "Computer": 71,
+      "Sanskrit": 30
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-10014/026",
+    "name": "Devvrat Sharma",
+    "class": "8",
+    "section": "A",
+    "roll_no": 10014,
+    "roll_code": "10014/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 77,
+      "Hindi": 67,
+      "Mathematics": 75,
+      "Science": 79,
+      "Social Science": 74,
+      "Computer": 76,
+      "Sanskrit": 66
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9430/026",
+    "name": "Divyam Joshi",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9430,
+    "roll_code": "9430/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 70,
+      "Mathematics": 62,
+      "Science": 75,
+      "Social Science": 56,
+      "Computer": 71,
+      "Sanskrit": 49
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-8333/026",
+    "name": "Kanishk",
+    "class": "8",
+    "section": "A",
+    "roll_no": 8333,
+    "roll_code": "8333/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 64,
+      "Mathematics": 40,
+      "Science": 49,
+      "Social Science": 57,
+      "Computer": 72,
+      "Sanskrit": 33
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-10145/026",
+    "name": "Karan Trivediya",
+    "class": "8",
+    "section": "A",
+    "roll_no": 10145,
+    "roll_code": "10145/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 70,
+      "Hindi": 72,
+      "Mathematics": 69,
+      "Science": 75,
+      "Social Science": 58,
+      "Computer": 76,
+      "Sanskrit": 49
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-6468/026",
+    "name": "Kartik Katare",
+    "class": "8",
+    "section": "A",
+    "roll_no": 6468,
+    "roll_code": "6468/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 67,
+      "Hindi": 69,
+      "Mathematics": 54,
+      "Science": 79,
+      "Social Science": 63,
+      "Computer": 73,
+      "Sanskrit": 61
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9736/026",
+    "name": "Kartik Sharma",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9736,
+    "roll_code": "9736/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Hindi": 66,
+      "Mathematics": 27,
+      "Science": 53,
+      "Social Science": 57,
+      "Computer": 56,
+      "Sanskrit": 40
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-6667/026",
+    "name": "Mayank Singh",
+    "class": "8",
+    "section": "A",
+    "roll_no": 6667,
+    "roll_code": "6667/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 58,
+      "Hindi": 61,
+      "Mathematics": 56,
+      "Science": 69,
+      "Social Science": 57,
+      "Computer": 63,
+      "Sanskrit": 44
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-8961/026",
+    "name": "Naman Singh Bhadoria",
+    "class": "8",
+    "section": "A",
+    "roll_no": 8961,
+    "roll_code": "8961/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 69,
+      "Hindi": 71,
+      "Mathematics": 60,
+      "Science": 77,
+      "Social Science": 64,
+      "Computer": 70,
+      "Sanskrit": 61
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-10220/026",
+    "name": "Om Sharma",
+    "class": "8",
+    "section": "A",
+    "roll_no": 10220,
+    "roll_code": "10220/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 43,
+      "Mathematics": 41,
+      "Science": 51,
+      "Social Science": 52,
+      "Computer": 70,
+      "Sanskrit": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9705/026",
+    "name": "Pankaj Singh Baghel",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9705,
+    "roll_code": "9705/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 51,
+      "Hindi": 68,
+      "Mathematics": 59,
+      "Science": 64,
+      "Social Science": 58,
+      "Computer": 66,
+      "Sanskrit": 49
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9364/026",
+    "name": "Raghav",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9364,
+    "roll_code": "9364/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 57,
+      "Mathematics": 43,
+      "Science": 53,
+      "Social Science": 44,
+      "Computer": 55,
+      "Sanskrit": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9369/026",
+    "name": "Rishabh",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9369,
+    "roll_code": "9369/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Hindi": 53,
+      "Mathematics": 47,
+      "Science": 44,
+      "Social Science": 46,
+      "Computer": 67,
+      "Sanskrit": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-6992/026",
+    "name": "Riyal Yadav",
+    "class": "8",
+    "section": "A",
+    "roll_no": 6992,
+    "roll_code": "6992/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 73,
+      "Hindi": 76,
+      "Mathematics": 64,
+      "Science": 76,
+      "Social Science": 77,
+      "Computer": 75,
+      "Sanskrit": 70
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-5590/026",
+    "name": "Rudra Pratap Singh Jadon",
+    "class": "8",
+    "section": "A",
+    "roll_no": 5590,
+    "roll_code": "5590/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 73,
+      "Hindi": 67,
+      "Mathematics": 66,
+      "Science": 76,
+      "Social Science": 64,
+      "Computer": 75,
+      "Sanskrit": 61
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9007/026",
+    "name": "Satyam Chaturvedi",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9007,
+    "roll_code": "9007/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 70,
+      "Hindi": 65,
+      "Mathematics": 62,
+      "Science": 71,
+      "Social Science": 64,
+      "Computer": 66,
+      "Sanskrit": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-6695/026",
+    "name": "Shashank Joshi",
+    "class": "8",
+    "section": "A",
+    "roll_no": 6695,
+    "roll_code": "6695/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 50,
+      "Hindi": 66,
+      "Mathematics": 50,
+      "Science": 59,
+      "Social Science": 37,
+      "Computer": 67,
+      "Sanskrit": 35
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9031/026",
+    "name": "Shivam Chaturvedi",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9031,
+    "roll_code": "9031/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 69,
+      "Hindi": 70,
+      "Mathematics": 58,
+      "Science": 78,
+      "Social Science": 77,
+      "Computer": 76,
+      "Sanskrit": 53
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9443/026",
+    "name": "Shivansh Rathor",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9443,
+    "roll_code": "9443/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 66,
+      "Hindi": 69,
+      "Mathematics": 55,
+      "Science": 64,
+      "Social Science": 46,
+      "Computer": 56,
+      "Sanskrit": 40
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9564/026",
+    "name": "Shivansh Sharma",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9564,
+    "roll_code": "9564/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 66,
+      "Mathematics": 47,
+      "Science": 72,
+      "Social Science": 59,
+      "Computer": 68,
+      "Sanskrit": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-6813/026",
+    "name": "Shlok Sharma",
+    "class": "8",
+    "section": "A",
+    "roll_no": 6813,
+    "roll_code": "6813/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 52,
+      "Mathematics": 39,
+      "Science": 61,
+      "Social Science": 36,
+      "Computer": 60,
+      "Sanskrit": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-5768/026",
+    "name": "Siddant Sharma",
+    "class": "8",
+    "section": "A",
+    "roll_no": 5768,
+    "roll_code": "5768/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 23,
+      "Hindi": 20,
+      "Mathematics": 23,
+      "Science": 33,
+      "Social Science": 24,
+      "Computer": 51,
+      "Sanskrit": 7
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9767/026",
+    "name": "Sumit Khare",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9767,
+    "roll_code": "9767/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 42,
+      "Hindi": 44,
+      "Mathematics": 49,
+      "Science": 59,
+      "Social Science": 37,
+      "Computer": 60,
+      "Sanskrit": 35
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-8429/026",
+    "name": "Sunny Singh",
+    "class": "8",
+    "section": "A",
+    "roll_no": 8429,
+    "roll_code": "8429/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0,
+      "Computer": 0,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-8835/026",
+    "name": "Tanmay Shukla",
+    "class": "8",
+    "section": "A",
+    "roll_no": 8835,
+    "roll_code": "8835/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 74,
+      "Hindi": 73,
+      "Mathematics": 67,
+      "Science": 76,
+      "Social Science": 72,
+      "Computer": 77,
+      "Sanskrit": 72
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-8288/026",
+    "name": "Vashu Jain",
+    "class": "8",
+    "section": "A",
+    "roll_no": 8288,
+    "roll_code": "8288/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 53,
+      "Mathematics": 41,
+      "Science": 70,
+      "Social Science": 48,
+      "Computer": 52,
+      "Sanskrit": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-9346/026",
+    "name": "Vishwapratap Singh Yadav",
+    "class": "8",
+    "section": "A",
+    "roll_no": 9346,
+    "roll_code": "9346/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 70,
+      "Hindi": 67,
+      "Mathematics": 53,
+      "Science": 76,
+      "Social Science": 73,
+      "Computer": 67,
+      "Sanskrit": 48
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8A-8406/026",
+    "name": "Yuvraj Singh",
+    "class": "8",
+    "section": "A",
+    "roll_no": 8406,
+    "roll_code": "8406/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 54,
+      "Hindi": 61,
+      "Mathematics": 35,
+      "Science": 48,
+      "Social Science": 41,
+      "Computer": 48,
+      "Sanskrit": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-6190/026",
+    "name": "Aditya Singh Rajawat",
+    "class": "8",
+    "section": "B",
+    "roll_no": 6190,
+    "roll_code": "6190/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Hindi": 65,
+      "Mathematics": 46,
+      "Science": 57,
+      "Social Science": 30,
+      "Computer": 49,
+      "Sanskrit": 54
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9084/026",
+    "name": "Aneesh Mourya",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9084,
+    "roll_code": "9084/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Hindi": 57,
+      "Mathematics": 35,
+      "Science": 46,
+      "Social Science": 41,
+      "Computer": 56,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-10197/026",
+    "name": "Anmol Singh",
+    "class": "8",
+    "section": "B",
+    "roll_no": 10197,
+    "roll_code": "10197/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 33,
+      "Hindi": 33,
+      "Mathematics": 26,
+      "Science": 15,
+      "Social Science": 22,
+      "Computer": 47,
+      "Sanskrit": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9596/026",
+    "name": "Anshul Kumar",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9596,
+    "roll_code": "9596/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 36,
+      "Mathematics": 23,
+      "Science": 37,
+      "Social Science": 43,
+      "Computer": 68,
+      "Sanskrit": 35
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9548/026",
+    "name": "Anshuman Singh Gurjar",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9548,
+    "roll_code": "9548/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 58,
+      "Hindi": 52,
+      "Mathematics": 54,
+      "Science": 21,
+      "Social Science": 38,
+      "Computer": 44,
+      "Sanskrit": 41
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-8913/026",
+    "name": "Arjun Porwal",
+    "class": "8",
+    "section": "B",
+    "roll_no": 8913,
+    "roll_code": "8913/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 57,
+      "Mathematics": 49,
+      "Science": 62,
+      "Social Science": 63,
+      "Computer": 67,
+      "Sanskrit": 35
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-5457/026",
+    "name": "Aryan Sharma",
+    "class": "8",
+    "section": "B",
+    "roll_no": 5457,
+    "roll_code": "5457/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 35,
+      "Hindi": 45,
+      "Mathematics": 28,
+      "Science": 15,
+      "Social Science": 25,
+      "Computer": 40,
+      "Sanskrit": 30
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9197/026",
+    "name": "Aryan Yadav",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9197,
+    "roll_code": "9197/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Hindi": 71,
+      "Mathematics": 64,
+      "Science": 78,
+      "Social Science": 61,
+      "Computer": 66,
+      "Sanskrit": 54
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9988/026",
+    "name": "Avnish Baghel",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9988,
+    "roll_code": "9988/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 50,
+      "Mathematics": 40,
+      "Science": 31,
+      "Social Science": 27,
+      "Computer": 50,
+      "Sanskrit": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-5775/026",
+    "name": "Ayush Sharma",
+    "class": "8",
+    "section": "B",
+    "roll_no": 5775,
+    "roll_code": "5775/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 74,
+      "Hindi": 71,
+      "Mathematics": 78,
+      "Science": 72,
+      "Social Science": 78,
+      "Computer": 70,
+      "Sanskrit": 61
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9230/026",
+    "name": "Bhanu Pratap Singh Tomar",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9230,
+    "roll_code": "9230/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 62,
+      "Mathematics": 33,
+      "Science": 35,
+      "Social Science": 42,
+      "Computer": 63,
+      "Sanskrit": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9126/026",
+    "name": "Daljeet",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9126,
+    "roll_code": "9126/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 67,
+      "Hindi": 70,
+      "Mathematics": 70,
+      "Science": 70,
+      "Social Science": 69,
+      "Computer": 63,
+      "Sanskrit": 64
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-8586/026",
+    "name": "Dev Sharma",
+    "class": "8",
+    "section": "B",
+    "roll_no": 8586,
+    "roll_code": "8586/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 73,
+      "Hindi": 73,
+      "Mathematics": 79,
+      "Science": 77,
+      "Social Science": 78,
+      "Computer": 71,
+      "Sanskrit": 67
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9655/026",
+    "name": "Devanshu Sharma",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9655,
+    "roll_code": "9655/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 66,
+      "Mathematics": 50,
+      "Science": 65,
+      "Social Science": 47,
+      "Computer": 68,
+      "Sanskrit": 41
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9113/026",
+    "name": "Halchal Singh",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9113,
+    "roll_code": "9113/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 42,
+      "Mathematics": 40,
+      "Science": 32,
+      "Social Science": 53,
+      "Computer": 62,
+      "Sanskrit": 34
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-6716/026",
+    "name": "Harsh Pratap Singh",
+    "class": "8",
+    "section": "B",
+    "roll_no": 6716,
+    "roll_code": "6716/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 45,
+      "Hindi": 42,
+      "Mathematics": 40,
+      "Science": 60,
+      "Social Science": 35,
+      "Computer": 47,
+      "Sanskrit": 17
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-6508/026",
+    "name": "Harsh Sharma",
+    "class": "8",
+    "section": "B",
+    "roll_no": 6508,
+    "roll_code": "6508/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 66,
+      "Hindi": 73,
+      "Mathematics": 59,
+      "Science": 75,
+      "Social Science": 71,
+      "Computer": 61,
+      "Sanskrit": 56
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-6040/026",
+    "name": "Harsh Yadav",
+    "class": "8",
+    "section": "B",
+    "roll_no": 6040,
+    "roll_code": "6040/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Hindi": 43,
+      "Mathematics": 37,
+      "Science": 47,
+      "Social Science": 31,
+      "Computer": 58,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-10063/026",
+    "name": "Himanshu Singh Tomar",
+    "class": "8",
+    "section": "B",
+    "roll_no": 10063,
+    "roll_code": "10063/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 75,
+      "Mathematics": 61,
+      "Science": 77,
+      "Social Science": 67,
+      "Computer": 78,
+      "Sanskrit": 57
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9934/026",
+    "name": "Jay Sharma",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9934,
+    "roll_code": "9934/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Hindi": 70,
+      "Mathematics": 54,
+      "Science": 68,
+      "Social Science": 69,
+      "Computer": 61,
+      "Sanskrit": 34
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9225/026",
+    "name": "Jeetu Singh Bhadoriya",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9225,
+    "roll_code": "9225/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 70,
+      "Mathematics": 58,
+      "Science": 75,
+      "Social Science": 65,
+      "Computer": 70,
+      "Sanskrit": 30
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9565/026",
+    "name": "Krishnakant Ojha",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9565,
+    "roll_code": "9565/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 66,
+      "Hindi": 71,
+      "Mathematics": 68,
+      "Science": 67,
+      "Social Science": 65,
+      "Computer": 68,
+      "Sanskrit": 58
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9632/026",
+    "name": "Manvendra Singh",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9632,
+    "roll_code": "9632/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 42,
+      "Hindi": 70,
+      "Mathematics": 54,
+      "Science": 57,
+      "Social Science": 44,
+      "Computer": 60,
+      "Sanskrit": 46
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9896/026",
+    "name": "Mayank",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9896,
+    "roll_code": "9896/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 73,
+      "Hindi": 61,
+      "Mathematics": 55,
+      "Science": 69,
+      "Social Science": 59,
+      "Computer": 70,
+      "Sanskrit": 55
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-8706/026",
+    "name": "Mehan",
+    "class": "8",
+    "section": "B",
+    "roll_no": 8706,
+    "roll_code": "8706/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 70,
+      "Mathematics": 61,
+      "Science": 75,
+      "Social Science": 77,
+      "Computer": 61,
+      "Sanskrit": 62
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9525/026",
+    "name": "Piyush Yadav",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9525,
+    "roll_code": "9525/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 45,
+      "Hindi": 27,
+      "Mathematics": 29,
+      "Science": 17,
+      "Social Science": 40,
+      "Computer": 47,
+      "Sanskrit": 14
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-5956/026",
+    "name": "Priyanshu Shrivas",
+    "class": "8",
+    "section": "B",
+    "roll_no": 5956,
+    "roll_code": "5956/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 73,
+      "Hindi": 73,
+      "Mathematics": 64,
+      "Science": 73,
+      "Social Science": 75,
+      "Computer": 77,
+      "Sanskrit": 60
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9675/026",
+    "name": "Puneet Kumar",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9675,
+    "roll_code": "9675/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 31,
+      "Hindi": 31,
+      "Mathematics": 27,
+      "Science": 28,
+      "Social Science": 33,
+      "Computer": 42,
+      "Sanskrit": 10
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-6116/026",
+    "name": "Raman Singh",
+    "class": "8",
+    "section": "B",
+    "roll_no": 6116,
+    "roll_code": "6116/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 70,
+      "Mathematics": 63,
+      "Science": 46,
+      "Social Science": 66,
+      "Computer": 67,
+      "Sanskrit": 56
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9319/026",
+    "name": "Rishabh Singh Kushwah",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9319,
+    "roll_code": "9319/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 69,
+      "Hindi": 72,
+      "Mathematics": 65,
+      "Science": 70,
+      "Social Science": 75,
+      "Computer": 62,
+      "Sanskrit": 57
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9758/026",
+    "name": "Ritesh",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9758,
+    "roll_code": "9758/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Hindi": 77,
+      "Mathematics": 75,
+      "Science": 74,
+      "Social Science": 62,
+      "Computer": 59,
+      "Sanskrit": 65
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9616/026",
+    "name": "Saksham Bhardwaj",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9616,
+    "roll_code": "9616/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 69,
+      "Hindi": 65,
+      "Mathematics": 65,
+      "Science": 56,
+      "Social Science": 63,
+      "Computer": 67,
+      "Sanskrit": 44
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9278/026",
+    "name": "Shivam",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9278,
+    "roll_code": "9278/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 71,
+      "Mathematics": 62,
+      "Science": 59,
+      "Social Science": 69,
+      "Computer": 67,
+      "Sanskrit": 47
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9508/026",
+    "name": "Tarun Singh",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9508,
+    "roll_code": "9508/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 78,
+      "Hindi": 72,
+      "Mathematics": 51,
+      "Science": 63,
+      "Social Science": 57,
+      "Computer": 60,
+      "Sanskrit": 44
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-9201/026",
+    "name": "Vinay Uday",
+    "class": "8",
+    "section": "B",
+    "roll_no": 9201,
+    "roll_code": "9201/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 70,
+      "Mathematics": 65,
+      "Science": 74,
+      "Social Science": 62,
+      "Computer": 73,
+      "Sanskrit": 39
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-6439/026",
+    "name": "Vivek Shrivas",
+    "class": "8",
+    "section": "B",
+    "roll_no": 6439,
+    "roll_code": "6439/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 45,
+      "Hindi": 53,
+      "Mathematics": 34,
+      "Science": 17,
+      "Social Science": 29,
+      "Computer": 54,
+      "Sanskrit": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-6172/026",
+    "name": "Yas Pratap Narwariya",
+    "class": "8",
+    "section": "B",
+    "roll_no": 6172,
+    "roll_code": "6172/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 77,
+      "Hindi": 75,
+      "Mathematics": 62,
+      "Science": 68,
+      "Social Science": 78,
+      "Computer": 75,
+      "Sanskrit": 53
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8B-5769/026",
+    "name": "Yuvraj Singh Bhadoriya",
+    "class": "8",
+    "section": "B",
+    "roll_no": 5769,
+    "roll_code": "5769/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 70,
+      "Mathematics": 63,
+      "Science": 58,
+      "Social Science": 61,
+      "Computer": 68,
+      "Sanskrit": 48
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-8164/026",
+    "name": "Aadarsh Yadav",
+    "class": "8",
+    "section": "C",
+    "roll_no": 8164,
+    "roll_code": "8164/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 15,
+      "Hindi": 12,
+      "Mathematics": 9,
+      "Science": 11,
+      "Social Science": 27,
+      "Computer": 43,
+      "Sanskrit": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-10215/026",
+    "name": "Abhay Singh Bhatiya",
+    "class": "8",
+    "section": "C",
+    "roll_no": 10215,
+    "roll_code": "10215/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 19,
+      "Hindi": 27,
+      "Mathematics": 13,
+      "Science": 22,
+      "Social Science": 33,
+      "Computer": 37,
+      "Sanskrit": 16
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-9541/026",
+    "name": "Abhay Yadav",
+    "class": "8",
+    "section": "C",
+    "roll_no": 9541,
+    "roll_code": "9541/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Hindi": 24,
+      "Mathematics": 14,
+      "Science": 11,
+      "Social Science": 18,
+      "Computer": 43,
+      "Sanskrit": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-9371/026",
+    "name": "Abhi Dubey",
+    "class": "8",
+    "section": "C",
+    "roll_no": 9371,
+    "roll_code": "9371/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 36,
+      "Hindi": 31,
+      "Mathematics": 20,
+      "Science": 25,
+      "Social Science": 33,
+      "Computer": 40,
+      "Sanskrit": 22
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-8657/026",
+    "name": "Abhi Sharma",
+    "class": "8",
+    "section": "C",
+    "roll_no": 8657,
+    "roll_code": "8657/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 19,
+      "Hindi": 27,
+      "Mathematics": 24,
+      "Science": 14,
+      "Social Science": 27,
+      "Computer": 52,
+      "Sanskrit": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-9658/026",
+    "name": "Abhiraj Singh Chauhan",
+    "class": "8",
+    "section": "C",
+    "roll_no": 9658,
+    "roll_code": "9658/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Hindi": 27,
+      "Mathematics": 41,
+      "Science": 35,
+      "Social Science": 37,
+      "Computer": 49,
+      "Sanskrit": 26
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-8882/026",
+    "name": "Abhishek Sharma",
+    "class": "8",
+    "section": "C",
+    "roll_no": 8882,
+    "roll_code": "8882/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 43,
+      "Hindi": 33,
+      "Mathematics": 36,
+      "Science": 40,
+      "Social Science": 52,
+      "Computer": 57,
+      "Sanskrit": 17
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-6608/026",
+    "name": "Abhishek Yadav",
+    "class": "8",
+    "section": "C",
+    "roll_no": 6608,
+    "roll_code": "6608/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 21,
+      "Hindi": 32,
+      "Mathematics": 32,
+      "Science": 21,
+      "Social Science": 30,
+      "Computer": 54,
+      "Sanskrit": 19
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-10240/026",
+    "name": "Abhyuday Pratap Singh Tomar",
+    "class": "8",
+    "section": "C",
+    "roll_no": 10240,
+    "roll_code": "10240/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 30,
+      "Hindi": 36,
+      "Mathematics": 38,
+      "Science": 34,
+      "Social Science": 28,
+      "Computer": 51,
+      "Sanskrit": 20
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-9183/026",
+    "name": "Aditya Singh",
+    "class": "8",
+    "section": "C",
+    "roll_no": 9183,
+    "roll_code": "9183/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 9,
+      "Hindi": 9,
+      "Mathematics": 6,
+      "Science": 7,
+      "Social Science": 0,
+      "Computer": 39,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-9482/026",
+    "name": "Anurag Singh",
+    "class": "8",
+    "section": "C",
+    "roll_no": 9482,
+    "roll_code": "9482/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 19,
+      "Hindi": 24,
+      "Mathematics": 25,
+      "Science": 14,
+      "Social Science": 27,
+      "Computer": 39,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-8631/026",
+    "name": "Anurag Singh",
+    "class": "8",
+    "section": "C",
+    "roll_no": 8631,
+    "roll_code": "8631/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0,
+      "Computer": 0,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-9131/026",
+    "name": "Anurag Singh Bhadauriya",
+    "class": "8",
+    "section": "C",
+    "roll_no": 9131,
+    "roll_code": "9131/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 29,
+      "Mathematics": 16,
+      "Science": 22,
+      "Social Science": 36,
+      "Computer": 38,
+      "Sanskrit": 14
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-8760/026",
+    "name": "Arjun Sharma",
+    "class": "8",
+    "section": "C",
+    "roll_no": 8760,
+    "roll_code": "8760/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 30,
+      "Hindi": 30,
+      "Mathematics": 40,
+      "Science": 30,
+      "Social Science": 49,
+      "Computer": 59,
+      "Sanskrit": 23
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-10253/026",
+    "name": "Ashutosh Singh Bhadauriya",
+    "class": "8",
+    "section": "C",
+    "roll_no": 10253,
+    "roll_code": "10253/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 36,
+      "Hindi": 31,
+      "Mathematics": 19,
+      "Science": 52,
+      "Social Science": 33,
+      "Computer": 46,
+      "Sanskrit": 19
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-10232/026",
+    "name": "Astitva Singh",
+    "class": "8",
+    "section": "C",
+    "roll_no": 10232,
+    "roll_code": "10232/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 66,
+      "Hindi": 54,
+      "Mathematics": 56,
+      "Science": 71,
+      "Social Science": 65,
+      "Computer": 65,
+      "Sanskrit": 46
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-9487/026",
+    "name": "Avanish Baghel",
+    "class": "8",
+    "section": "C",
+    "roll_no": 9487,
+    "roll_code": "9487/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 38,
+      "Hindi": 44,
+      "Mathematics": 45,
+      "Science": 38,
+      "Social Science": 40,
+      "Computer": 49,
+      "Sanskrit": 23
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-6237/026",
+    "name": "Ayan Ali",
+    "class": "8",
+    "section": "C",
+    "roll_no": 6237,
+    "roll_code": "6237/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 18,
+      "Hindi": 32,
+      "Mathematics": 28,
+      "Science": 6,
+      "Social Science": 25,
+      "Computer": 40,
+      "Sanskrit": 20
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-9715/026",
+    "name": "Ayush Singh",
+    "class": "8",
+    "section": "C",
+    "roll_no": 9715,
+    "roll_code": "9715/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 17,
+      "Hindi": 31,
+      "Mathematics": 9,
+      "Science": 17,
+      "Social Science": 40,
+      "Computer": 60,
+      "Sanskrit": 23
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-10018/026",
+    "name": "Deepak Singh Tomar",
+    "class": "8",
+    "section": "C",
+    "roll_no": 10018,
+    "roll_code": "10018/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 38,
+      "Hindi": 40,
+      "Mathematics": 35,
+      "Science": 42,
+      "Social Science": 35,
+      "Computer": 58,
+      "Sanskrit": 39
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-9845/026",
+    "name": "Devraj Gurjar",
+    "class": "8",
+    "section": "C",
+    "roll_no": 9845,
+    "roll_code": "9845/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 35,
+      "Hindi": 27,
+      "Mathematics": 32,
+      "Science": 37,
+      "Social Science": 16,
+      "Computer": 51,
+      "Sanskrit": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-8340/026",
+    "name": "Divyansh Bhadouriya",
+    "class": "8",
+    "section": "C",
+    "roll_no": 8340,
+    "roll_code": "8340/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 24,
+      "Hindi": 32,
+      "Mathematics": 24,
+      "Science": 27,
+      "Social Science": 32,
+      "Computer": 54,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-9385/026",
+    "name": "Karan Parmar",
+    "class": "8",
+    "section": "C",
+    "roll_no": 9385,
+    "roll_code": "9385/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0,
+      "Computer": 0,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-9563/026",
+    "name": "Krashna",
+    "class": "8",
+    "section": "C",
+    "roll_no": 9563,
+    "roll_code": "9563/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 43,
+      "Hindi": 51,
+      "Mathematics": 46,
+      "Science": 50,
+      "Social Science": 32,
+      "Computer": 45,
+      "Sanskrit": 35
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-9368/026",
+    "name": "Love Kumar",
+    "class": "8",
+    "section": "C",
+    "roll_no": 9368,
+    "roll_code": "9368/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 19,
+      "Hindi": 32,
+      "Mathematics": 41,
+      "Science": 36,
+      "Social Science": 28,
+      "Computer": 53,
+      "Sanskrit": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-9379/026",
+    "name": "Mayank",
+    "class": "8",
+    "section": "C",
+    "roll_no": 9379,
+    "roll_code": "9379/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 22,
+      "Hindi": 21,
+      "Mathematics": 10,
+      "Science": 15,
+      "Social Science": 20,
+      "Computer": 42,
+      "Sanskrit": 30
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-9680/026",
+    "name": "Prabal Pratap Singh",
+    "class": "8",
+    "section": "C",
+    "roll_no": 9680,
+    "roll_code": "9680/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 12,
+      "Hindi": 8,
+      "Mathematics": 7,
+      "Science": 7,
+      "Social Science": 14,
+      "Computer": 35,
+      "Sanskrit": 2
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-9856/026",
+    "name": "Priyanshu",
+    "class": "8",
+    "section": "C",
+    "roll_no": 9856,
+    "roll_code": "9856/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 14,
+      "Hindi": 32,
+      "Mathematics": 29,
+      "Science": 16,
+      "Social Science": 19,
+      "Computer": 52,
+      "Sanskrit": 21
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-5705/026",
+    "name": "Rudra Pratap",
+    "class": "8",
+    "section": "C",
+    "roll_no": 5705,
+    "roll_code": "5705/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 38,
+      "Mathematics": 32,
+      "Science": 16,
+      "Social Science": 20,
+      "Computer": 56,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-10295/026",
+    "name": "Rudra Singh",
+    "class": "8",
+    "section": "C",
+    "roll_no": 10295,
+    "roll_code": "10295/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 21,
+      "Hindi": 36,
+      "Mathematics": 21,
+      "Science": 37,
+      "Social Science": 27,
+      "Computer": 48,
+      "Sanskrit": 19
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-8494/026",
+    "name": "Shiva Singh",
+    "class": "8",
+    "section": "C",
+    "roll_no": 8494,
+    "roll_code": "8494/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 6,
+      "Hindi": 22,
+      "Mathematics": 20,
+      "Science": 23,
+      "Social Science": 11,
+      "Computer": 42,
+      "Sanskrit": 9
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-8422/026",
+    "name": "Siddharth Barua",
+    "class": "8",
+    "section": "C",
+    "roll_no": 8422,
+    "roll_code": "8422/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 45,
+      "Hindi": 32,
+      "Mathematics": 39,
+      "Science": 31,
+      "Social Science": 27,
+      "Computer": 54,
+      "Sanskrit": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-5967/026",
+    "name": "Sourya Singh",
+    "class": "8",
+    "section": "C",
+    "roll_no": 5967,
+    "roll_code": "5967/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 35,
+      "Hindi": 36,
+      "Mathematics": 38,
+      "Science": 33,
+      "Social Science": 29,
+      "Computer": 58,
+      "Sanskrit": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-9037/026",
+    "name": "Sumit Baghel",
+    "class": "8",
+    "section": "C",
+    "roll_no": 9037,
+    "roll_code": "9037/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 19,
+      "Hindi": 21,
+      "Mathematics": 14,
+      "Science": 12,
+      "Social Science": 15,
+      "Computer": 39,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8C-8881/026",
+    "name": "Yuvraj Yadav",
+    "class": "8",
+    "section": "C",
+    "roll_no": 8881,
+    "roll_code": "8881/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 38,
+      "Hindi": 32,
+      "Mathematics": 19,
+      "Science": 39,
+      "Social Science": 29,
+      "Computer": 50,
+      "Sanskrit": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-7023/026",
+    "name": "Alfiza Bano",
+    "class": "8",
+    "section": "D",
+    "roll_no": 7023,
+    "roll_code": "7023/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Hindi": 70,
+      "Mathematics": 51,
+      "Science": 72,
+      "Social Science": 68,
+      "Computer": 62,
+      "Sanskrit": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-10332/026",
+    "name": "Ananya",
+    "class": "8",
+    "section": "D",
+    "roll_no": 10332,
+    "roll_code": "10332/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 38,
+      "Hindi": 63,
+      "Mathematics": 50,
+      "Science": 60,
+      "Social Science": 41,
+      "Computer": 58,
+      "Sanskrit": 51
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-9339/026",
+    "name": "Ananya Rajawat",
+    "class": "8",
+    "section": "D",
+    "roll_no": 9339,
+    "roll_code": "9339/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 65,
+      "Mathematics": 48,
+      "Science": 50,
+      "Social Science": 49,
+      "Computer": 59,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-9054/026",
+    "name": "Angel Tomar",
+    "class": "8",
+    "section": "D",
+    "roll_no": 9054,
+    "roll_code": "9054/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 53,
+      "Mathematics": 38,
+      "Science": 54,
+      "Social Science": 42,
+      "Computer": 53,
+      "Sanskrit": 7
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-10149/026",
+    "name": "Anshika Yadav",
+    "class": "8",
+    "section": "D",
+    "roll_no": 10149,
+    "roll_code": "10149/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 37,
+      "Hindi": 55,
+      "Mathematics": 44,
+      "Science": 63,
+      "Social Science": 55,
+      "Computer": 70,
+      "Sanskrit": 35
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-8403/026",
+    "name": "Aradhya Jadaun",
+    "class": "8",
+    "section": "D",
+    "roll_no": 8403,
+    "roll_code": "8403/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 70,
+      "Mathematics": 51,
+      "Science": 69,
+      "Social Science": 65,
+      "Computer": 61,
+      "Sanskrit": 47
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-6622/026",
+    "name": "Arohi",
+    "class": "8",
+    "section": "D",
+    "roll_no": 6622,
+    "roll_code": "6622/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 70,
+      "Hindi": 74,
+      "Mathematics": 71,
+      "Science": 79,
+      "Social Science": 74,
+      "Computer": 78,
+      "Sanskrit": 63
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-6543/026",
+    "name": "Arohi Pathak",
+    "class": "8",
+    "section": "D",
+    "roll_no": 6543,
+    "roll_code": "6543/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Hindi": 71,
+      "Mathematics": 75,
+      "Science": 77,
+      "Social Science": 76,
+      "Computer": 67,
+      "Sanskrit": 63
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-8541/026",
+    "name": "Ashok Sundari Sharma",
+    "class": "8",
+    "section": "D",
+    "roll_no": 8541,
+    "roll_code": "8541/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0,
+      "Computer": 0,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-10224/026",
+    "name": "Astha",
+    "class": "8",
+    "section": "D",
+    "roll_no": 10224,
+    "roll_code": "10224/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 60,
+      "Mathematics": 36,
+      "Science": 61,
+      "Social Science": 27,
+      "Computer": 39,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-5832/026",
+    "name": "Ayushi",
+    "class": "8",
+    "section": "D",
+    "roll_no": 5832,
+    "roll_code": "5832/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Hindi": 67,
+      "Mathematics": 37,
+      "Science": 71,
+      "Social Science": 43,
+      "Computer": 58,
+      "Sanskrit": 40
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-10223/026",
+    "name": "Chitranshi Bhadouriya",
+    "class": "8",
+    "section": "D",
+    "roll_no": 10223,
+    "roll_code": "10223/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Hindi": 58,
+      "Mathematics": 36,
+      "Science": 59,
+      "Social Science": 41,
+      "Computer": 55,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-5938/026",
+    "name": "Daksha Singh",
+    "class": "8",
+    "section": "D",
+    "roll_no": 5938,
+    "roll_code": "5938/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 75,
+      "Hindi": 74,
+      "Mathematics": 71,
+      "Science": 77,
+      "Social Science": 70,
+      "Computer": 75,
+      "Sanskrit": 60
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-9501/026",
+    "name": "Diksha",
+    "class": "8",
+    "section": "D",
+    "roll_no": 9501,
+    "roll_code": "9501/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 75,
+      "Mathematics": 66,
+      "Science": 79,
+      "Social Science": 70,
+      "Computer": 64,
+      "Sanskrit": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-5939/026",
+    "name": "Dishita Singh",
+    "class": "8",
+    "section": "D",
+    "roll_no": 5939,
+    "roll_code": "5939/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 76,
+      "Hindi": 78,
+      "Mathematics": 73,
+      "Science": 79,
+      "Social Science": 76,
+      "Computer": 76,
+      "Sanskrit": 63
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-6258/026",
+    "name": "Harshita Bhadouriya",
+    "class": "8",
+    "section": "D",
+    "roll_no": 6258,
+    "roll_code": "6258/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 70,
+      "Mathematics": 57,
+      "Science": 69,
+      "Social Science": 64,
+      "Computer": 68,
+      "Sanskrit": 43
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-6906/026",
+    "name": "Ishika Sharma",
+    "class": "8",
+    "section": "D",
+    "roll_no": 6906,
+    "roll_code": "6906/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 50,
+      "Mathematics": 8,
+      "Science": 11,
+      "Social Science": 21,
+      "Computer": 49,
+      "Sanskrit": 20
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-9698/026",
+    "name": "Karishma",
+    "class": "8",
+    "section": "D",
+    "roll_no": 9698,
+    "roll_code": "9698/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 28,
+      "Mathematics": 29,
+      "Science": 47,
+      "Social Science": 27,
+      "Computer": 46,
+      "Sanskrit": 9
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-10225/026",
+    "name": "Kaushiki Bhadouriya",
+    "class": "8",
+    "section": "D",
+    "roll_no": 10225,
+    "roll_code": "10225/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 71,
+      "Hindi": 70,
+      "Mathematics": 27,
+      "Science": 62,
+      "Social Science": 59,
+      "Computer": 60,
+      "Sanskrit": 42
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-6451/026",
+    "name": "Kavya Pathak",
+    "class": "8",
+    "section": "D",
+    "roll_no": 6451,
+    "roll_code": "6451/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 54,
+      "Hindi": 65,
+      "Mathematics": 32,
+      "Science": 62,
+      "Social Science": 67,
+      "Computer": 65,
+      "Sanskrit": 39
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-9643/026",
+    "name": "Khushi",
+    "class": "8",
+    "section": "D",
+    "roll_no": 9643,
+    "roll_code": "9643/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 18,
+      "Hindi": 40,
+      "Mathematics": 16,
+      "Science": 11,
+      "Social Science": 20,
+      "Computer": 42,
+      "Sanskrit": 11
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-8837/026",
+    "name": "Megha Tripathi",
+    "class": "8",
+    "section": "D",
+    "roll_no": 8837,
+    "roll_code": "8837/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 72,
+      "Hindi": 74,
+      "Mathematics": 71,
+      "Science": 76,
+      "Social Science": 74,
+      "Computer": 72,
+      "Sanskrit": 48
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-9053/026",
+    "name": "Nitya Mishra",
+    "class": "8",
+    "section": "D",
+    "roll_no": 9053,
+    "roll_code": "9053/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 38,
+      "Hindi": 65,
+      "Mathematics": 38,
+      "Science": 61,
+      "Social Science": 43,
+      "Computer": 56,
+      "Sanskrit": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-9806/026",
+    "name": "Nitya Sharma",
+    "class": "8",
+    "section": "D",
+    "roll_no": 9806,
+    "roll_code": "9806/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 55,
+      "Mathematics": 58,
+      "Science": 70,
+      "Social Science": 41,
+      "Computer": 63,
+      "Sanskrit": 18
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-9481/026",
+    "name": "Palak Rajawat",
+    "class": "8",
+    "section": "D",
+    "roll_no": 9481,
+    "roll_code": "9481/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 65,
+      "Mathematics": 54,
+      "Science": 69,
+      "Social Science": 50,
+      "Computer": 66,
+      "Sanskrit": 22
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-8884/026",
+    "name": "Paridhi Dixit",
+    "class": "8",
+    "section": "D",
+    "roll_no": 8884,
+    "roll_code": "8884/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Hindi": 68,
+      "Mathematics": 32,
+      "Science": 58,
+      "Social Science": 53,
+      "Computer": 60,
+      "Sanskrit": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-10156/026",
+    "name": "Preeti",
+    "class": "8",
+    "section": "D",
+    "roll_no": 10156,
+    "roll_code": "10156/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 56,
+      "Mathematics": 19,
+      "Science": 29,
+      "Social Science": 33,
+      "Computer": 46,
+      "Sanskrit": 7
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-9438/026",
+    "name": "Princy",
+    "class": "8",
+    "section": "D",
+    "roll_no": 9438,
+    "roll_code": "9438/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 16,
+      "Hindi": 61,
+      "Mathematics": 14,
+      "Science": 0,
+      "Social Science": 15,
+      "Computer": 42,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-5922/026",
+    "name": "Radhika Mishra",
+    "class": "8",
+    "section": "D",
+    "roll_no": 5922,
+    "roll_code": "5922/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 58,
+      "Hindi": 62,
+      "Mathematics": 22,
+      "Science": 57,
+      "Social Science": 62,
+      "Computer": 63,
+      "Sanskrit": 35
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-8379/026",
+    "name": "Radhika Verma",
+    "class": "8",
+    "section": "D",
+    "roll_no": 8379,
+    "roll_code": "8379/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 63,
+      "Mathematics": 51,
+      "Science": 71,
+      "Social Science": 68,
+      "Computer": 58,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-6280/026",
+    "name": "Rakhi",
+    "class": "8",
+    "section": "D",
+    "roll_no": 6280,
+    "roll_code": "6280/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 51,
+      "Hindi": 70,
+      "Mathematics": 33,
+      "Science": 66,
+      "Social Science": 49,
+      "Computer": 55,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-9699/026",
+    "name": "Reshma",
+    "class": "8",
+    "section": "D",
+    "roll_no": 9699,
+    "roll_code": "9699/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 34,
+      "Hindi": 52,
+      "Mathematics": 20,
+      "Science": 36,
+      "Social Science": 27,
+      "Computer": 42,
+      "Sanskrit": 17
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-6235/026",
+    "name": "Rouli Jain",
+    "class": "8",
+    "section": "D",
+    "roll_no": 6235,
+    "roll_code": "6235/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Hindi": 62,
+      "Mathematics": 50,
+      "Science": 71,
+      "Social Science": 63,
+      "Computer": 55,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-9421/026",
+    "name": "Rupal Joshi",
+    "class": "8",
+    "section": "D",
+    "roll_no": 9421,
+    "roll_code": "9421/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Hindi": 41,
+      "Mathematics": 21,
+      "Science": 20,
+      "Social Science": 31,
+      "Computer": 57,
+      "Sanskrit": 16
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-6602/026",
+    "name": "Sangam Yadav",
+    "class": "8",
+    "section": "D",
+    "roll_no": 6602,
+    "roll_code": "6602/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 27,
+      "Hindi": 55,
+      "Mathematics": 18,
+      "Science": 38,
+      "Social Science": 36,
+      "Computer": 44,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-6473/026",
+    "name": "Sanskriti",
+    "class": "8",
+    "section": "D",
+    "roll_no": 6473,
+    "roll_code": "6473/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 63,
+      "Mathematics": 45,
+      "Science": 71,
+      "Social Science": 67,
+      "Computer": 54,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-9322/026",
+    "name": "Saumya Shukla",
+    "class": "8",
+    "section": "D",
+    "roll_no": 9322,
+    "roll_code": "9322/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 63,
+      "Mathematics": 42,
+      "Science": 68,
+      "Social Science": 49,
+      "Computer": 44,
+      "Sanskrit": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-5870/026",
+    "name": "Shiva Yadav",
+    "class": "8",
+    "section": "D",
+    "roll_no": 5870,
+    "roll_code": "5870/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 71,
+      "Mathematics": 54,
+      "Science": 75,
+      "Social Science": 70,
+      "Computer": 69,
+      "Sanskrit": 57
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-10139/026",
+    "name": "Shivi Yadav",
+    "class": "8",
+    "section": "D",
+    "roll_no": 10139,
+    "roll_code": "10139/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Hindi": 33,
+      "Mathematics": 43,
+      "Science": 38,
+      "Social Science": 32,
+      "Computer": 63,
+      "Sanskrit": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-9326/026",
+    "name": "Shrashti Sharma",
+    "class": "8",
+    "section": "D",
+    "roll_no": 9326,
+    "roll_code": "9326/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 74,
+      "Mathematics": 53,
+      "Science": 71,
+      "Social Science": 68,
+      "Computer": 65,
+      "Sanskrit": 42
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-8268/026",
+    "name": "Shrasti Rathore",
+    "class": "8",
+    "section": "D",
+    "roll_no": 8268,
+    "roll_code": "8268/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 72,
+      "Hindi": 72,
+      "Mathematics": 68,
+      "Science": 74,
+      "Social Science": 74,
+      "Computer": 77,
+      "Sanskrit": 46
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-6249/026",
+    "name": "Shreya Sharma",
+    "class": "8",
+    "section": "D",
+    "roll_no": 6249,
+    "roll_code": "6249/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 70,
+      "Mathematics": 60,
+      "Science": 72,
+      "Social Science": 72,
+      "Computer": 75,
+      "Sanskrit": 46
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-9825/026",
+    "name": "Somya",
+    "class": "8",
+    "section": "D",
+    "roll_no": 9825,
+    "roll_code": "9825/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 67,
+      "Mathematics": 49,
+      "Science": 60,
+      "Social Science": 57,
+      "Computer": 42,
+      "Sanskrit": 36
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-5789/026",
+    "name": "Somya Sharma",
+    "class": "8",
+    "section": "D",
+    "roll_no": 5789,
+    "roll_code": "5789/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 38,
+      "Hindi": 55,
+      "Mathematics": 35,
+      "Science": 30,
+      "Social Science": 35,
+      "Computer": 51,
+      "Sanskrit": 34
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-6491/026",
+    "name": "Subrata Sengar",
+    "class": "8",
+    "section": "D",
+    "roll_no": 6491,
+    "roll_code": "6491/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Hindi": 74,
+      "Mathematics": 68,
+      "Science": 69,
+      "Social Science": 59,
+      "Computer": 60,
+      "Sanskrit": 52
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-8301/026",
+    "name": "Tanvi Bhatele",
+    "class": "8",
+    "section": "D",
+    "roll_no": 8301,
+    "roll_code": "8301/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 70,
+      "Mathematics": 45,
+      "Science": 74,
+      "Social Science": 73,
+      "Computer": 68,
+      "Sanskrit": 48
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-6236/026",
+    "name": "Vaishali",
+    "class": "8",
+    "section": "D",
+    "roll_no": 6236,
+    "roll_code": "6236/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 65,
+      "Mathematics": 39,
+      "Science": 72,
+      "Social Science": 46,
+      "Computer": 66,
+      "Sanskrit": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-8218/026",
+    "name": "Vaishnavi Sharma",
+    "class": "8",
+    "section": "D",
+    "roll_no": 8218,
+    "roll_code": "8218/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 66,
+      "Hindi": 65,
+      "Mathematics": 56,
+      "Science": 71,
+      "Social Science": 59,
+      "Computer": 63,
+      "Sanskrit": 54
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-8D-8970/026",
+    "name": "Varsha",
+    "class": "8",
+    "section": "D",
+    "roll_no": 8970,
+    "roll_code": "8970/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 70,
+      "Mathematics": 56,
+      "Science": 73,
+      "Social Science": 57,
+      "Computer": 60,
+      "Sanskrit": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Computer": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-5180/026",
+    "name": "Aadi Ojha",
+    "class": "9",
+    "section": "A",
+    "roll_no": 5180,
+    "roll_code": "5180/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 15,
+      "Hindi": 10,
+      "Mathematics": 27,
+      "Science": 9,
+      "Social Science": 12,
+      "Sanskrit": 20
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-9511/026",
+    "name": "Aayu Yadav",
+    "class": "9",
+    "section": "A",
+    "roll_no": 9511,
+    "roll_code": "9511/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 69,
+      "Mathematics": 47,
+      "Science": 55,
+      "Social Science": 73,
+      "Sanskrit": 62
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-10338/026",
+    "name": "Abhinav Yadav",
+    "class": "9",
+    "section": "A",
+    "roll_no": 10338,
+    "roll_code": "10338/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Hindi": 52,
+      "Mathematics": 29,
+      "Science": 31,
+      "Social Science": 33,
+      "Sanskrit": 24
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-6270/026",
+    "name": "Aditya Sharma",
+    "class": "9",
+    "section": "A",
+    "roll_no": 6270,
+    "roll_code": "6270/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 51,
+      "Mathematics": 21,
+      "Science": 31,
+      "Social Science": 34,
+      "Sanskrit": 51
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-9235/026",
+    "name": "Aditya Singh Bhadauriya",
+    "class": "9",
+    "section": "A",
+    "roll_no": 9235,
+    "roll_code": "9235/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 76,
+      "Mathematics": 65,
+      "Science": 66,
+      "Social Science": 74,
+      "Sanskrit": 61
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-9214/026",
+    "name": "Alok Singh Bhadoriya",
+    "class": "9",
+    "section": "A",
+    "roll_no": 9214,
+    "roll_code": "9214/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Hindi": 43,
+      "Mathematics": 23,
+      "Science": 33,
+      "Social Science": 28,
+      "Sanskrit": 50
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-8958/026",
+    "name": "Ankush",
+    "class": "9",
+    "section": "A",
+    "roll_no": 8958,
+    "roll_code": "8958/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 15,
+      "Hindi": 28,
+      "Mathematics": 18,
+      "Science": 27,
+      "Social Science": 27,
+      "Sanskrit": 33
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-8628/026",
+    "name": "Ansh Pratap Singh Sisodhiya",
+    "class": "9",
+    "section": "A",
+    "roll_no": 8628,
+    "roll_code": "8628/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 53,
+      "Mathematics": 29,
+      "Science": 27,
+      "Social Science": 50,
+      "Sanskrit": 50
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-10208/026",
+    "name": "Ansh Shakya",
+    "class": "9",
+    "section": "A",
+    "roll_no": 10208,
+    "roll_code": "10208/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Hindi": 68,
+      "Mathematics": 76,
+      "Science": 75,
+      "Social Science": 73,
+      "Sanskrit": 66
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-10249/026",
+    "name": "Anuj Sharma",
+    "class": "9",
+    "section": "A",
+    "roll_no": 10249,
+    "roll_code": "10249/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 17,
+      "Hindi": 19,
+      "Mathematics": 13,
+      "Science": 0,
+      "Social Science": 35,
+      "Sanskrit": 44
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-8828/026",
+    "name": "Anuj Tiwari",
+    "class": "9",
+    "section": "A",
+    "roll_no": 8828,
+    "roll_code": "8828/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 14,
+      "Hindi": 20,
+      "Mathematics": 11,
+      "Science": 23,
+      "Social Science": 27,
+      "Sanskrit": 34
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-6238/026",
+    "name": "Arav Ojha",
+    "class": "9",
+    "section": "A",
+    "roll_no": 6238,
+    "roll_code": "6238/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 41,
+      "Mathematics": 77,
+      "Science": 78,
+      "Social Science": 78,
+      "Sanskrit": 75
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-9311/026",
+    "name": "Arjav Jain",
+    "class": "9",
+    "section": "A",
+    "roll_no": 9311,
+    "roll_code": "9311/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Hindi": 65,
+      "Mathematics": 71,
+      "Science": 64,
+      "Social Science": 67,
+      "Sanskrit": 65
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-5131/026",
+    "name": "Ashwani Sharma",
+    "class": "9",
+    "section": "A",
+    "roll_no": 5131,
+    "roll_code": "5131/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 67,
+      "Mathematics": 75,
+      "Science": 70,
+      "Social Science": 73,
+      "Sanskrit": 70
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-8870/026",
+    "name": "Ayush Narwariya",
+    "class": "9",
+    "section": "A",
+    "roll_no": 8870,
+    "roll_code": "8870/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 33,
+      "Hindi": 55,
+      "Mathematics": 27,
+      "Science": 36,
+      "Social Science": 44,
+      "Sanskrit": 40
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-8709/026",
+    "name": "Dev Sharma",
+    "class": "9",
+    "section": "A",
+    "roll_no": 8709,
+    "roll_code": "8709/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 12,
+      "Hindi": 27,
+      "Mathematics": 20,
+      "Science": 28,
+      "Social Science": 30,
+      "Sanskrit": 42
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-10003/026",
+    "name": "Digvijay Singh",
+    "class": "9",
+    "section": "A",
+    "roll_no": 10003,
+    "roll_code": "10003/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 37,
+      "Hindi": 43,
+      "Mathematics": 30,
+      "Science": 0,
+      "Social Science": 28,
+      "Sanskrit": 30
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-6293/026",
+    "name": "Diwakar Singh",
+    "class": "9",
+    "section": "A",
+    "roll_no": 6293,
+    "roll_code": "6293/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 29,
+      "Hindi": 43,
+      "Mathematics": 30,
+      "Science": 39,
+      "Social Science": 34,
+      "Sanskrit": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-10212/026",
+    "name": "Eklavya Bhadauriya",
+    "class": "9",
+    "section": "A",
+    "roll_no": 10212,
+    "roll_code": "10212/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 50,
+      "Hindi": 64,
+      "Mathematics": 62,
+      "Science": 64,
+      "Social Science": 57,
+      "Sanskrit": 69
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-9353/026",
+    "name": "Happy Dohare",
+    "class": "9",
+    "section": "A",
+    "roll_no": 9353,
+    "roll_code": "9353/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 29,
+      "Hindi": 52,
+      "Mathematics": 33,
+      "Science": 46,
+      "Social Science": 38,
+      "Sanskrit": 36
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-9437/026",
+    "name": "Harsh Shukla",
+    "class": "9",
+    "section": "A",
+    "roll_no": 9437,
+    "roll_code": "9437/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 49,
+      "Mathematics": 51,
+      "Science": 57,
+      "Social Science": 61,
+      "Sanskrit": 57
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-8348/026",
+    "name": "Himanshu Bhadouriya",
+    "class": "9",
+    "section": "A",
+    "roll_no": 8348,
+    "roll_code": "8348/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Hindi": 56,
+      "Mathematics": 33,
+      "Science": 55,
+      "Social Science": 36,
+      "Sanskrit": 43
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-10060/026",
+    "name": "Krishna Lodhi",
+    "class": "9",
+    "section": "A",
+    "roll_no": 10060,
+    "roll_code": "10060/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 30,
+      "Hindi": 34,
+      "Mathematics": 38,
+      "Science": 0,
+      "Social Science": 28,
+      "Sanskrit": 21
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-8438/026",
+    "name": "Krishnkant Sharma",
+    "class": "9",
+    "section": "A",
+    "roll_no": 8438,
+    "roll_code": "8438/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 69,
+      "Hindi": 77,
+      "Mathematics": 72,
+      "Science": 78,
+      "Social Science": 76,
+      "Sanskrit": 66
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-7062/026",
+    "name": "Kunal Tomar",
+    "class": "9",
+    "section": "A",
+    "roll_no": 7062,
+    "roll_code": "7062/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-6670/026",
+    "name": "Lucky Tomar",
+    "class": "9",
+    "section": "A",
+    "roll_no": 6670,
+    "roll_code": "6670/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Hindi": 58,
+      "Mathematics": 28,
+      "Science": 60,
+      "Social Science": 60,
+      "Sanskrit": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-9329/026",
+    "name": "Madhav Sharma",
+    "class": "9",
+    "section": "A",
+    "roll_no": 9329,
+    "roll_code": "9329/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 21,
+      "Hindi": 53,
+      "Mathematics": 27,
+      "Science": 42,
+      "Social Science": 55,
+      "Sanskrit": 39
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-8826/026",
+    "name": "Manmohan Singh",
+    "class": "9",
+    "section": "A",
+    "roll_no": 8826,
+    "roll_code": "8826/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 21,
+      "Hindi": 19,
+      "Mathematics": 29,
+      "Science": 25,
+      "Social Science": 27,
+      "Sanskrit": 19
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-8434/026",
+    "name": "Naitik Rathore",
+    "class": "9",
+    "section": "A",
+    "roll_no": 8434,
+    "roll_code": "8434/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 72,
+      "Mathematics": 72,
+      "Science": 65,
+      "Social Science": 76,
+      "Sanskrit": 68
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-9238/026",
+    "name": "Neelesh",
+    "class": "9",
+    "section": "A",
+    "roll_no": 9238,
+    "roll_code": "9238/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 3,
+      "Hindi": 18,
+      "Mathematics": 15,
+      "Science": 11,
+      "Social Science": 18,
+      "Sanskrit": 12
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-9844/026",
+    "name": "Nipun Singh Bhadouriya",
+    "class": "9",
+    "section": "A",
+    "roll_no": 9844,
+    "roll_code": "9844/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 38,
+      "Hindi": 32,
+      "Mathematics": 69,
+      "Science": 51,
+      "Social Science": 67,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-6334/026",
+    "name": "Om Sharma",
+    "class": "9",
+    "section": "A",
+    "roll_no": 6334,
+    "roll_code": "6334/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 27,
+      "Hindi": 51,
+      "Mathematics": 35,
+      "Science": 54,
+      "Social Science": 27,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-9218/026",
+    "name": "Omji",
+    "class": "9",
+    "section": "A",
+    "roll_no": 9218,
+    "roll_code": "9218/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-6842/026",
+    "name": "Raghav Ojha",
+    "class": "9",
+    "section": "A",
+    "roll_no": 6842,
+    "roll_code": "6842/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 62,
+      "Mathematics": 45,
+      "Science": 64,
+      "Social Science": 69,
+      "Sanskrit": 63
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-10071/026",
+    "name": "Raj Baghel",
+    "class": "9",
+    "section": "A",
+    "roll_no": 10071,
+    "roll_code": "10071/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Hindi": 78,
+      "Mathematics": 58,
+      "Science": 71,
+      "Social Science": 62,
+      "Sanskrit": 67
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-7068/026",
+    "name": "Rishav Tiwari",
+    "class": "9",
+    "section": "A",
+    "roll_no": 7068,
+    "roll_code": "7068/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 18,
+      "Hindi": 27,
+      "Mathematics": 18,
+      "Science": 13,
+      "Social Science": 27,
+      "Sanskrit": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-9377/026",
+    "name": "Saksham",
+    "class": "9",
+    "section": "A",
+    "roll_no": 9377,
+    "roll_code": "9377/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Hindi": 64,
+      "Mathematics": 64,
+      "Science": 73,
+      "Social Science": 75,
+      "Sanskrit": 62
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-10230/026",
+    "name": "Satyam Rajput",
+    "class": "9",
+    "section": "A",
+    "roll_no": 10230,
+    "roll_code": "10230/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 51,
+      "Mathematics": 58,
+      "Science": 71,
+      "Social Science": 65,
+      "Sanskrit": 64
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-8642/026",
+    "name": "Satyam Singh Yadav",
+    "class": "9",
+    "section": "A",
+    "roll_no": 8642,
+    "roll_code": "8642/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Hindi": 70,
+      "Mathematics": 67,
+      "Science": 76,
+      "Social Science": 76,
+      "Sanskrit": 71
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-8898/026",
+    "name": "Shaury Shukla",
+    "class": "9",
+    "section": "A",
+    "roll_no": 8898,
+    "roll_code": "8898/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 70,
+      "Hindi": 72,
+      "Mathematics": 75,
+      "Science": 78,
+      "Social Science": 78,
+      "Sanskrit": 73
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-6496/026",
+    "name": "Shivang Trivedi",
+    "class": "9",
+    "section": "A",
+    "roll_no": 6496,
+    "roll_code": "6496/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 37,
+      "Hindi": 47,
+      "Mathematics": 13,
+      "Science": 43,
+      "Social Science": 54,
+      "Sanskrit": 20
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-10078/026",
+    "name": "Shivansh Pandey",
+    "class": "9",
+    "section": "A",
+    "roll_no": 10078,
+    "roll_code": "10078/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Hindi": 49,
+      "Mathematics": 19,
+      "Science": 27,
+      "Social Science": 45,
+      "Sanskrit": 33
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-9342/026",
+    "name": "Sohan Singh Bhadouriya",
+    "class": "9",
+    "section": "A",
+    "roll_no": 9342,
+    "roll_code": "9342/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 45,
+      "Hindi": 54,
+      "Mathematics": 46,
+      "Science": 40,
+      "Social Science": 63,
+      "Sanskrit": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-9833/026",
+    "name": "Surya Pratap Singh",
+    "class": "9",
+    "section": "A",
+    "roll_no": 9833,
+    "roll_code": "9833/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 11,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-8863/026",
+    "name": "Vibhav Jain",
+    "class": "9",
+    "section": "A",
+    "roll_no": 8863,
+    "roll_code": "8863/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 36,
+      "Hindi": 49,
+      "Mathematics": 30,
+      "Science": 46,
+      "Social Science": 43,
+      "Sanskrit": 39
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-8847/026",
+    "name": "Vinayak Sharma",
+    "class": "9",
+    "section": "A",
+    "roll_no": 8847,
+    "roll_code": "8847/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Hindi": 62,
+      "Mathematics": 60,
+      "Science": 48,
+      "Social Science": 50,
+      "Sanskrit": 50
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9A-5858/026",
+    "name": "Yashwardhan Pathak",
+    "class": "9",
+    "section": "A",
+    "roll_no": 5858,
+    "roll_code": "5858/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 45,
+      "Mathematics": 38,
+      "Science": 50,
+      "Social Science": 58,
+      "Sanskrit": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-9284/026",
+    "name": "Aagam Jain",
+    "class": "9",
+    "section": "B",
+    "roll_no": 9284,
+    "roll_code": "9284/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 57,
+      "Mathematics": 51,
+      "Science": 64,
+      "Social Science": 74,
+      "Sanskrit": 62
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-10030/026",
+    "name": "Abhishek",
+    "class": "9",
+    "section": "B",
+    "roll_no": 10030,
+    "roll_code": "10030/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 8,
+      "Hindi": 27,
+      "Mathematics": 7,
+      "Science": 8,
+      "Social Science": 19,
+      "Sanskrit": 16
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-10302/026",
+    "name": "Aditya Pratap Singh Sengar",
+    "class": "9",
+    "section": "B",
+    "roll_no": 10302,
+    "roll_code": "10302/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 63,
+      "Mathematics": 73,
+      "Science": 65,
+      "Social Science": 75,
+      "Sanskrit": 72
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-9051/026",
+    "name": "Aditya Singh Rajawat",
+    "class": "9",
+    "section": "B",
+    "roll_no": 9051,
+    "roll_code": "9051/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 19,
+      "Hindi": 49,
+      "Mathematics": 19,
+      "Science": 34,
+      "Social Science": 28,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-9005/026",
+    "name": "Aditya Soni",
+    "class": "9",
+    "section": "B",
+    "roll_no": 9005,
+    "roll_code": "9005/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 30,
+      "Hindi": 40,
+      "Mathematics": 19,
+      "Science": 0,
+      "Social Science": 34,
+      "Sanskrit": 41
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-9510/026",
+    "name": "Ankush Singh",
+    "class": "9",
+    "section": "B",
+    "roll_no": 9510,
+    "roll_code": "9510/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 38,
+      "Hindi": 60,
+      "Mathematics": 23,
+      "Science": 44,
+      "Social Science": 50,
+      "Sanskrit": 41
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-8566/026",
+    "name": "Ansh",
+    "class": "9",
+    "section": "B",
+    "roll_no": 8566,
+    "roll_code": "8566/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 29,
+      "Hindi": 45,
+      "Mathematics": 30,
+      "Science": 12,
+      "Social Science": 27,
+      "Sanskrit": 20
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-8326/026",
+    "name": "Anshu Sharma",
+    "class": "9",
+    "section": "B",
+    "roll_no": 8326,
+    "roll_code": "8326/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 26,
+      "Hindi": 24,
+      "Mathematics": 10,
+      "Science": 43,
+      "Social Science": 41,
+      "Sanskrit": 21
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-5878/026",
+    "name": "Anugrah Jain",
+    "class": "9",
+    "section": "B",
+    "roll_no": 5878,
+    "roll_code": "5878/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Hindi": 61,
+      "Mathematics": 48,
+      "Science": 59,
+      "Social Science": 69,
+      "Sanskrit": 48
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-5532/026",
+    "name": "Anuj Yadav",
+    "class": "9",
+    "section": "B",
+    "roll_no": 5532,
+    "roll_code": "5532/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 15,
+      "Hindi": 44,
+      "Mathematics": 6,
+      "Science": 27,
+      "Social Science": 35,
+      "Sanskrit": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-8461/026",
+    "name": "Arnav Bhadouriya",
+    "class": "9",
+    "section": "B",
+    "roll_no": 8461,
+    "roll_code": "8461/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 73,
+      "Mathematics": 67,
+      "Science": 72,
+      "Social Science": 78,
+      "Sanskrit": 69
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-9957/026",
+    "name": "Arnav Singh Bhadauriya",
+    "class": "9",
+    "section": "B",
+    "roll_no": 9957,
+    "roll_code": "9957/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 66,
+      "Mathematics": 48,
+      "Science": 49,
+      "Social Science": 49,
+      "Sanskrit": 66
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-9409/026",
+    "name": "Arush Jain",
+    "class": "9",
+    "section": "B",
+    "roll_no": 9409,
+    "roll_code": "9409/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 19,
+      "Hindi": 43,
+      "Mathematics": 6,
+      "Science": 27,
+      "Social Science": 33,
+      "Sanskrit": 39
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-9089/026",
+    "name": "Aryan Singh Gurjar",
+    "class": "9",
+    "section": "B",
+    "roll_no": 9089,
+    "roll_code": "9089/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 24,
+      "Hindi": 46,
+      "Mathematics": 27,
+      "Science": 42,
+      "Social Science": 35,
+      "Sanskrit": 39
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-8046/026",
+    "name": "Ayush",
+    "class": "9",
+    "section": "B",
+    "roll_no": 8046,
+    "roll_code": "8046/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 30,
+      "Mathematics": 23,
+      "Science": 28,
+      "Social Science": 27,
+      "Sanskrit": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-5668/026",
+    "name": "Bhoopendra Singh Bhadoriya",
+    "class": "9",
+    "section": "B",
+    "roll_no": 5668,
+    "roll_code": "5668/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Hindi": 61,
+      "Mathematics": 50,
+      "Science": 42,
+      "Social Science": 53,
+      "Sanskrit": 49
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-8501/026",
+    "name": "Divyansh Sharma",
+    "class": "9",
+    "section": "B",
+    "roll_no": 8501,
+    "roll_code": "8501/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 55,
+      "Mathematics": 12,
+      "Science": 31,
+      "Social Science": 37,
+      "Sanskrit": 47
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-9136/026",
+    "name": "Harshit Bhardwaj",
+    "class": "9",
+    "section": "B",
+    "roll_no": 9136,
+    "roll_code": "9136/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Hindi": 66,
+      "Mathematics": 31,
+      "Science": 42,
+      "Social Science": 50,
+      "Sanskrit": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-5770/026",
+    "name": "Harshit Sharma",
+    "class": "9",
+    "section": "B",
+    "roll_no": 5770,
+    "roll_code": "5770/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 71,
+      "Mathematics": 62,
+      "Science": 69,
+      "Social Science": 73,
+      "Sanskrit": 64
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-8063/026",
+    "name": "Harshvardhan Parashar",
+    "class": "9",
+    "section": "B",
+    "roll_no": 8063,
+    "roll_code": "8063/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 15,
+      "Hindi": 41,
+      "Mathematics": 19,
+      "Science": 24,
+      "Social Science": 29,
+      "Sanskrit": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-5860/026",
+    "name": "Kratarth Sharma",
+    "class": "9",
+    "section": "B",
+    "roll_no": 5860,
+    "roll_code": "5860/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 74,
+      "Hindi": 79,
+      "Mathematics": 73,
+      "Science": 76,
+      "Social Science": 80,
+      "Sanskrit": 70
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-9766/026",
+    "name": "Krishna Singh Bhadouriya",
+    "class": "9",
+    "section": "B",
+    "roll_no": 9766,
+    "roll_code": "9766/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 61,
+      "Mathematics": 67,
+      "Science": 75,
+      "Social Science": 77,
+      "Sanskrit": 72
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-9404/026",
+    "name": "Naitik Shukla",
+    "class": "9",
+    "section": "B",
+    "roll_no": 9404,
+    "roll_code": "9404/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 14,
+      "Hindi": 36,
+      "Mathematics": 4,
+      "Science": 18,
+      "Social Science": 20,
+      "Sanskrit": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-9399/026",
+    "name": "Pavan",
+    "class": "9",
+    "section": "B",
+    "roll_no": 9399,
+    "roll_code": "9399/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Hindi": 63,
+      "Mathematics": 36,
+      "Science": 53,
+      "Social Science": 44,
+      "Sanskrit": 59
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-8368/026",
+    "name": "Prajjaval Soni",
+    "class": "9",
+    "section": "B",
+    "roll_no": 8368,
+    "roll_code": "8368/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 71,
+      "Mathematics": 21,
+      "Science": 41,
+      "Social Science": 57,
+      "Sanskrit": 64
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-5550/026",
+    "name": "Pranjal Sharma",
+    "class": "9",
+    "section": "B",
+    "roll_no": 5550,
+    "roll_code": "5550/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 71,
+      "Mathematics": 70,
+      "Science": 71,
+      "Social Science": 72,
+      "Sanskrit": 70
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-8509/026",
+    "name": "Priyansh Bhadauriya",
+    "class": "9",
+    "section": "B",
+    "roll_no": 8509,
+    "roll_code": "8509/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 69,
+      "Mathematics": 51,
+      "Science": 62,
+      "Social Science": 70,
+      "Sanskrit": 56
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-6912/026",
+    "name": "Puneet Sharma",
+    "class": "9",
+    "section": "B",
+    "roll_no": 6912,
+    "roll_code": "6912/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 51,
+      "Hindi": 46,
+      "Mathematics": 24,
+      "Science": 35,
+      "Social Science": 35,
+      "Sanskrit": 51
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-9505/026",
+    "name": "Robinsh Vimal",
+    "class": "9",
+    "section": "B",
+    "roll_no": 9505,
+    "roll_code": "9505/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 33,
+      "Hindi": 36,
+      "Mathematics": 26,
+      "Science": 15,
+      "Social Science": 32,
+      "Sanskrit": 36
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-8979/026",
+    "name": "Rohit Kushwah",
+    "class": "9",
+    "section": "B",
+    "roll_no": 8979,
+    "roll_code": "8979/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 53,
+      "Mathematics": 14,
+      "Science": 31,
+      "Social Science": 42,
+      "Sanskrit": 48
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-6091/026",
+    "name": "Saksham Sharma",
+    "class": "9",
+    "section": "B",
+    "roll_no": 6091,
+    "roll_code": "6091/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 42,
+      "Hindi": 68,
+      "Mathematics": 46,
+      "Science": 46,
+      "Social Science": 65,
+      "Sanskrit": 47
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-9968/026",
+    "name": "Sanskar",
+    "class": "9",
+    "section": "B",
+    "roll_no": 9968,
+    "roll_code": "9968/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 64,
+      "Mathematics": 76,
+      "Science": 78,
+      "Social Science": 78,
+      "Sanskrit": 67
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-6113/026",
+    "name": "Saransh Tomar",
+    "class": "9",
+    "section": "B",
+    "roll_no": 6113,
+    "roll_code": "6113/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 43,
+      "Hindi": 51,
+      "Mathematics": 30,
+      "Science": 28,
+      "Social Science": 41,
+      "Sanskrit": 34
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-10180/026",
+    "name": "Satyam Baghel",
+    "class": "9",
+    "section": "B",
+    "roll_no": 10180,
+    "roll_code": "10180/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 66,
+      "Mathematics": 59,
+      "Science": 50,
+      "Social Science": 62,
+      "Sanskrit": 61
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-8556/026",
+    "name": "Shivansh Bhadouriya",
+    "class": "9",
+    "section": "B",
+    "roll_no": 8556,
+    "roll_code": "8556/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 45,
+      "Hindi": 68,
+      "Mathematics": 9,
+      "Science": 36,
+      "Social Science": 46,
+      "Sanskrit": 49
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-10058/026",
+    "name": "Siddharth Singh",
+    "class": "9",
+    "section": "B",
+    "roll_no": 10058,
+    "roll_code": "10058/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 62,
+      "Mathematics": 67,
+      "Science": 70,
+      "Social Science": 65,
+      "Sanskrit": 64
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-6945/026",
+    "name": "Sumit Gurjar",
+    "class": "9",
+    "section": "B",
+    "roll_no": 6945,
+    "roll_code": "6945/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 38,
+      "Hindi": 67,
+      "Mathematics": 49,
+      "Science": 58,
+      "Social Science": 47,
+      "Sanskrit": 60
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-10165/026",
+    "name": "Tarun Bhargav",
+    "class": "9",
+    "section": "B",
+    "roll_no": 10165,
+    "roll_code": "10165/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Hindi": 59,
+      "Mathematics": 32,
+      "Science": 29,
+      "Social Science": 43,
+      "Sanskrit": 35
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-8201/026",
+    "name": "Tejas Shriwastav",
+    "class": "9",
+    "section": "B",
+    "roll_no": 8201,
+    "roll_code": "8201/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 43,
+      "Mathematics": 27,
+      "Science": 29,
+      "Social Science": 27,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-8553/026",
+    "name": "Utkarsh Singh",
+    "class": "9",
+    "section": "B",
+    "roll_no": 8553,
+    "roll_code": "8553/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 34,
+      "Hindi": 44,
+      "Mathematics": 26,
+      "Science": 29,
+      "Social Science": 27,
+      "Sanskrit": 23
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-9743/026",
+    "name": "Vansh Tomar",
+    "class": "9",
+    "section": "B",
+    "roll_no": 9743,
+    "roll_code": "9743/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 31,
+      "Hindi": 30,
+      "Mathematics": 11,
+      "Science": 22,
+      "Social Science": 37,
+      "Sanskrit": 41
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-8976/026",
+    "name": "Vishal",
+    "class": "9",
+    "section": "B",
+    "roll_no": 8976,
+    "roll_code": "8976/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 14,
+      "Hindi": 12,
+      "Mathematics": 24,
+      "Science": 14,
+      "Social Science": 27,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9B-8630/026",
+    "name": "Vivek",
+    "class": "9",
+    "section": "B",
+    "roll_no": 8630,
+    "roll_code": "8630/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 23,
+      "Hindi": 25,
+      "Mathematics": 12,
+      "Science": 27,
+      "Social Science": 28,
+      "Sanskrit": 43
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-10046/026",
+    "name": "Acharan Jain",
+    "class": "9",
+    "section": "C",
+    "roll_no": 10046,
+    "roll_code": "10046/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 39,
+      "Hindi": 62,
+      "Mathematics": 58,
+      "Science": 37,
+      "Social Science": 44,
+      "Sanskrit": 46
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-6857/026",
+    "name": "Adarsh Dwivedi",
+    "class": "9",
+    "section": "C",
+    "roll_no": 6857,
+    "roll_code": "6857/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 31,
+      "Hindi": 50,
+      "Mathematics": 57,
+      "Science": 45,
+      "Social Science": 52,
+      "Sanskrit": 57
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-5497/026",
+    "name": "Ajeet Singh",
+    "class": "9",
+    "section": "C",
+    "roll_no": 5497,
+    "roll_code": "5497/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Hindi": 65,
+      "Mathematics": 74,
+      "Science": 76,
+      "Social Science": 75,
+      "Sanskrit": 65
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-8839/026",
+    "name": "Akshat Soni",
+    "class": "9",
+    "section": "C",
+    "roll_no": 8839,
+    "roll_code": "8839/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 21,
+      "Hindi": 11,
+      "Mathematics": 6,
+      "Science": 27,
+      "Social Science": 34,
+      "Sanskrit": 12
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-8861/026",
+    "name": "Ansh Kumar Mishra",
+    "class": "9",
+    "section": "C",
+    "roll_no": 8861,
+    "roll_code": "8861/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Hindi": 75,
+      "Mathematics": 76,
+      "Science": 78,
+      "Social Science": 80,
+      "Sanskrit": 73
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-10292/026",
+    "name": "Anshul Singh Bhadoria",
+    "class": "9",
+    "section": "C",
+    "roll_no": 10292,
+    "roll_code": "10292/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 4,
+      "Hindi": 12,
+      "Mathematics": 10,
+      "Science": 9,
+      "Social Science": 28,
+      "Sanskrit": 14
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-10146/026",
+    "name": "Arvaj Khan",
+    "class": "9",
+    "section": "C",
+    "roll_no": 10146,
+    "roll_code": "10146/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 14,
+      "Hindi": 46,
+      "Mathematics": 27,
+      "Science": 18,
+      "Social Science": 34,
+      "Sanskrit": 51
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9150/026",
+    "name": "Bhupendra Singh",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9150,
+    "roll_code": "9150/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 50,
+      "Hindi": 67,
+      "Mathematics": 32,
+      "Science": 31,
+      "Social Science": 55,
+      "Sanskrit": 36
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9890/026",
+    "name": "Brijesh",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9890,
+    "roll_code": "9890/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 13,
+      "Hindi": 39,
+      "Mathematics": 11,
+      "Science": 33,
+      "Social Science": 39,
+      "Sanskrit": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9291/026",
+    "name": "Devansh Jatav",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9291,
+    "roll_code": "9291/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 34,
+      "Hindi": 61,
+      "Mathematics": 30,
+      "Science": 43,
+      "Social Science": 59,
+      "Sanskrit": 58
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9914/026",
+    "name": "Devraj Singh",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9914,
+    "roll_code": "9914/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 72,
+      "Mathematics": 72,
+      "Science": 76,
+      "Social Science": 77,
+      "Sanskrit": 68
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-8415/026",
+    "name": "Dhanpal Singh",
+    "class": "9",
+    "section": "C",
+    "roll_no": 8415,
+    "roll_code": "8415/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 43,
+      "Hindi": 55,
+      "Mathematics": 40,
+      "Science": 29,
+      "Social Science": 52,
+      "Sanskrit": 59
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-10151/026",
+    "name": "Dhyanendra Gurjar",
+    "class": "9",
+    "section": "C",
+    "roll_no": 10151,
+    "roll_code": "10151/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 38,
+      "Mathematics": 13,
+      "Science": 32,
+      "Social Science": 29,
+      "Sanskrit": 60
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9942/026",
+    "name": "Divyansh Baghel Hirasingh",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9942,
+    "roll_code": "9942/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0,
+      "Sanskrit": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-10261/026",
+    "name": "Divyanshu",
+    "class": "9",
+    "section": "C",
+    "roll_no": 10261,
+    "roll_code": "10261/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 31,
+      "Hindi": 60,
+      "Mathematics": 23,
+      "Science": 60,
+      "Social Science": 65,
+      "Sanskrit": 56
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9661/026",
+    "name": "Kartik Sharma",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9661,
+    "roll_code": "9661/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 73,
+      "Mathematics": 55,
+      "Science": 62,
+      "Social Science": 70,
+      "Sanskrit": 54
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9666/026",
+    "name": "Kirshna Shakya",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9666,
+    "roll_code": "9666/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 73,
+      "Mathematics": 51,
+      "Science": 73,
+      "Social Science": 78,
+      "Sanskrit": 58
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9659/026",
+    "name": "Krishna Sharma",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9659,
+    "roll_code": "9659/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Hindi": 46,
+      "Mathematics": 50,
+      "Science": 62,
+      "Social Science": 57,
+      "Sanskrit": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-10084/026",
+    "name": "Manav Sharma",
+    "class": "9",
+    "section": "C",
+    "roll_no": 10084,
+    "roll_code": "10084/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 5,
+      "Hindi": 27,
+      "Mathematics": 23,
+      "Science": 34,
+      "Social Science": 22,
+      "Sanskrit": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9945/026",
+    "name": "Manu Singh Gurjar",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9945,
+    "roll_code": "9945/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 8,
+      "Hindi": 20,
+      "Mathematics": 11,
+      "Science": 29,
+      "Social Science": 40,
+      "Sanskrit": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-6239/026",
+    "name": "Manvendra Bhadoriya",
+    "class": "9",
+    "section": "C",
+    "roll_no": 6239,
+    "roll_code": "6239/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 67,
+      "Mathematics": 54,
+      "Science": 63,
+      "Social Science": 69,
+      "Sanskrit": 54
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-10037/026",
+    "name": "Mayank Agrawal",
+    "class": "9",
+    "section": "C",
+    "roll_no": 10037,
+    "roll_code": "10037/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 48,
+      "Hindi": 53,
+      "Mathematics": 0,
+      "Science": 46,
+      "Social Science": 70,
+      "Sanskrit": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-6437/026",
+    "name": "Mohit",
+    "class": "9",
+    "section": "C",
+    "roll_no": 6437,
+    "roll_code": "6437/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 37,
+      "Hindi": 62,
+      "Mathematics": 33,
+      "Science": 34,
+      "Social Science": 65,
+      "Sanskrit": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9316/026",
+    "name": "Moksh Sharma",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9316,
+    "roll_code": "9316/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 67,
+      "Mathematics": 67,
+      "Science": 75,
+      "Social Science": 77,
+      "Sanskrit": 76
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-8373/026",
+    "name": "Naitik",
+    "class": "9",
+    "section": "C",
+    "roll_no": 8373,
+    "roll_code": "8373/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 30,
+      "Hindi": 46,
+      "Mathematics": 15,
+      "Science": 34,
+      "Social Science": 38,
+      "Sanskrit": 47
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-8073/026",
+    "name": "Nirmal Singh Bhadouriya",
+    "class": "9",
+    "section": "C",
+    "roll_no": 8073,
+    "roll_code": "8073/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 31,
+      "Hindi": 38,
+      "Mathematics": 16,
+      "Science": 42,
+      "Social Science": 37,
+      "Sanskrit": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9064/026",
+    "name": "Pranshu",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9064,
+    "roll_code": "9064/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 33,
+      "Hindi": 48,
+      "Mathematics": 16,
+      "Science": 34,
+      "Social Science": 65,
+      "Sanskrit": 40
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-6292/026",
+    "name": "Prashant Singh Rajawat",
+    "class": "9",
+    "section": "C",
+    "roll_no": 6292,
+    "roll_code": "6292/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 71,
+      "Mathematics": 67,
+      "Science": 75,
+      "Social Science": 75,
+      "Sanskrit": 68
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9674/026",
+    "name": "Prince Bhadouriya",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9674,
+    "roll_code": "9674/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 37,
+      "Hindi": 64,
+      "Mathematics": 55,
+      "Science": 66,
+      "Social Science": 79,
+      "Sanskrit": 68
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9868/026",
+    "name": "Prince Jatav",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9868,
+    "roll_code": "9868/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 36,
+      "Hindi": 64,
+      "Mathematics": 19,
+      "Science": 60,
+      "Social Science": 62,
+      "Sanskrit": 57
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-5331/026",
+    "name": "Rishab Bhadouriya",
+    "class": "9",
+    "section": "C",
+    "roll_no": 5331,
+    "roll_code": "5331/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 38,
+      "Mathematics": 27,
+      "Science": 30,
+      "Social Science": 33,
+      "Sanskrit": 41
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-10308/026",
+    "name": "Rishav Sharma",
+    "class": "9",
+    "section": "C",
+    "roll_no": 10308,
+    "roll_code": "10308/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 15,
+      "Hindi": 48,
+      "Mathematics": 29,
+      "Science": 32,
+      "Social Science": 29,
+      "Sanskrit": 22
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9518/026",
+    "name": "Sanket Rathor",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9518,
+    "roll_code": "9518/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 30,
+      "Hindi": 49,
+      "Mathematics": 27,
+      "Science": 22,
+      "Social Science": 34,
+      "Sanskrit": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9710/026",
+    "name": "Shorya Bhadana",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9710,
+    "roll_code": "9710/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 16,
+      "Hindi": 32,
+      "Mathematics": 9,
+      "Science": 16,
+      "Social Science": 22,
+      "Sanskrit": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9911/026",
+    "name": "Shreshtha Tiwari",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9911,
+    "roll_code": "9911/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 23,
+      "Hindi": 49,
+      "Mathematics": 10,
+      "Science": 19,
+      "Social Science": 51,
+      "Sanskrit": 42
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9922/026",
+    "name": "Veer Pratap Singh Kushwah",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9922,
+    "roll_code": "9922/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 22,
+      "Mathematics": 9,
+      "Science": 18,
+      "Social Science": 34,
+      "Sanskrit": 12
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-9664/026",
+    "name": "Viyom Agrawal",
+    "class": "9",
+    "section": "C",
+    "roll_no": 9664,
+    "roll_code": "9664/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 35,
+      "Hindi": 60,
+      "Mathematics": 76,
+      "Science": 70,
+      "Social Science": 79,
+      "Sanskrit": 66
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9C-6096/026",
+    "name": "Yashvardhan Parashar",
+    "class": "9",
+    "section": "C",
+    "roll_no": 6096,
+    "roll_code": "6096/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 43,
+      "Hindi": 70,
+      "Mathematics": 55,
+      "Science": 54,
+      "Social Science": 64,
+      "Sanskrit": 63
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-9281/026",
+    "name": "Aaradhya Tomar",
+    "class": "9",
+    "section": "D",
+    "roll_no": 9281,
+    "roll_code": "9281/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Hindi": 62,
+      "Mathematics": 36,
+      "Science": 31,
+      "Social Science": 57,
+      "Sanskrit": 61
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-10333/026",
+    "name": "Akanksha",
+    "class": "9",
+    "section": "D",
+    "roll_no": 10333,
+    "roll_code": "10333/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 51,
+      "Hindi": 71,
+      "Mathematics": 52,
+      "Science": 60,
+      "Social Science": 74,
+      "Sanskrit": 66
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-6230/026",
+    "name": "Anushka Sharma",
+    "class": "9",
+    "section": "D",
+    "roll_no": 6230,
+    "roll_code": "6230/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 58,
+      "Hindi": 73,
+      "Mathematics": 73,
+      "Science": 76,
+      "Social Science": 79,
+      "Sanskrit": 74
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-9607/026",
+    "name": "Ekta Goutam",
+    "class": "9",
+    "section": "D",
+    "roll_no": 9607,
+    "roll_code": "9607/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Hindi": 57,
+      "Mathematics": 31,
+      "Science": 28,
+      "Social Science": 67,
+      "Sanskrit": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-5729/026",
+    "name": "Jyoti Sharma",
+    "class": "9",
+    "section": "D",
+    "roll_no": 5729,
+    "roll_code": "5729/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 57,
+      "Mathematics": 28,
+      "Science": 54,
+      "Social Science": 45,
+      "Sanskrit": 53
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-8923/026",
+    "name": "Jyoti Yadav",
+    "class": "9",
+    "section": "D",
+    "roll_no": 8923,
+    "roll_code": "8923/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 20,
+      "Hindi": 33,
+      "Mathematics": 9,
+      "Science": 8,
+      "Social Science": 44,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-8278/026",
+    "name": "Kavya Sisodia",
+    "class": "9",
+    "section": "D",
+    "roll_no": 8278,
+    "roll_code": "8278/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 42,
+      "Hindi": 66,
+      "Mathematics": 18,
+      "Science": 39,
+      "Social Science": 56,
+      "Sanskrit": 59
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-9750/026",
+    "name": "Khushi Sharma",
+    "class": "9",
+    "section": "D",
+    "roll_no": 9750,
+    "roll_code": "9750/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 64,
+      "Mathematics": 36,
+      "Science": 53,
+      "Social Science": 71,
+      "Sanskrit": 70
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-5142/026",
+    "name": "Lavanya Joshi",
+    "class": "9",
+    "section": "D",
+    "roll_no": 5142,
+    "roll_code": "5142/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 69,
+      "Mathematics": 44,
+      "Science": 64,
+      "Social Science": 75,
+      "Sanskrit": 67
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-5790/026",
+    "name": "Manshi Joshi",
+    "class": "9",
+    "section": "D",
+    "roll_no": 5790,
+    "roll_code": "5790/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 0,
+      "Hindi": 64,
+      "Mathematics": 34,
+      "Science": 0,
+      "Social Science": 79,
+      "Sanskrit": 65
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-8236/026",
+    "name": "Manvi Bohare",
+    "class": "9",
+    "section": "D",
+    "roll_no": 8236,
+    "roll_code": "8236/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 66,
+      "Mathematics": 30,
+      "Science": 35,
+      "Social Science": 56,
+      "Sanskrit": 55
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-8857/026",
+    "name": "Mohini Harioudh",
+    "class": "9",
+    "section": "D",
+    "roll_no": 8857,
+    "roll_code": "8857/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 60,
+      "Mathematics": 27,
+      "Science": 47,
+      "Social Science": 58,
+      "Sanskrit": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-5784/026",
+    "name": "Muskan Sharma",
+    "class": "9",
+    "section": "D",
+    "roll_no": 5784,
+    "roll_code": "5784/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 72,
+      "Mathematics": 61,
+      "Science": 51,
+      "Social Science": 78,
+      "Sanskrit": 76
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-10300/026",
+    "name": "Ojal Jain",
+    "class": "9",
+    "section": "D",
+    "roll_no": 10300,
+    "roll_code": "10300/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 42,
+      "Hindi": 51,
+      "Mathematics": 39,
+      "Science": 48,
+      "Social Science": 56,
+      "Sanskrit": 53
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-9463/026",
+    "name": "Pawani Sharma",
+    "class": "9",
+    "section": "D",
+    "roll_no": 9463,
+    "roll_code": "9463/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 73,
+      "Mathematics": 61,
+      "Science": 66,
+      "Social Science": 74,
+      "Sanskrit": 70
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-8387/026",
+    "name": "Radhika",
+    "class": "9",
+    "section": "D",
+    "roll_no": 8387,
+    "roll_code": "8387/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 59,
+      "Mathematics": 48,
+      "Science": 33,
+      "Social Science": 60,
+      "Sanskrit": 52
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-5719/026",
+    "name": "Radhika Sharma",
+    "class": "9",
+    "section": "D",
+    "roll_no": 5719,
+    "roll_code": "5719/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 52,
+      "Science": 47,
+      "Social Science": 61,
+      "Sanskrit": 70
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-8189/026",
+    "name": "Rashika Bhadouriya",
+    "class": "9",
+    "section": "D",
+    "roll_no": 8189,
+    "roll_code": "8189/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 54,
+      "Hindi": 56,
+      "Mathematics": 52,
+      "Science": 59,
+      "Social Science": 65,
+      "Sanskrit": 43
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-8492/026",
+    "name": "Ridhi Bhadauriya",
+    "class": "9",
+    "section": "D",
+    "roll_no": 8492,
+    "roll_code": "8492/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 40,
+      "Hindi": 52,
+      "Mathematics": 17,
+      "Science": 0,
+      "Social Science": 56,
+      "Sanskrit": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-9018/026",
+    "name": "Sandhya Bhadouria",
+    "class": "9",
+    "section": "D",
+    "roll_no": 9018,
+    "roll_code": "9018/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 29,
+      "Hindi": 70,
+      "Mathematics": 56,
+      "Science": 31,
+      "Social Science": 64,
+      "Sanskrit": 57
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-9764/026",
+    "name": "Sona Bhadoriya",
+    "class": "9",
+    "section": "D",
+    "roll_no": 9764,
+    "roll_code": "9764/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 39,
+      "Hindi": 70,
+      "Mathematics": 45,
+      "Science": 52,
+      "Social Science": 65,
+      "Sanskrit": 66
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-10321/026",
+    "name": "Swecchha Sharma",
+    "class": "9",
+    "section": "D",
+    "roll_no": 10321,
+    "roll_code": "10321/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 59,
+      "Mathematics": 16,
+      "Science": 20,
+      "Social Science": 39,
+      "Sanskrit": 52
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-6344/026",
+    "name": "Tanshika Sharma",
+    "class": "9",
+    "section": "D",
+    "roll_no": 6344,
+    "roll_code": "6344/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 69,
+      "Mathematics": 59,
+      "Science": 63,
+      "Social Science": 74,
+      "Sanskrit": 59
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-10073/026",
+    "name": "Uma Singh",
+    "class": "9",
+    "section": "D",
+    "roll_no": 10073,
+    "roll_code": "10073/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 19,
+      "Hindi": 0,
+      "Mathematics": 11,
+      "Science": 9,
+      "Social Science": 29,
+      "Sanskrit": 46
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-8731/026",
+    "name": "Unnati Yadav",
+    "class": "9",
+    "section": "D",
+    "roll_no": 8731,
+    "roll_code": "8731/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 73,
+      "Mathematics": 61,
+      "Science": 72,
+      "Social Science": 79,
+      "Sanskrit": 76
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-9406/026",
+    "name": "Upma Sharma",
+    "class": "9",
+    "section": "D",
+    "roll_no": 9406,
+    "roll_code": "9406/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 34,
+      "Hindi": 52,
+      "Mathematics": 16,
+      "Science": 13,
+      "Social Science": 41,
+      "Sanskrit": 40
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-5816/026",
+    "name": "Vaishnavi",
+    "class": "9",
+    "section": "D",
+    "roll_no": 5816,
+    "roll_code": "5816/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 73,
+      "Mathematics": 48,
+      "Science": 69,
+      "Social Science": 79,
+      "Sanskrit": 69
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9D-8455/026",
+    "name": "Yashi Dubey",
+    "class": "9",
+    "section": "D",
+    "roll_no": 8455,
+    "roll_code": "8455/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Hindi": 66,
+      "Mathematics": 27,
+      "Science": 58,
+      "Social Science": 70,
+      "Sanskrit": 55
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-8928/026",
+    "name": "Anshu Yadav",
+    "class": "9",
+    "section": "E",
+    "roll_no": 8928,
+    "roll_code": "8928/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 54,
+      "Mathematics": 14,
+      "Science": 31,
+      "Social Science": 38,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-5867/026",
+    "name": "Anvi Jain",
+    "class": "9",
+    "section": "E",
+    "roll_no": 5867,
+    "roll_code": "5867/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 69,
+      "Hindi": 72,
+      "Mathematics": 73,
+      "Science": 70,
+      "Social Science": 80,
+      "Sanskrit": 67
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-9232/026",
+    "name": "Ardhika Sharma",
+    "class": "9",
+    "section": "E",
+    "roll_no": 9232,
+    "roll_code": "9232/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Hindi": 71,
+      "Mathematics": 61,
+      "Science": 55,
+      "Social Science": 77,
+      "Sanskrit": 64
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-9119/026",
+    "name": "Ayati Sharma",
+    "class": "9",
+    "section": "E",
+    "roll_no": 9119,
+    "roll_code": "9119/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 30,
+      "Mathematics": 17,
+      "Science": 22,
+      "Social Science": 60,
+      "Sanskrit": 41
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-7014/026",
+    "name": "Ayushi Bhadouria",
+    "class": "9",
+    "section": "E",
+    "roll_no": 7014,
+    "roll_code": "7014/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 16,
+      "Hindi": 36,
+      "Mathematics": 17,
+      "Science": 17,
+      "Social Science": 28,
+      "Sanskrit": 19
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-8926/026",
+    "name": "Divyanshi Yadav",
+    "class": "9",
+    "section": "E",
+    "roll_no": 8926,
+    "roll_code": "8926/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 70,
+      "Mathematics": 27,
+      "Science": 53,
+      "Social Science": 73,
+      "Sanskrit": 63
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-6370/026",
+    "name": "Janvi Bhadoria",
+    "class": "9",
+    "section": "E",
+    "roll_no": 6370,
+    "roll_code": "6370/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 60,
+      "Mathematics": 42,
+      "Science": 33,
+      "Social Science": 45,
+      "Sanskrit": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-8447/026",
+    "name": "Kashish",
+    "class": "9",
+    "section": "E",
+    "roll_no": 8447,
+    "roll_code": "8447/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 51,
+      "Hindi": 62,
+      "Mathematics": 30,
+      "Science": 44,
+      "Social Science": 63,
+      "Sanskrit": 58
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-10337/026",
+    "name": "Kavya Mourya",
+    "class": "9",
+    "section": "E",
+    "roll_no": 10337,
+    "roll_code": "10337/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Hindi": 35,
+      "Mathematics": 27,
+      "Science": 14,
+      "Social Science": 27,
+      "Sanskrit": 35
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-5346/026",
+    "name": "Lalita Yadav",
+    "class": "9",
+    "section": "E",
+    "roll_no": 5346,
+    "roll_code": "5346/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 40,
+      "Mathematics": 33,
+      "Science": 23,
+      "Social Science": 33,
+      "Sanskrit": 25
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-8453/026",
+    "name": "Mandavi Rajawat",
+    "class": "9",
+    "section": "E",
+    "roll_no": 8453,
+    "roll_code": "8453/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 70,
+      "Mathematics": 72,
+      "Science": 75,
+      "Social Science": 79,
+      "Sanskrit": 71
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-9587/026",
+    "name": "Manvi",
+    "class": "9",
+    "section": "E",
+    "roll_no": 9587,
+    "roll_code": "9587/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Hindi": 70,
+      "Mathematics": 36,
+      "Science": 54,
+      "Social Science": 58,
+      "Sanskrit": 67
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-8966/026",
+    "name": "Manvi Bohare",
+    "class": "9",
+    "section": "E",
+    "roll_no": 8966,
+    "roll_code": "8966/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Hindi": 46,
+      "Mathematics": 16,
+      "Science": 31,
+      "Social Science": 34,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-9156/026",
+    "name": "Monisha Yadav",
+    "class": "9",
+    "section": "E",
+    "roll_no": 9156,
+    "roll_code": "9156/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 38,
+      "Hindi": 65,
+      "Mathematics": 14,
+      "Science": 32,
+      "Social Science": 46,
+      "Sanskrit": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-9697/026",
+    "name": "Naina Ojha",
+    "class": "9",
+    "section": "E",
+    "roll_no": 9697,
+    "roll_code": "9697/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 36,
+      "Hindi": 27,
+      "Mathematics": 27,
+      "Science": 0,
+      "Social Science": 49,
+      "Sanskrit": 24
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-5831/026",
+    "name": "Nandani Kushwah",
+    "class": "9",
+    "section": "E",
+    "roll_no": 5831,
+    "roll_code": "5831/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 27,
+      "Mathematics": 13,
+      "Science": 28,
+      "Social Science": 30,
+      "Sanskrit": 25
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-9878/026",
+    "name": "Pawni Jain",
+    "class": "9",
+    "section": "E",
+    "roll_no": 9878,
+    "roll_code": "9878/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 72,
+      "Mathematics": 38,
+      "Science": 53,
+      "Social Science": 66,
+      "Sanskrit": 62
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-6666/026",
+    "name": "Praveena Bhadauria",
+    "class": "9",
+    "section": "E",
+    "roll_no": 6666,
+    "roll_code": "6666/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 38,
+      "Hindi": 47,
+      "Mathematics": 31,
+      "Science": 50,
+      "Social Science": 39,
+      "Sanskrit": 48
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-9693/026",
+    "name": "Priyanka",
+    "class": "9",
+    "section": "E",
+    "roll_no": 9693,
+    "roll_code": "9693/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Hindi": 65,
+      "Mathematics": 53,
+      "Science": 67,
+      "Social Science": 68,
+      "Sanskrit": 60
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-9608/026",
+    "name": "Radhika Baraiya",
+    "class": "9",
+    "section": "E",
+    "roll_no": 9608,
+    "roll_code": "9608/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 22,
+      "Hindi": 15,
+      "Mathematics": 7,
+      "Science": 14,
+      "Social Science": 31,
+      "Sanskrit": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-9600/026",
+    "name": "Raksha Tomar",
+    "class": "9",
+    "section": "E",
+    "roll_no": 9600,
+    "roll_code": "9600/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 51,
+      "Hindi": 53,
+      "Mathematics": 27,
+      "Science": 45,
+      "Social Science": 55,
+      "Sanskrit": 50
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-6535/026",
+    "name": "Shayani Bhadoriya",
+    "class": "9",
+    "section": "E",
+    "roll_no": 6535,
+    "roll_code": "6535/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Hindi": 61,
+      "Mathematics": 53,
+      "Science": 59,
+      "Social Science": 58,
+      "Sanskrit": 67
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-9502/026",
+    "name": "Shiksha",
+    "class": "9",
+    "section": "E",
+    "roll_no": 9502,
+    "roll_code": "9502/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Hindi": 64,
+      "Mathematics": 34,
+      "Science": 30,
+      "Social Science": 40,
+      "Sanskrit": 51
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-8493/026",
+    "name": "Sidhi Bhadauriya",
+    "class": "9",
+    "section": "E",
+    "roll_no": 8493,
+    "roll_code": "8493/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 51,
+      "Hindi": 68,
+      "Mathematics": 32,
+      "Science": 0,
+      "Social Science": 57,
+      "Sanskrit": 60
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-8508/026",
+    "name": "Tanishka Tayal",
+    "class": "9",
+    "section": "E",
+    "roll_no": 8508,
+    "roll_code": "8508/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 71,
+      "Hindi": 65,
+      "Mathematics": 45,
+      "Science": 67,
+      "Social Science": 72,
+      "Sanskrit": 52
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-6883/026",
+    "name": "Vaibhavi Soni",
+    "class": "9",
+    "section": "E",
+    "roll_no": 6883,
+    "roll_code": "6883/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 70,
+      "Mathematics": 27,
+      "Science": 57,
+      "Social Science": 56,
+      "Sanskrit": 58
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-6400/026",
+    "name": "Vaishnavi Dixit",
+    "class": "9",
+    "section": "E",
+    "roll_no": 6400,
+    "roll_code": "6400/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 72,
+      "Mathematics": 55,
+      "Science": 66,
+      "Social Science": 79,
+      "Sanskrit": 63
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-10075/026",
+    "name": "Vaishnavi Sharma",
+    "class": "9",
+    "section": "E",
+    "roll_no": 10075,
+    "roll_code": "10075/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Hindi": 50,
+      "Mathematics": 48,
+      "Science": 28,
+      "Social Science": 33,
+      "Sanskrit": 34
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-9E-7011/026",
+    "name": "Yashasvi",
+    "class": "9",
+    "section": "E",
+    "roll_no": 7011,
+    "roll_code": "7011/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Hindi": 74,
+      "Mathematics": 50,
+      "Science": 69,
+      "Social Science": 73,
+      "Sanskrit": 65
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80,
+      "Sanskrit": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-8059/026",
+    "name": "Abhay Sharma",
+    "class": "10",
+    "section": "A",
+    "roll_no": 8059,
+    "roll_code": "8059/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 64,
+      "Mathematics": 44,
+      "Science": 63,
+      "Social Science": 53
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9174/026",
+    "name": "Abhay Singh",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9174,
+    "roll_code": "9174/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 36,
+      "Hindi": 42,
+      "Mathematics": 28,
+      "Science": 30,
+      "Social Science": 31
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-5143/026",
+    "name": "Aditya",
+    "class": "10",
+    "section": "A",
+    "roll_no": 5143,
+    "roll_code": "5143/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Hindi": 50,
+      "Mathematics": 65,
+      "Science": 72,
+      "Social Science": 74
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9916/026",
+    "name": "Aditya Sharma",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9916,
+    "roll_code": "9916/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Hindi": 58,
+      "Mathematics": 43,
+      "Science": 28,
+      "Social Science": 39
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9386/026",
+    "name": "Aditya Yadav",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9386,
+    "roll_code": "9386/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 54,
+      "Mathematics": 34,
+      "Science": 44,
+      "Social Science": 49
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-6626/026",
+    "name": "Akshat Singh",
+    "class": "10",
+    "section": "A",
+    "roll_no": 6626,
+    "roll_code": "6626/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 69,
+      "Hindi": 72,
+      "Mathematics": 64,
+      "Science": 76,
+      "Social Science": 79
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9292/026",
+    "name": "Alok Singh Bhadoria",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9292,
+    "roll_code": "9292/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 58,
+      "Mathematics": 36,
+      "Science": 50,
+      "Social Science": 65
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9264/026",
+    "name": "Aman Sharma",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9264,
+    "roll_code": "9264/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 77,
+      "Mathematics": 66,
+      "Science": 64,
+      "Social Science": 68
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9711/026",
+    "name": "Aman Bhadouriya",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9711,
+    "roll_code": "9711/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 59,
+      "Mathematics": 20,
+      "Science": 33,
+      "Social Science": 54
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9068/026",
+    "name": "Anshu",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9068,
+    "roll_code": "9068/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 42,
+      "Mathematics": 11,
+      "Science": 17,
+      "Social Science": 20
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9305/026",
+    "name": "Anshul Sharma",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9305,
+    "roll_code": "9305/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 66,
+      "Hindi": 63,
+      "Mathematics": 75,
+      "Science": 73,
+      "Social Science": 74
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9542/026",
+    "name": "Anshul Sharma",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9542,
+    "roll_code": "9542/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Hindi": 58,
+      "Mathematics": 51,
+      "Science": 55,
+      "Social Science": 34
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9712/026",
+    "name": "Anuj Bhadouriya",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9712,
+    "roll_code": "9712/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 37,
+      "Hindi": 34,
+      "Mathematics": 18,
+      "Science": 24,
+      "Social Science": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-4843/026",
+    "name": "Anuj Yadav",
+    "class": "10",
+    "section": "A",
+    "roll_no": 4843,
+    "roll_code": "4843/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 12,
+      "Hindi": 27,
+      "Mathematics": 14,
+      "Science": 7,
+      "Social Science": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-8275/026",
+    "name": "Arpit Sharma",
+    "class": "10",
+    "section": "A",
+    "roll_no": 8275,
+    "roll_code": "8275/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 54,
+      "Hindi": 70,
+      "Mathematics": 62,
+      "Science": 74,
+      "Social Science": 70
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9182/026",
+    "name": "Arpit Singh",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9182,
+    "roll_code": "9182/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-6169/026",
+    "name": "Aryajitendra Sharma",
+    "class": "10",
+    "section": "A",
+    "roll_no": 6169,
+    "roll_code": "6169/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Hindi": 73,
+      "Mathematics": 61,
+      "Science": 70,
+      "Social Science": 68
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9069/026",
+    "name": "Aryan",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9069,
+    "roll_code": "9069/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 65,
+      "Mathematics": 47,
+      "Science": 57,
+      "Social Science": 67
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-6480/026",
+    "name": "Ashish Joshi",
+    "class": "10",
+    "section": "A",
+    "roll_no": 6480,
+    "roll_code": "6480/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Hindi": 57,
+      "Mathematics": 48,
+      "Science": 57,
+      "Social Science": 61
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-6033/026",
+    "name": "Dhruv Singh Gurjar",
+    "class": "10",
+    "section": "A",
+    "roll_no": 6033,
+    "roll_code": "6033/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 65,
+      "Mathematics": 52,
+      "Science": 52,
+      "Social Science": 46
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-4817/026",
+    "name": "Divyanshu Singh Bhadouriya",
+    "class": "10",
+    "section": "A",
+    "roll_no": 4817,
+    "roll_code": "4817/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 33,
+      "Hindi": 47,
+      "Mathematics": 12,
+      "Science": 25,
+      "Social Science": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9363/026",
+    "name": "Divyapratap Singh Bhadouriya",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9363,
+    "roll_code": "9363/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 16,
+      "Hindi": 20,
+      "Mathematics": 11,
+      "Science": 11,
+      "Social Science": 16
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-6681/026",
+    "name": "Garv Yadav",
+    "class": "10",
+    "section": "A",
+    "roll_no": 6681,
+    "roll_code": "6681/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 70,
+      "Hindi": 70,
+      "Mathematics": 60,
+      "Science": 72,
+      "Social Science": 73
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9544/026",
+    "name": "Golu Yadav",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9544,
+    "roll_code": "9544/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 1,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9260/026",
+    "name": "Harshit Mishra",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9260,
+    "roll_code": "9260/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 30,
+      "Hindi": 58,
+      "Mathematics": 30,
+      "Science": 35,
+      "Social Science": 44
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9335/026",
+    "name": "Harshit Singh Bhadoriya",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9335,
+    "roll_code": "9335/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 31,
+      "Hindi": 63,
+      "Mathematics": 47,
+      "Science": 29,
+      "Social Science": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-5971/026",
+    "name": "Krishna Singh",
+    "class": "10",
+    "section": "A",
+    "roll_no": 5971,
+    "roll_code": "5971/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 42,
+      "Hindi": 51,
+      "Mathematics": 43,
+      "Science": 34,
+      "Social Science": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9683/026",
+    "name": "Krishnam Pandey",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9683,
+    "roll_code": "9683/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 0,
+      "Hindi": 16,
+      "Mathematics": 20,
+      "Science": 50,
+      "Social Science": 50
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-8678/026",
+    "name": "Nishu Yadav",
+    "class": "10",
+    "section": "A",
+    "roll_no": 8678,
+    "roll_code": "8678/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-10000/026",
+    "name": "Praveen Manik",
+    "class": "10",
+    "section": "A",
+    "roll_no": 10000,
+    "roll_code": "10000/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 37,
+      "Hindi": 38,
+      "Mathematics": 28,
+      "Science": 33,
+      "Social Science": 44
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-8849/026",
+    "name": "Prince Kushwah",
+    "class": "10",
+    "section": "A",
+    "roll_no": 8849,
+    "roll_code": "8849/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 62,
+      "Mathematics": 63,
+      "Science": 61,
+      "Social Science": 76
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-8414/026",
+    "name": "Priyansu",
+    "class": "10",
+    "section": "A",
+    "roll_no": 8414,
+    "roll_code": "8414/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 58,
+      "Mathematics": 45,
+      "Science": 57,
+      "Social Science": 64
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-5708/026",
+    "name": "Raghav Yadav",
+    "class": "10",
+    "section": "A",
+    "roll_no": 5708,
+    "roll_code": "5708/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 76,
+      "Mathematics": 67,
+      "Science": 59,
+      "Social Science": 68
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-8691/026",
+    "name": "Satyam Sharma",
+    "class": "10",
+    "section": "A",
+    "roll_no": 8691,
+    "roll_code": "8691/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 32,
+      "Hindi": 57,
+      "Mathematics": 19,
+      "Science": 31,
+      "Social Science": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-8865/026",
+    "name": "Shikhar Kurele",
+    "class": "10",
+    "section": "A",
+    "roll_no": 8865,
+    "roll_code": "8865/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Hindi": 51,
+      "Mathematics": 59,
+      "Science": 71,
+      "Social Science": 75
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-8880/026",
+    "name": "Shiv Pratap Singh",
+    "class": "10",
+    "section": "A",
+    "roll_no": 8880,
+    "roll_code": "8880/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 72,
+      "Hindi": 67,
+      "Mathematics": 71,
+      "Science": 78,
+      "Social Science": 79
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9713/026",
+    "name": "Shiva Narayan Lakhere",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9713,
+    "roll_code": "9713/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 33,
+      "Hindi": 46,
+      "Mathematics": 16,
+      "Science": 19,
+      "Social Science": 24
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-4730/026",
+    "name": "Sumit Singh Baghel",
+    "class": "10",
+    "section": "A",
+    "roll_no": 4730,
+    "roll_code": "4730/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 67,
+      "Mathematics": 55,
+      "Science": 72,
+      "Social Science": 72
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-7063/026",
+    "name": "Sumit Yadav",
+    "class": "10",
+    "section": "A",
+    "roll_no": 7063,
+    "roll_code": "7063/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 32,
+      "Hindi": 35,
+      "Mathematics": 30,
+      "Science": 23,
+      "Social Science": 22
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9423/026",
+    "name": "Uday Yadav",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9423,
+    "roll_code": "9423/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 73,
+      "Mathematics": 68,
+      "Science": 71,
+      "Social Science": 71
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9429/026",
+    "name": "Vansh Yadav",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9429,
+    "roll_code": "9429/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 56,
+      "Mathematics": 64,
+      "Science": 69,
+      "Social Science": 60
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-9866/026",
+    "name": "Vishal Singh",
+    "class": "10",
+    "section": "A",
+    "roll_no": 9866,
+    "roll_code": "9866/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 34,
+      "Hindi": 41,
+      "Mathematics": 27,
+      "Science": 29,
+      "Social Science": 23
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-5432/026",
+    "name": "Vishesh Sharma",
+    "class": "10",
+    "section": "A",
+    "roll_no": 5432,
+    "roll_code": "5432/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Hindi": 44,
+      "Mathematics": 32,
+      "Science": 32,
+      "Social Science": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10A-10015/026",
+    "name": "Yogesh Singh Jayant",
+    "class": "10",
+    "section": "A",
+    "roll_no": 10015,
+    "roll_code": "10015/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 36,
+      "Hindi": 46,
+      "Mathematics": 17,
+      "Science": 15,
+      "Social Science": 41
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-9595/026",
+    "name": "Aditya Kumar",
+    "class": "10",
+    "section": "B",
+    "roll_no": 9595,
+    "roll_code": "9595/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 51,
+      "Mathematics": 29,
+      "Science": 41,
+      "Social Science": 44
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-9085/026",
+    "name": "Aniket Mourya",
+    "class": "10",
+    "section": "B",
+    "roll_no": 9085,
+    "roll_code": "9085/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 56,
+      "Mathematics": 52,
+      "Science": 52,
+      "Social Science": 65
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-5777/026",
+    "name": "Ankush Rajawat",
+    "class": "10",
+    "section": "B",
+    "roll_no": 5777,
+    "roll_code": "5777/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 50,
+      "Mathematics": 27,
+      "Science": 16,
+      "Social Science": 36
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-8765/026",
+    "name": "Ansh Sharma",
+    "class": "10",
+    "section": "B",
+    "roll_no": 8765,
+    "roll_code": "8765/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 31,
+      "Hindi": 51,
+      "Mathematics": 27,
+      "Science": 16,
+      "Social Science": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-8233/026",
+    "name": "Ansh Singh Bhadouria",
+    "class": "10",
+    "section": "B",
+    "roll_no": 8233,
+    "roll_code": "8233/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 38,
+      "Hindi": 38,
+      "Mathematics": 28,
+      "Science": 28,
+      "Social Science": 44
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-6957/026",
+    "name": "Anubhav Sharma",
+    "class": "10",
+    "section": "B",
+    "roll_no": 6957,
+    "roll_code": "6957/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 30,
+      "Hindi": 27,
+      "Mathematics": 17,
+      "Science": 12,
+      "Social Science": 29
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-4873/026",
+    "name": "Anuj Pratap Singh Chauhan",
+    "class": "10",
+    "section": "B",
+    "roll_no": 4873,
+    "roll_code": "4873/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 67,
+      "Hindi": 68,
+      "Mathematics": 50,
+      "Science": 65,
+      "Social Science": 72
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-6828/026",
+    "name": "Anurag",
+    "class": "10",
+    "section": "B",
+    "roll_no": 6828,
+    "roll_code": "6828/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 38,
+      "Hindi": 44,
+      "Mathematics": 10,
+      "Science": 17,
+      "Social Science": 30
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-6204/026",
+    "name": "Archit Shrivas",
+    "class": "10",
+    "section": "B",
+    "roll_no": 6204,
+    "roll_code": "6204/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Hindi": 54,
+      "Mathematics": 27,
+      "Science": 35,
+      "Social Science": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-8830/026",
+    "name": "Arth Agrawal",
+    "class": "10",
+    "section": "B",
+    "roll_no": 8830,
+    "roll_code": "8830/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Hindi": 51,
+      "Mathematics": 41,
+      "Science": 50,
+      "Social Science": 36
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-5022/026",
+    "name": "Aryan Pratap Singh",
+    "class": "10",
+    "section": "B",
+    "roll_no": 5022,
+    "roll_code": "5022/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 74,
+      "Hindi": 75,
+      "Mathematics": 67,
+      "Science": 77,
+      "Social Science": 78
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-9748/026",
+    "name": "Ayush",
+    "class": "10",
+    "section": "B",
+    "roll_no": 9748,
+    "roll_code": "9748/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Hindi": 55,
+      "Mathematics": 17,
+      "Science": 8,
+      "Social Science": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-4981/026",
+    "name": "Ayush Dubey",
+    "class": "10",
+    "section": "B",
+    "roll_no": 4981,
+    "roll_code": "4981/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 44,
+      "Mathematics": 16,
+      "Science": 19,
+      "Social Science": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-9676/026",
+    "name": "Ayush Katare",
+    "class": "10",
+    "section": "B",
+    "roll_no": 9676,
+    "roll_code": "9676/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 50,
+      "Hindi": 41,
+      "Mathematics": 37,
+      "Science": 30,
+      "Social Science": 44
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-8633/026",
+    "name": "Ayush Sharma",
+    "class": "10",
+    "section": "B",
+    "roll_no": 8633,
+    "roll_code": "8633/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 32,
+      "Hindi": 27,
+      "Mathematics": 16,
+      "Science": 7,
+      "Social Science": 14
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-8505/026",
+    "name": "Dev Narayan",
+    "class": "10",
+    "section": "B",
+    "roll_no": 8505,
+    "roll_code": "8505/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Hindi": 21,
+      "Mathematics": 22,
+      "Science": 7,
+      "Social Science": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-9703/026",
+    "name": "Devank Singh Baghel",
+    "class": "10",
+    "section": "B",
+    "roll_no": 9703,
+    "roll_code": "9703/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 50,
+      "Mathematics": 31,
+      "Science": 47,
+      "Social Science": 64
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-8893/026",
+    "name": "Devraj Singh Tomar",
+    "class": "10",
+    "section": "B",
+    "roll_no": 8893,
+    "roll_code": "8893/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-6240/026",
+    "name": "Divyansh Sharma",
+    "class": "10",
+    "section": "B",
+    "roll_no": 6240,
+    "roll_code": "6240/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Hindi": 70,
+      "Mathematics": 63,
+      "Science": 64,
+      "Social Science": 68
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-9605/026",
+    "name": "Ganesh Singh",
+    "class": "10",
+    "section": "B",
+    "roll_no": 9605,
+    "roll_code": "9605/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 31,
+      "Hindi": 43,
+      "Mathematics": 18,
+      "Science": 27,
+      "Social Science": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-9354/026",
+    "name": "Hardik Dohare",
+    "class": "10",
+    "section": "B",
+    "roll_no": 9354,
+    "roll_code": "9354/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 67,
+      "Hindi": 34,
+      "Mathematics": 60,
+      "Science": 57,
+      "Social Science": 77
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-4998/026",
+    "name": "Harshvardhan Sikarwar",
+    "class": "10",
+    "section": "B",
+    "roll_no": 4998,
+    "roll_code": "4998/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Hindi": 37,
+      "Mathematics": 29,
+      "Science": 13,
+      "Social Science": 33
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-9472/026",
+    "name": "Kartik Sharma",
+    "class": "10",
+    "section": "B",
+    "roll_no": 9472,
+    "roll_code": "9472/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 53,
+      "Hindi": 0,
+      "Mathematics": 35,
+      "Science": 56,
+      "Social Science": 38
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-8263/026",
+    "name": "Krishna",
+    "class": "10",
+    "section": "B",
+    "roll_no": 8263,
+    "roll_code": "8263/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-9889/026",
+    "name": "Krishna",
+    "class": "10",
+    "section": "B",
+    "roll_no": 9889,
+    "roll_code": "9889/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 45,
+      "Mathematics": 27,
+      "Science": 27,
+      "Social Science": 53
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-9340/026",
+    "name": "Lakshya Bhadauria",
+    "class": "10",
+    "section": "B",
+    "roll_no": 9340,
+    "roll_code": "9340/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 56,
+      "Mathematics": 36,
+      "Science": 47,
+      "Social Science": 68
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-4983/026",
+    "name": "Mayank Pratap Singh Bhadoriya",
+    "class": "10",
+    "section": "B",
+    "roll_no": 4983,
+    "roll_code": "4983/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 47,
+      "Mathematics": 28,
+      "Science": 39,
+      "Social Science": 66
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-4684/026",
+    "name": "Prashant Yadav",
+    "class": "10",
+    "section": "B",
+    "roll_no": 4684,
+    "roll_code": "4684/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 22,
+      "Mathematics": 34,
+      "Science": 32,
+      "Social Science": 34
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-6739/026",
+    "name": "Priyanshu Rajawat",
+    "class": "10",
+    "section": "B",
+    "roll_no": 6739,
+    "roll_code": "6739/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Hindi": 57,
+      "Mathematics": 23,
+      "Science": 30,
+      "Social Science": 42
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-8827/026",
+    "name": "Sahil Bhadouriya",
+    "class": "10",
+    "section": "B",
+    "roll_no": 8827,
+    "roll_code": "8827/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 51,
+      "Hindi": 37,
+      "Mathematics": 42,
+      "Science": 41,
+      "Social Science": 68
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-10088/026",
+    "name": "Satyam Singh Bhadouriya",
+    "class": "10",
+    "section": "B",
+    "roll_no": 10088,
+    "roll_code": "10088/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 55,
+      "Mathematics": 47,
+      "Science": 63,
+      "Social Science": 76
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-5038/026",
+    "name": "Shiva Sharma",
+    "class": "10",
+    "section": "B",
+    "roll_no": 5038,
+    "roll_code": "5038/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 59,
+      "Mathematics": 60,
+      "Science": 59,
+      "Social Science": 72
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-9657/026",
+    "name": "Shiva Sharma",
+    "class": "10",
+    "section": "B",
+    "roll_no": 9657,
+    "roll_code": "9657/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 50,
+      "Mathematics": 57,
+      "Science": 69,
+      "Social Science": 60
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-5377/026",
+    "name": "Shivansh Singh Parihar",
+    "class": "10",
+    "section": "B",
+    "roll_no": 5377,
+    "roll_code": "5377/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 71,
+      "Hindi": 65,
+      "Mathematics": 59,
+      "Science": 69,
+      "Social Science": 77
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-8602/026",
+    "name": "Shubham Dwivedi",
+    "class": "10",
+    "section": "B",
+    "roll_no": 8602,
+    "roll_code": "8602/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Hindi": 70,
+      "Mathematics": 58,
+      "Science": 65,
+      "Social Science": 76
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-9961/026",
+    "name": "Siddharth Jain",
+    "class": "10",
+    "section": "B",
+    "roll_no": 9961,
+    "roll_code": "9961/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 34,
+      "Hindi": 39,
+      "Mathematics": 19,
+      "Science": 27,
+      "Social Science": 44
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-6847/026",
+    "name": "Sumit",
+    "class": "10",
+    "section": "B",
+    "roll_no": 6847,
+    "roll_code": "6847/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Hindi": 53,
+      "Mathematics": 60,
+      "Science": 64,
+      "Social Science": 67
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-9160/026",
+    "name": "Tejash Kushwah",
+    "class": "10",
+    "section": "B",
+    "roll_no": 9160,
+    "roll_code": "9160/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 34,
+      "Hindi": 27,
+      "Mathematics": 15,
+      "Science": 38,
+      "Social Science": 47
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-6241/026",
+    "name": "Vansh Singh Tomar",
+    "class": "10",
+    "section": "B",
+    "roll_no": 6241,
+    "roll_code": "6241/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 39,
+      "Hindi": 30,
+      "Mathematics": 19,
+      "Science": 20,
+      "Social Science": 23
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-8075/026",
+    "name": "Vidhata Ojha",
+    "class": "10",
+    "section": "B",
+    "roll_no": 8075,
+    "roll_code": "8075/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 66,
+      "Mathematics": 63,
+      "Science": 58,
+      "Social Science": 58
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10B-9466/026",
+    "name": "Yuvraj Singh Tomar",
+    "class": "10",
+    "section": "B",
+    "roll_no": 9466,
+    "roll_code": "9466/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 71,
+      "Hindi": 67,
+      "Mathematics": 19,
+      "Science": 71,
+      "Social Science": 79
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-9970/026",
+    "name": "Aarna Trivedi",
+    "class": "10",
+    "section": "D",
+    "roll_no": 9970,
+    "roll_code": "9970/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-9651/026",
+    "name": "Akshita Kumari",
+    "class": "10",
+    "section": "D",
+    "roll_no": 9651,
+    "roll_code": "9651/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 58,
+      "Hindi": 60,
+      "Mathematics": 58,
+      "Science": 63,
+      "Social Science": 75
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-4707/026",
+    "name": "Anshika Sharma",
+    "class": "10",
+    "section": "D",
+    "roll_no": 4707,
+    "roll_code": "4707/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 64,
+      "Mathematics": 30,
+      "Science": 44,
+      "Social Science": 55
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-9325/026",
+    "name": "Ashi Bansal",
+    "class": "10",
+    "section": "D",
+    "roll_no": 9325,
+    "roll_code": "9325/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 67,
+      "Mathematics": 35,
+      "Science": 48,
+      "Social Science": 66
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-8027/026",
+    "name": "Barkha",
+    "class": "10",
+    "section": "D",
+    "roll_no": 8027,
+    "roll_code": "8027/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 67,
+      "Mathematics": 39,
+      "Science": 45,
+      "Social Science": 53
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-9077/026",
+    "name": "Deepika Joshi",
+    "class": "10",
+    "section": "D",
+    "roll_no": 9077,
+    "roll_code": "9077/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-9478/026",
+    "name": "Gouri Bhadouriya",
+    "class": "10",
+    "section": "D",
+    "roll_no": 9478,
+    "roll_code": "9478/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Hindi": 68,
+      "Mathematics": 42,
+      "Science": 50,
+      "Social Science": 57
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-8824/026",
+    "name": "Gungun Sharma",
+    "class": "10",
+    "section": "D",
+    "roll_no": 8824,
+    "roll_code": "8824/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 72,
+      "Hindi": 71,
+      "Mathematics": 77,
+      "Science": 77,
+      "Social Science": 78
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-8843/026",
+    "name": "Janvi Sharma",
+    "class": "10",
+    "section": "D",
+    "roll_no": 8843,
+    "roll_code": "8843/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Hindi": 62,
+      "Mathematics": 39,
+      "Science": 31,
+      "Social Science": 52
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-9001/026",
+    "name": "Jayanti Bohare",
+    "class": "10",
+    "section": "D",
+    "roll_no": 9001,
+    "roll_code": "9001/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 51,
+      "Hindi": 73,
+      "Mathematics": 33,
+      "Science": 45,
+      "Social Science": 71
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-9295/026",
+    "name": "Kajal Dubey",
+    "class": "10",
+    "section": "D",
+    "roll_no": 9295,
+    "roll_code": "9295/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Hindi": 70,
+      "Mathematics": 39,
+      "Science": 45,
+      "Social Science": 58
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-8777/026",
+    "name": "Kanak Atroliya",
+    "class": "10",
+    "section": "D",
+    "roll_no": 8777,
+    "roll_code": "8777/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 63,
+      "Mathematics": 29,
+      "Science": 45,
+      "Social Science": 71
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-8924/026",
+    "name": "Karishma Raipuriya",
+    "class": "10",
+    "section": "D",
+    "roll_no": 8924,
+    "roll_code": "8924/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 62,
+      "Mathematics": 28,
+      "Science": 20,
+      "Social Science": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-9526/026",
+    "name": "Khushi Yadav",
+    "class": "10",
+    "section": "D",
+    "roll_no": 9526,
+    "roll_code": "9526/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Hindi": 66,
+      "Mathematics": 25,
+      "Science": 44,
+      "Social Science": 58
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-8188/026",
+    "name": "Manvi Bhadouriya",
+    "class": "10",
+    "section": "D",
+    "roll_no": 8188,
+    "roll_code": "8188/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 36,
+      "Hindi": 54,
+      "Mathematics": 20,
+      "Science": 19,
+      "Social Science": 15
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-9897/026",
+    "name": "Naina Bhadauria",
+    "class": "10",
+    "section": "D",
+    "roll_no": 9897,
+    "roll_code": "9897/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 49,
+      "Mathematics": 9,
+      "Science": 8,
+      "Social Science": 21
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-5540/026",
+    "name": "Nainsi Bhadoriya",
+    "class": "10",
+    "section": "D",
+    "roll_no": 5540,
+    "roll_code": "5540/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 70,
+      "Mathematics": 65,
+      "Science": 78,
+      "Social Science": 78
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-9328/026",
+    "name": "Navya Jain",
+    "class": "10",
+    "section": "D",
+    "roll_no": 9328,
+    "roll_code": "9328/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 74,
+      "Mathematics": 41,
+      "Science": 60,
+      "Social Science": 56
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-5399/026",
+    "name": "Pari Bhadouria",
+    "class": "10",
+    "section": "D",
+    "roll_no": 5399,
+    "roll_code": "5399/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Hindi": 74,
+      "Mathematics": 37,
+      "Science": 63,
+      "Social Science": 76
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-8269/026",
+    "name": "Pavani Rathore",
+    "class": "10",
+    "section": "D",
+    "roll_no": 8269,
+    "roll_code": "8269/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Hindi": 71,
+      "Mathematics": 52,
+      "Science": 74,
+      "Social Science": 76
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-8575/026",
+    "name": "Payal Bhadouriya",
+    "class": "10",
+    "section": "D",
+    "roll_no": 8575,
+    "roll_code": "8575/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 54,
+      "Hindi": 72,
+      "Mathematics": 57,
+      "Science": 66,
+      "Social Science": 67
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-5117/026",
+    "name": "Pranjali",
+    "class": "10",
+    "section": "D",
+    "roll_no": 5117,
+    "roll_code": "5117/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Hindi": 58,
+      "Mathematics": 48,
+      "Science": 57,
+      "Social Science": 71
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-6107/026",
+    "name": "Pratigya",
+    "class": "10",
+    "section": "D",
+    "roll_no": 6107,
+    "roll_code": "6107/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Hindi": 77,
+      "Mathematics": 50,
+      "Science": 59,
+      "Social Science": 57
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-9185/026",
+    "name": "Pratigya Chaturvedi",
+    "class": "10",
+    "section": "D",
+    "roll_no": 9185,
+    "roll_code": "9185/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 71,
+      "Mathematics": 35,
+      "Science": 45,
+      "Social Science": 62
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-9886/026",
+    "name": "Priyanshi Joshi",
+    "class": "10",
+    "section": "D",
+    "roll_no": 9886,
+    "roll_code": "9886/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Hindi": 67,
+      "Mathematics": 37,
+      "Science": 38,
+      "Social Science": 65
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-9901/026",
+    "name": "Ragini",
+    "class": "10",
+    "section": "D",
+    "roll_no": 9901,
+    "roll_code": "9901/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 34,
+      "Mathematics": 6,
+      "Science": 4,
+      "Social Science": 30
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-8339/026",
+    "name": "Sanjana",
+    "class": "10",
+    "section": "D",
+    "roll_no": 8339,
+    "roll_code": "8339/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Hindi": 56,
+      "Mathematics": 27,
+      "Science": 33,
+      "Social Science": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-4990/026",
+    "name": "Santoshi",
+    "class": "10",
+    "section": "D",
+    "roll_no": 4990,
+    "roll_code": "4990/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 72,
+      "Hindi": 78,
+      "Mathematics": 58,
+      "Science": 77,
+      "Social Science": 80
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-8672/026",
+    "name": "Shaily Bhadouria",
+    "class": "10",
+    "section": "D",
+    "roll_no": 8672,
+    "roll_code": "8672/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Science": 0,
+      "Social Science": 0
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-8887/026",
+    "name": "Sneha Yadav",
+    "class": "10",
+    "section": "D",
+    "roll_no": 8887,
+    "roll_code": "8887/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Hindi": 78,
+      "Mathematics": 69,
+      "Science": 58,
+      "Social Science": 69
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-6499/026",
+    "name": "Supriya Mishra",
+    "class": "10",
+    "section": "D",
+    "roll_no": 6499,
+    "roll_code": "6499/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 58,
+      "Hindi": 72,
+      "Mathematics": 57,
+      "Science": 76,
+      "Social Science": 76
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-8920/026",
+    "name": "Tanushka Kumari",
+    "class": "10",
+    "section": "D",
+    "roll_no": 8920,
+    "roll_code": "8920/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 45,
+      "Hindi": 68,
+      "Mathematics": 28,
+      "Science": 38,
+      "Social Science": 44
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10D-8028/026",
+    "name": "Varsha",
+    "class": "10",
+    "section": "D",
+    "roll_no": 8028,
+    "roll_code": "8028/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 55,
+      "Mathematics": 49,
+      "Science": 31,
+      "Social Science": 43
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-10029/026",
+    "name": "Aanya Jain",
+    "class": "10",
+    "section": "E",
+    "roll_no": 10029,
+    "roll_code": "10029/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Hindi": 8,
+      "Mathematics": 9,
+      "Science": 9,
+      "Social Science": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-10054/026",
+    "name": "Amreen",
+    "class": "10",
+    "section": "E",
+    "roll_no": 10054,
+    "roll_code": "10054/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Hindi": 31,
+      "Mathematics": 13,
+      "Science": 10,
+      "Social Science": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-8337/026",
+    "name": "Ananya Rajawat",
+    "class": "10",
+    "section": "E",
+    "roll_no": 8337,
+    "roll_code": "8337/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 65,
+      "Hindi": 55,
+      "Mathematics": 0,
+      "Science": 28,
+      "Social Science": 65
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-8854/026",
+    "name": "Ananya Sengar",
+    "class": "10",
+    "section": "E",
+    "roll_no": 8854,
+    "roll_code": "8854/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 70,
+      "Mathematics": 31,
+      "Science": 47,
+      "Social Science": 75
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-8207/026",
+    "name": "Anshika Sharma",
+    "class": "10",
+    "section": "E",
+    "roll_no": 8207,
+    "roll_code": "8207/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 55,
+      "Hindi": 0,
+      "Mathematics": 16,
+      "Science": 27,
+      "Social Science": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9777/026",
+    "name": "Anshika Vyas",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9777,
+    "roll_code": "9777/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 70,
+      "Hindi": 69,
+      "Mathematics": 52,
+      "Science": 59,
+      "Social Science": 79
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9665/026",
+    "name": "Aprajita",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9665,
+    "roll_code": "9665/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 67,
+      "Mathematics": 47,
+      "Science": 49,
+      "Social Science": 62
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-6889/026",
+    "name": "Aradhya Rathore",
+    "class": "10",
+    "section": "E",
+    "roll_no": 6889,
+    "roll_code": "6889/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Hindi": 35,
+      "Mathematics": 9,
+      "Science": 20,
+      "Social Science": 34
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-8315/026",
+    "name": "Aradhya Shivhare",
+    "class": "10",
+    "section": "E",
+    "roll_no": 8315,
+    "roll_code": "8315/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 75,
+      "Mathematics": 67,
+      "Science": 64,
+      "Social Science": 78
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-4898/026",
+    "name": "Ayushi Yadav",
+    "class": "10",
+    "section": "E",
+    "roll_no": 4898,
+    "roll_code": "4898/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Hindi": 59,
+      "Mathematics": 15,
+      "Science": 14,
+      "Social Science": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-8294/026",
+    "name": "Chhama Bhadouriya",
+    "class": "10",
+    "section": "E",
+    "roll_no": 8294,
+    "roll_code": "8294/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Hindi": 62,
+      "Mathematics": 21,
+      "Science": 27,
+      "Social Science": 50
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-5478/026",
+    "name": "Deetya Sharma",
+    "class": "10",
+    "section": "E",
+    "roll_no": 5478,
+    "roll_code": "5478/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 69,
+      "Hindi": 63,
+      "Mathematics": 45,
+      "Science": 62,
+      "Social Science": 60
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9081/026",
+    "name": "Gungun",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9081,
+    "roll_code": "9081/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 67,
+      "Hindi": 62,
+      "Mathematics": 38,
+      "Science": 49,
+      "Social Science": 35
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9304/026",
+    "name": "Gunjjan",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9304,
+    "roll_code": "9304/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Hindi": 65,
+      "Mathematics": 43,
+      "Science": 48,
+      "Social Science": 65
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-5326/026",
+    "name": "Janvi",
+    "class": "10",
+    "section": "E",
+    "roll_no": 5326,
+    "roll_code": "5326/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 54,
+      "Hindi": 68,
+      "Mathematics": 32,
+      "Science": 34,
+      "Social Science": 43
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9333/026",
+    "name": "Juli Uday",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9333,
+    "roll_code": "9333/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Hindi": 75,
+      "Mathematics": 33,
+      "Science": 64,
+      "Social Science": 59
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9780/026",
+    "name": "Khushi",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9780,
+    "roll_code": "9780/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 58,
+      "Hindi": 59,
+      "Mathematics": 9,
+      "Science": 25,
+      "Social Science": 51
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-4683/026",
+    "name": "Khushi Bhadouriya",
+    "class": "10",
+    "section": "E",
+    "roll_no": 4683,
+    "roll_code": "4683/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Hindi": 67,
+      "Mathematics": 31,
+      "Science": 32,
+      "Social Science": 51
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9243/026",
+    "name": "Khushi Sharma",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9243,
+    "roll_code": "9243/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Hindi": 45,
+      "Mathematics": 16,
+      "Science": 30,
+      "Social Science": 39
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9681/026",
+    "name": "Kumari Chhawi",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9681,
+    "roll_code": "9681/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 69,
+      "Hindi": 72,
+      "Mathematics": 0,
+      "Science": 48,
+      "Social Science": 71
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-8410/026",
+    "name": "Mahak Singh",
+    "class": "10",
+    "section": "E",
+    "roll_no": 8410,
+    "roll_code": "8410/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Hindi": 54,
+      "Mathematics": 27,
+      "Science": 27,
+      "Social Science": 44
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-6321/026",
+    "name": "Mahi Tomar",
+    "class": "10",
+    "section": "E",
+    "roll_no": 6321,
+    "roll_code": "6321/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 48,
+      "Mathematics": 32,
+      "Science": 28,
+      "Social Science": 22
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-8532/026",
+    "name": "Mohinee",
+    "class": "10",
+    "section": "E",
+    "roll_no": 8532,
+    "roll_code": "8532/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 30,
+      "Hindi": 48,
+      "Mathematics": 28,
+      "Science": 27,
+      "Social Science": 37
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-4864/026",
+    "name": "Muskan",
+    "class": "10",
+    "section": "E",
+    "roll_no": 4864,
+    "roll_code": "4864/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 67,
+      "Mathematics": 39,
+      "Science": 61,
+      "Social Science": 68
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-8462/026",
+    "name": "Nainshi",
+    "class": "10",
+    "section": "E",
+    "roll_no": 8462,
+    "roll_code": "8462/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 59,
+      "Mathematics": 32,
+      "Science": 39,
+      "Social Science": 62
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9891/026",
+    "name": "Navya Bhadauria",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9891,
+    "roll_code": "9891/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Hindi": 66,
+      "Mathematics": 28,
+      "Science": 38,
+      "Social Science": 48
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-5044/026",
+    "name": "Nidhi Sharma",
+    "class": "10",
+    "section": "E",
+    "roll_no": 5044,
+    "roll_code": "5044/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 58,
+      "Hindi": 65,
+      "Mathematics": 31,
+      "Science": 22,
+      "Social Science": 36
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9462/026",
+    "name": "Payal Narwariya",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9462,
+    "roll_code": "9462/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Hindi": 65,
+      "Mathematics": 27,
+      "Science": 56,
+      "Social Science": 35
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-4718/026",
+    "name": "Pranshee Sharma",
+    "class": "10",
+    "section": "E",
+    "roll_no": 4718,
+    "roll_code": "4718/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 70,
+      "Mathematics": 36,
+      "Science": 42,
+      "Social Science": 63
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-4954/026",
+    "name": "Saanvi Chaturvedi",
+    "class": "10",
+    "section": "E",
+    "roll_no": 4954,
+    "roll_code": "4954/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 70,
+      "Hindi": 69,
+      "Mathematics": 47,
+      "Science": 47,
+      "Social Science": 56
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-8684/026",
+    "name": "Sandhya Bhadouriya",
+    "class": "10",
+    "section": "E",
+    "roll_no": 8684,
+    "roll_code": "8684/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 67,
+      "Mathematics": 31,
+      "Science": 32,
+      "Social Science": 35
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-8747/026",
+    "name": "Sandhya Lodhi",
+    "class": "10",
+    "section": "E",
+    "roll_no": 8747,
+    "roll_code": "8747/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Hindi": 50,
+      "Mathematics": 37,
+      "Science": 36,
+      "Social Science": 53
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-6991/026",
+    "name": "Sanjana Yadav",
+    "class": "10",
+    "section": "E",
+    "roll_no": 6991,
+    "roll_code": "6991/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 66,
+      "Hindi": 72,
+      "Mathematics": 49,
+      "Science": 73,
+      "Social Science": 76
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9839/026",
+    "name": "Shivani Prajapati",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9839,
+    "roll_code": "9839/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Hindi": 75,
+      "Mathematics": 38,
+      "Science": 65,
+      "Social Science": 78
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9435/026",
+    "name": "Shreya Singh",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9435,
+    "roll_code": "9435/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Hindi": 44,
+      "Mathematics": 21,
+      "Science": 14,
+      "Social Science": 32
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9915/026",
+    "name": "Sonali Tomar",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9915,
+    "roll_code": "9915/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Hindi": 72,
+      "Mathematics": 39,
+      "Science": 56,
+      "Social Science": 60
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9924/026",
+    "name": "Tamanna Tomar",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9924,
+    "roll_code": "9924/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 40,
+      "Hindi": 0,
+      "Mathematics": 11,
+      "Science": 4,
+      "Social Science": 20
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-6427/026",
+    "name": "Unnati Bhadouriya",
+    "class": "10",
+    "section": "E",
+    "roll_no": 6427,
+    "roll_code": "6427/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 33,
+      "Hindi": 48,
+      "Mathematics": 16,
+      "Science": 15,
+      "Social Science": 27
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9974/026",
+    "name": "Unnati Srivastava",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9974,
+    "roll_code": "9974/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 52,
+      "Hindi": 0,
+      "Mathematics": 15,
+      "Science": 27,
+      "Social Science": 41
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9321/026",
+    "name": "Vanshika",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9321,
+    "roll_code": "9321/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 66,
+      "Hindi": 64,
+      "Mathematics": 28,
+      "Science": 32,
+      "Social Science": 45
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-9663/026",
+    "name": "Vibha Tomar",
+    "class": "10",
+    "section": "E",
+    "roll_no": 9663,
+    "roll_code": "9663/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 70,
+      "Hindi": 71,
+      "Mathematics": 69,
+      "Science": 69,
+      "Social Science": 75
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  },
+  {
+    "student_id": "CCS-10E-6918/026",
+    "name": "Yamini Rajput",
+    "class": "10",
+    "section": "E",
+    "roll_no": 6918,
+    "roll_code": "6918/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 54,
+      "Hindi": 63,
+      "Mathematics": 28,
+      "Science": 20,
+      "Social Science": 28
+    },
+    "max_marks": {
+      "English": 80,
+      "Hindi": 80,
+      "Mathematics": 80,
+      "Science": 80,
+      "Social Science": 80
+    }
+  }
+];

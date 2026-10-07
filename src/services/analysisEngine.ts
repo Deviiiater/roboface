@@ -24,7 +24,8 @@ const SUBJECT_IMPROVEMENT_TIPS: Record<string, string> = {
   'Computer Science': 'Debug code snippets regularly, master object-oriented concepts and SQL query syntax.',
   'Accountancy': 'Practice balance sheet formats and ledger entries daily; verify debit-credit balancing steps.',
   'Business Studies': 'Memorize headings and key management terms with real-world case studies.',
-  'Economics': 'Draw micro and macro economic graphs neatly; learn formulas for national income and elasticity.'
+  'Economics': 'Draw micro and macro economic graphs neatly; learn formulas for national income and elasticity.',
+  'Sanskrit': 'Practice Sanskrit grammar (Dhatu roop, Shabda roop), sandhi rules, and shloka meanings.'
 };
 
 export const HINDI_SUBJECT_NAMES: Record<string, string> = {
@@ -43,7 +44,8 @@ export const HINDI_SUBJECT_NAMES: Record<string, string> = {
   'Computer Science': 'कंप्यूटर साइंस',
   'Accountancy': 'लेखाशास्त्र',
   'Business Studies': 'व्यावसायिक अध्ययन',
-  'Economics': 'अर्थशास्त्र'
+  'Economics': 'अर्थशास्त्र',
+  'Sanskrit': 'संस्कृत'
 };
 
 export const HINDI_SUBJECT_IMPROVEMENT_TIPS: Record<string, string> = {
@@ -62,7 +64,8 @@ export const HINDI_SUBJECT_IMPROVEMENT_TIPS: Record<string, string> = {
   'Computer Science': 'प्रोग्रामिंग कोड का नियमित अभ्यास करें और एसक्यूएल क्वेरी समझें।',
   'Accountancy': 'बैलेंस शीट और लेज़र प्रविष्टियों का दैनिक अभ्यास करें।',
   'Business Studies': 'प्रबंधन सिद्धांतों को याद करें और व्यावहारिक उदाहरणों से समझें।',
-  'Economics': 'आर्थिक ग्राफ़ का अभ्यास करें और राष्ट्रीय आय के सूत्र याद करें।'
+  'Economics': 'आर्थिक ग्राफ़ का अभ्यास करें और राष्ट्रीय आय के सूत्र याद करें।',
+  'Sanskrit': 'संस्कृत व्याकरण, धातु रूप, शब्द रूप और श्लोकों के अर्थ का नियमित अभ्यास करें।'
 };
 
 const DEFAULT_SUBJECT_TIP = 'Revise key concepts, maintain dedicated revision notes, and solve previous year questions weekly.';

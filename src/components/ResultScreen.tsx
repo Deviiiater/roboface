@@ -463,7 +463,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                   {strengths.map(s => (
                     <div key={s.subject} className="text-xs text-neutral-200 font-semibold flex justify-between">
                       <span>{s.subject}</span>
-                      <span className="text-emerald-400">{s.marks}%</span>
+                      <span className="text-emerald-400">{s.percentage}%</span>
                     </div>
                   ))}
                 </div>
@@ -479,7 +479,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                     weakSubjects.map(w => (
                       <div key={w.subject} className="text-xs text-neutral-200 font-semibold flex justify-between">
                         <span>{w.subject}</span>
-                        <span className="text-amber-400">{w.marks}%</span>
+                        <span className="text-amber-400">{w.percentage}%</span>
                       </div>
                     ))
                   ) : (
