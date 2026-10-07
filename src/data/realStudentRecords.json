@@ -23029,5 +23029,3674 @@
       "Science": 80,
       "Social Science": 80
     }
+  },
+  {
+    "student_id": "CCS-11A-9330/026",
+    "name": "Abhinendra Singh Kushwah",
+    "class": "11",
+    "section": "A",
+    "roll_no": 9330,
+    "roll_code": "9330/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Physical Education": 0,
+      "Mathematics": 0,
+      "Physics": 0,
+      "Chemistry": 0
+    },
+    "is_marks_only": true,
+    "grade": "AB"
+  },
+  {
+    "student_id": "CCS-11A-6494/026",
+    "name": "Abhishek Singh Bhadoria",
+    "class": "11",
+    "section": "A",
+    "roll_no": 6494,
+    "roll_code": "6494/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 52,
+      "Mathematics": 37,
+      "Physics": 44,
+      "Chemistry": 46
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-11A-6495/026",
+    "name": "Ajay Singh Bhadoriya",
+    "class": "11",
+    "section": "A",
+    "roll_no": 6495,
+    "roll_code": "6495/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Hindi": 49,
+      "Mathematics": 65,
+      "Physics": 47,
+      "Chemistry": 57
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-11A-6732/026",
+    "name": "Ajeet Kushwah",
+    "class": "11",
+    "section": "A",
+    "roll_no": 6732,
+    "roll_code": "6732/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Physical Education": 63,
+      "Mathematics": 46,
+      "Physics": 50,
+      "Chemistry": 40
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-11A-4364/026",
+    "name": "Ankit Rathore",
+    "class": "11",
+    "section": "A",
+    "roll_no": 4364,
+    "roll_code": "4364/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Physical Education": 49,
+      "Mathematics": 46,
+      "Physics": 23,
+      "Chemistry": 27
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11A-4826/026",
+    "name": "Anmol Sharma",
+    "class": "11",
+    "section": "A",
+    "roll_no": 4826,
+    "roll_code": "4826/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 43,
+      "Physical Education": 39,
+      "Mathematics": 14,
+      "Physics": 23,
+      "Chemistry": 17
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11A-9440/026",
+    "name": "Anshu Purohit",
+    "class": "11",
+    "section": "A",
+    "roll_no": 9440,
+    "roll_code": "9440/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Physical Education": 50,
+      "Mathematics": 52,
+      "Physics": 33,
+      "Chemistry": 44
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-11A-8074/026",
+    "name": "Anurudh Ojha",
+    "class": "11",
+    "section": "A",
+    "roll_no": 8074,
+    "roll_code": "8074/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Physical Education": 44,
+      "Mathematics": 30,
+      "Physics": 26,
+      "Chemistry": 36
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11A-5771/026",
+    "name": "Anushka Sharma",
+    "class": "11",
+    "section": "A",
+    "roll_no": 5771,
+    "roll_code": "5771/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 73,
+      "Physical Education": 61,
+      "Mathematics": 57,
+      "Physics": 43,
+      "Chemistry": 53
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-11A-10326/026",
+    "name": "Ashu Yadav",
+    "class": "11",
+    "section": "A",
+    "roll_no": 10326,
+    "roll_code": "10326/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 68,
+      "Mathematics": 54,
+      "Physics": 33,
+      "Chemistry": 34
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-11A-10125/026",
+    "name": "Atharv Pathak",
+    "class": "11",
+    "section": "A",
+    "roll_no": 10125,
+    "roll_code": "10125/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Physical Education": 0,
+      "Mathematics": 0,
+      "Physics": 0,
+      "Chemistry": 0
+    },
+    "is_marks_only": true,
+    "grade": "AB"
+  },
+  {
+    "student_id": "CCS-11A-7087/026",
+    "name": "Avneesh Pandey",
+    "class": "11",
+    "section": "A",
+    "roll_no": 7087,
+    "roll_code": "7087/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 70,
+      "Physical Education": 62,
+      "Mathematics": 50,
+      "Physics": 35,
+      "Chemistry": 46
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-11A-8351/026",
+    "name": "Chandra Pratap Singh Bhadouriya",
+    "class": "11",
+    "section": "A",
+    "roll_no": 8351,
+    "roll_code": "8351/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Physical Education": 50,
+      "Mathematics": 28,
+      "Physics": 24,
+      "Chemistry": 16
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11A-4482/026",
+    "name": "Dev Shivhare",
+    "class": "11",
+    "section": "A",
+    "roll_no": 4482,
+    "roll_code": "4482/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Physical Education": 58,
+      "Mathematics": 34,
+      "Physics": 25,
+      "Chemistry": 15
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11A-9065/026",
+    "name": "Devbrat Barua",
+    "class": "11",
+    "section": "A",
+    "roll_no": 9065,
+    "roll_code": "9065/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Physical Education": 37,
+      "Mathematics": 12,
+      "Physics": 15,
+      "Chemistry": 9
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11A-8545/026",
+    "name": "Harshit Kushwah",
+    "class": "11",
+    "section": "A",
+    "roll_no": 8545,
+    "roll_code": "8545/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Physical Education": 39,
+      "Mathematics": 18,
+      "Physics": 23,
+      "Chemistry": 21
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11A-6757/026",
+    "name": "Kashish Bhadauria",
+    "class": "11",
+    "section": "A",
+    "roll_no": 6757,
+    "roll_code": "6757/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 56,
+      "Physical Education": 61,
+      "Mathematics": 35,
+      "Physics": 0,
+      "Chemistry": 32
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11A-6318/026",
+    "name": "Krishna Singh",
+    "class": "11",
+    "section": "A",
+    "roll_no": 6318,
+    "roll_code": "6318/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Physical Education": 58,
+      "Mathematics": 49,
+      "Physics": 27,
+      "Chemistry": 49
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-11A-6232/026",
+    "name": "Manya Gupta",
+    "class": "11",
+    "section": "A",
+    "roll_no": 6232,
+    "roll_code": "6232/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Hindi": 56,
+      "Mathematics": 37,
+      "Physics": 30,
+      "Chemistry": 13
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11A-8165/026",
+    "name": "Mayank",
+    "class": "11",
+    "section": "A",
+    "roll_no": 8165,
+    "roll_code": "8165/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Physical Education": 57,
+      "Mathematics": 56,
+      "Physics": 44,
+      "Chemistry": 30
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-11A-8423/026",
+    "name": "Naitik Barua",
+    "class": "11",
+    "section": "A",
+    "roll_no": 8423,
+    "roll_code": "8423/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 50,
+      "Physical Education": 53,
+      "Mathematics": 27,
+      "Physics": 26,
+      "Chemistry": 32
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11A-9370/026",
+    "name": "Naitik Rajput",
+    "class": "11",
+    "section": "A",
+    "roll_no": 9370,
+    "roll_code": "9370/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Physical Education": 60,
+      "Mathematics": 40,
+      "Physics": 24,
+      "Chemistry": 37
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-11A-8497/026",
+    "name": "Naveen Bradiya",
+    "class": "11",
+    "section": "A",
+    "roll_no": 8497,
+    "roll_code": "8497/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Physical Education": 38,
+      "Mathematics": 34,
+      "Physics": 21,
+      "Chemistry": 8
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11A-9323/026",
+    "name": "Palak Shukla",
+    "class": "11",
+    "section": "A",
+    "roll_no": 9323,
+    "roll_code": "9323/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Hindi": 0,
+      "Mathematics": 0,
+      "Physics": 0,
+      "Chemistry": 0
+    },
+    "is_marks_only": true,
+    "grade": "AB"
+  },
+  {
+    "student_id": "CCS-11A-5456/026",
+    "name": "Raj Sharma",
+    "class": "11",
+    "section": "A",
+    "roll_no": 5456,
+    "roll_code": "5456/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Physical Education": 56,
+      "Mathematics": 57,
+      "Physics": 43,
+      "Chemistry": 47
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-11A-8702/026",
+    "name": "Raman Singh",
+    "class": "11",
+    "section": "A",
+    "roll_no": 8702,
+    "roll_code": "8702/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Physical Education": 46,
+      "Mathematics": 34,
+      "Physics": 18,
+      "Chemistry": 13
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11A-6592/026",
+    "name": "Somya Rajawat",
+    "class": "11",
+    "section": "A",
+    "roll_no": 6592,
+    "roll_code": "6592/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 37,
+      "Physical Education": 54,
+      "Mathematics": 30,
+      "Physics": 23,
+      "Chemistry": 13
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11A-6393/026",
+    "name": "Srashti Mishra",
+    "class": "11",
+    "section": "A",
+    "roll_no": 6393,
+    "roll_code": "6393/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Physical Education": 62,
+      "Mathematics": 49,
+      "Physics": 52,
+      "Chemistry": 47
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-11A-4991/026",
+    "name": "Tanya Singh Bhadouriya",
+    "class": "11",
+    "section": "A",
+    "roll_no": 4991,
+    "roll_code": "4991/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Physical Education": 61,
+      "Mathematics": 54,
+      "Physics": 23,
+      "Chemistry": 29
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-11A-9685/026",
+    "name": "Vaishnavi",
+    "class": "11",
+    "section": "A",
+    "roll_no": 9685,
+    "roll_code": "9685/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Physical Education": 64,
+      "Mathematics": 42,
+      "Physics": 24,
+      "Chemistry": 17
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11A-9188/026",
+    "name": "Vishant Yadav",
+    "class": "11",
+    "section": "A",
+    "roll_no": 9188,
+    "roll_code": "9188/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Physical Education": 55,
+      "Mathematics": 36,
+      "Physics": 31,
+      "Chemistry": 25
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11B-4650/026",
+    "name": "Abhijeet Singh Bhadoriya",
+    "class": "11",
+    "section": "B",
+    "roll_no": 4650,
+    "roll_code": "4650/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Physical Education": 49,
+      "Physics": 23,
+      "Chemistry": 10,
+      "Biology": 38
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11B-8807/026",
+    "name": "Adarsh Singh Lodhi",
+    "class": "11",
+    "section": "B",
+    "roll_no": 8807,
+    "roll_code": "8807/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 58,
+      "Physical Education": 49,
+      "Physics": 48,
+      "Chemistry": 37,
+      "Biology": 27
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-11B-9392/026",
+    "name": "Aditi Jain",
+    "class": "11",
+    "section": "B",
+    "roll_no": 9392,
+    "roll_code": "9392/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 72,
+      "Physical Education": 56,
+      "Physics": 25,
+      "Chemistry": 8,
+      "Biology": 47
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11B-6269/026",
+    "name": "Aditya Singh",
+    "class": "11",
+    "section": "B",
+    "roll_no": 6269,
+    "roll_code": "6269/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 54,
+      "Physical Education": 47,
+      "Physics": 12,
+      "Chemistry": 4,
+      "Biology": 26
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11B-5840/026",
+    "name": "Aditya Yadav",
+    "class": "11",
+    "section": "B",
+    "roll_no": 5840,
+    "roll_code": "5840/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 14,
+      "Physical Education": 25,
+      "Physics": 6,
+      "Chemistry": 5,
+      "Biology": 9
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11B-8166/026",
+    "name": "Ankush",
+    "class": "11",
+    "section": "B",
+    "roll_no": 8166,
+    "roll_code": "8166/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Physical Education": 24,
+      "Physics": 6,
+      "Chemistry": 4,
+      "Biology": 12
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11B-10055/026",
+    "name": "Ansh Rajawat",
+    "class": "11",
+    "section": "B",
+    "roll_no": 10055,
+    "roll_code": "10055/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 17,
+      "Physical Education": 29,
+      "Physics": 7,
+      "Chemistry": 5,
+      "Biology": 8
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11B-6665/026",
+    "name": "Ashish Shakya",
+    "class": "11",
+    "section": "B",
+    "roll_no": 6665,
+    "roll_code": "6665/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 65,
+      "Physical Education": 59,
+      "Physics": 51,
+      "Chemistry": 44,
+      "Biology": 59
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-11B-9400/026",
+    "name": "Ayush Jain",
+    "class": "11",
+    "section": "B",
+    "roll_no": 9400,
+    "roll_code": "9400/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Physical Education": 58,
+      "Physics": 43,
+      "Chemistry": 8,
+      "Biology": 35
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11B-5710/026",
+    "name": "Gaurav Shrivas",
+    "class": "11",
+    "section": "B",
+    "roll_no": 5710,
+    "roll_code": "5710/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 43,
+      "Physical Education": 47,
+      "Physics": 17,
+      "Chemistry": 12,
+      "Biology": 28
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11B-9684/026",
+    "name": "Kartikey Sharma",
+    "class": "11",
+    "section": "B",
+    "roll_no": 9684,
+    "roll_code": "9684/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 34,
+      "Hindi": 38,
+      "Physics": 10,
+      "Chemistry": 10,
+      "Biology": 30
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11B-6512/026",
+    "name": "Prachi Sharma",
+    "class": "11",
+    "section": "B",
+    "roll_no": 6512,
+    "roll_code": "6512/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Physical Education": 62,
+      "Physics": 26,
+      "Chemistry": 30,
+      "Biology": 49
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-11B-6268/026",
+    "name": "Purnima Singh",
+    "class": "11",
+    "section": "B",
+    "roll_no": 6268,
+    "roll_code": "6268/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 67,
+      "Physical Education": 64,
+      "Physics": 53,
+      "Chemistry": 59,
+      "Biology": 63
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-11B-4165/026",
+    "name": "Raghav Singh",
+    "class": "11",
+    "section": "B",
+    "roll_no": 4165,
+    "roll_code": "4165/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 64,
+      "Physical Education": 54,
+      "Physics": 31,
+      "Chemistry": 11,
+      "Biology": 54
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-11B-8093/026",
+    "name": "Ramraj Singh",
+    "class": "11",
+    "section": "B",
+    "roll_no": 8093,
+    "roll_code": "8093/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Physical Education": 39,
+      "Physics": 23,
+      "Chemistry": 8,
+      "Biology": 33
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11B-8513/026",
+    "name": "Sanskar Dixit",
+    "class": "11",
+    "section": "B",
+    "roll_no": 8513,
+    "roll_code": "8513/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 39,
+      "Physical Education": 48,
+      "Physics": 23,
+      "Chemistry": 11,
+      "Biology": 30
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11B-9331/026",
+    "name": "Shailanshi Sharma",
+    "class": "11",
+    "section": "B",
+    "roll_no": 9331,
+    "roll_code": "9331/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Physical Education": 53,
+      "Physics": 9,
+      "Chemistry": 6,
+      "Biology": 37
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11B-4082/026",
+    "name": "Yuvraj Singh Bhadouriya",
+    "class": "11",
+    "section": "B",
+    "roll_no": 4082,
+    "roll_code": "4082/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 9,
+      "Physical Education": 18,
+      "Physics": 7,
+      "Chemistry": 6,
+      "Biology": 10
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11C-9475/026",
+    "name": "Abhishek Singh",
+    "class": "11",
+    "section": "C",
+    "roll_no": 9475,
+    "roll_code": "9475/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 35,
+      "Physical Education": 59,
+      "Business Studies": 30,
+      "Accountancy": 17,
+      "Economics": 25
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11C-8327/026",
+    "name": "Anshika Sharma",
+    "class": "11",
+    "section": "C",
+    "roll_no": 8327,
+    "roll_code": "8327/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 42,
+      "Hindi": 59,
+      "Business Studies": 35,
+      "Accountancy": 61,
+      "Economics": 32
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11C-5946/026",
+    "name": "Anushka Tomar",
+    "class": "11",
+    "section": "C",
+    "roll_no": 5946,
+    "roll_code": "5946/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 32,
+      "Physical Education": 24,
+      "Business Studies": 21,
+      "Accountancy": 12,
+      "Economics": 4
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11C-6244/026",
+    "name": "Aryan Singh Tomar",
+    "class": "11",
+    "section": "C",
+    "roll_no": 6244,
+    "roll_code": "6244/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 29,
+      "Physical Education": 25,
+      "Business Studies": 0,
+      "Accountancy": 20,
+      "Economics": 15
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11C-10340/026",
+    "name": "Aryan Singh Tomar",
+    "class": "11",
+    "section": "C",
+    "roll_no": 10340,
+    "roll_code": "10340/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 0,
+      "Physical Education": 21,
+      "Business Studies": 17,
+      "Accountancy": 6,
+      "Economics": 6
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11C-4982/026",
+    "name": "Bhavana Bhadouriya",
+    "class": "11",
+    "section": "C",
+    "roll_no": 4982,
+    "roll_code": "4982/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 58,
+      "Physical Education": 62,
+      "Applied Maths": 23,
+      "Business Studies": 57,
+      "Accountancy": 64,
+      "Economics": 64
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-11C-10319/026",
+    "name": "Chirag Mittal",
+    "class": "11",
+    "section": "C",
+    "roll_no": 10319,
+    "roll_code": "10319/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 20,
+      "Physical Education": 31,
+      "Applied Maths": 0,
+      "Business Studies": 26,
+      "Accountancy": 15,
+      "Economics": 21
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11C-4885/026",
+    "name": "Deeksha Yadav",
+    "class": "11",
+    "section": "C",
+    "roll_no": 4885,
+    "roll_code": "4885/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Physical Education": 51,
+      "Business Studies": 34,
+      "Accountancy": 20,
+      "Economics": 19
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11C-4649/026",
+    "name": "Divya Sharma",
+    "class": "11",
+    "section": "C",
+    "roll_no": 4649,
+    "roll_code": "4649/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Physical Education": 0,
+      "Business Studies": 0,
+      "Accountancy": 0,
+      "Economics": 0
+    },
+    "is_marks_only": true,
+    "grade": "AB"
+  },
+  {
+    "student_id": "CCS-11C-10077/026",
+    "name": "Gungun Pandey",
+    "class": "11",
+    "section": "C",
+    "roll_no": 10077,
+    "roll_code": "10077/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 66,
+      "Physical Education": 62,
+      "Business Studies": 56,
+      "Accountancy": 47,
+      "Economics": 50
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-11C-4987/026",
+    "name": "Jaivardhan Singh",
+    "class": "11",
+    "section": "C",
+    "roll_no": 4987,
+    "roll_code": "4987/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 35,
+      "Physical Education": 33,
+      "Business Studies": 23,
+      "Accountancy": 16,
+      "Economics": 16
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11C-9283/026",
+    "name": "Khushi Jain",
+    "class": "11",
+    "section": "C",
+    "roll_no": 9283,
+    "roll_code": "9283/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Physical Education": 60,
+      "Business Studies": 38,
+      "Accountancy": 42,
+      "Economics": 28
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11C-9524/026",
+    "name": "Pihu",
+    "class": "11",
+    "section": "C",
+    "roll_no": 9524,
+    "roll_code": "9524/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Physical Education": 50,
+      "Business Studies": 34,
+      "Accountancy": 27,
+      "Economics": 7
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11C-4564/026",
+    "name": "Prayanshu Singh",
+    "class": "11",
+    "section": "C",
+    "roll_no": 4564,
+    "roll_code": "4564/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 39,
+      "Physical Education": 53,
+      "Business Studies": 50,
+      "Accountancy": 21,
+      "Economics": 25
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11C-10076/026",
+    "name": "Priyanshi Sharma",
+    "class": "11",
+    "section": "C",
+    "roll_no": 10076,
+    "roll_code": "10076/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 49,
+      "Hindi": 61,
+      "Business Studies": 76,
+      "Accountancy": 76,
+      "Economics": 72
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-11C-4887/026",
+    "name": "Raj Karan Singh Rajawat",
+    "class": "11",
+    "section": "C",
+    "roll_no": 4887,
+    "roll_code": "4887/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Physical Education": 57,
+      "Business Studies": 55,
+      "Accountancy": 28,
+      "Economics": 54
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11C-5063/026",
+    "name": "Ramu",
+    "class": "11",
+    "section": "C",
+    "roll_no": 5063,
+    "roll_code": "5063/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 3,
+      "Physical Education": 0,
+      "Business Studies": 16,
+      "Accountancy": 7,
+      "Economics": 12
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11C-5575/026",
+    "name": "Rashika Bhadauriya",
+    "class": "11",
+    "section": "C",
+    "roll_no": 5575,
+    "roll_code": "5575/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Physical Education": 14,
+      "Business Studies": 12,
+      "Accountancy": 13,
+      "Economics": 6
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11C-4187/026",
+    "name": "Samiksha Bhadoriya",
+    "class": "11",
+    "section": "C",
+    "roll_no": 4187,
+    "roll_code": "4187/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 60,
+      "Physical Education": 59,
+      "Applied Maths": 0,
+      "Business Studies": 71,
+      "Accountancy": 71,
+      "Economics": 67
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-11C-7098/026",
+    "name": "Sankalp Pratap Singh",
+    "class": "11",
+    "section": "C",
+    "roll_no": 7098,
+    "roll_code": "7098/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 37,
+      "Physical Education": 45,
+      "Business Studies": 32,
+      "Accountancy": 21,
+      "Economics": 18
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11C-5698/026",
+    "name": "Tanu Yadav",
+    "class": "11",
+    "section": "C",
+    "roll_no": 5698,
+    "roll_code": "5698/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 43,
+      "Physical Education": 50,
+      "Business Studies": 33,
+      "Accountancy": 10,
+      "Economics": 16
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11C-8487/026",
+    "name": "Vanshika Soni",
+    "class": "11",
+    "section": "C",
+    "roll_no": 8487,
+    "roll_code": "8487/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 39,
+      "Physical Education": 43,
+      "Business Studies": 29,
+      "Accountancy": 34,
+      "Economics": 27
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11D-5071/026",
+    "name": "Abhay Pratap Singh Bhadauriya",
+    "class": "11",
+    "section": "D",
+    "roll_no": 5071,
+    "roll_code": "5071/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 50,
+      "Physical Education": 47,
+      "History": 66,
+      "Political Science": 69,
+      "Geography": 56
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11D-4712/026",
+    "name": "Akash Singh",
+    "class": "11",
+    "section": "D",
+    "roll_no": 4712,
+    "roll_code": "4712/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 60,
+      "Physical Education": 55,
+      "Applied Maths": 0,
+      "History": 72,
+      "Political Science": 64,
+      "Geography": 47
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11D-6250/026",
+    "name": "Akriti Dubey",
+    "class": "11",
+    "section": "D",
+    "roll_no": 6250,
+    "roll_code": "6250/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Hindi": 58,
+      "History": 70,
+      "Political Science": 44,
+      "Geography": 47
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11D-4251/026",
+    "name": "Anjali Bhadauriya",
+    "class": "11",
+    "section": "D",
+    "roll_no": 4251,
+    "roll_code": "4251/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 58,
+      "History": 70,
+      "Political Science": 62,
+      "Geography": 43
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11D-9233/026",
+    "name": "Anshul",
+    "class": "11",
+    "section": "D",
+    "roll_no": 9233,
+    "roll_code": "9233/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 45,
+      "Physical Education": 55,
+      "History": 77,
+      "Political Science": 75,
+      "Geography": 58
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11D-4686/026",
+    "name": "Anushka",
+    "class": "11",
+    "section": "D",
+    "roll_no": 4686,
+    "roll_code": "4686/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 47,
+      "Hindi": 51,
+      "History": 51,
+      "Political Science": 53,
+      "Geography": 28
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11D-8421/026",
+    "name": "Aryan Singh",
+    "class": "11",
+    "section": "D",
+    "roll_no": 8421,
+    "roll_code": "8421/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 34,
+      "Physical Education": 45,
+      "History": 29,
+      "Political Science": 28,
+      "Geography": 23
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11D-8062/026",
+    "name": "Astha Parashar",
+    "class": "11",
+    "section": "D",
+    "roll_no": 8062,
+    "roll_code": "8062/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 42,
+      "Hindi": 44,
+      "History": 53,
+      "Political Science": 37,
+      "Geography": 34
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11D-6273/026",
+    "name": "Basant Yadav",
+    "class": "11",
+    "section": "D",
+    "roll_no": 6273,
+    "roll_code": "6273/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 0,
+      "Physical Education": 0,
+      "History": 0,
+      "Political Science": 0,
+      "Geography": 31
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11D-10323/026",
+    "name": "Ganesh Sharma",
+    "class": "11",
+    "section": "D",
+    "roll_no": 10323,
+    "roll_code": "10323/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 47,
+      "Physical Education": 62,
+      "Applied Maths": 0,
+      "History": 73,
+      "Political Science": 54,
+      "Geography": 50
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11D-9791/026",
+    "name": "Jatin Singh",
+    "class": "11",
+    "section": "D",
+    "roll_no": 9791,
+    "roll_code": "9791/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 16,
+      "Physical Education": 27,
+      "History": 32,
+      "Political Science": 27,
+      "Geography": 23
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11D-10068/026",
+    "name": "Kajal Trivediya",
+    "class": "11",
+    "section": "D",
+    "roll_no": 10068,
+    "roll_code": "10068/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Physical Education": 56,
+      "Economics": 62,
+      "History": 79,
+      "Political Science": 75
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11D-8485/026",
+    "name": "Kanishka Vardhan",
+    "class": "11",
+    "section": "D",
+    "roll_no": 8485,
+    "roll_code": "8485/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 58,
+      "Hindi": 76,
+      "Mathematics": 27,
+      "History": 79,
+      "Political Science": 78,
+      "Geography": 68
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-11D-9349/026",
+    "name": "Mukul Sharma",
+    "class": "11",
+    "section": "D",
+    "roll_no": 9349,
+    "roll_code": "9349/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 68,
+      "Physical Education": 61,
+      "Applied Maths": 40,
+      "Accountancy": 59,
+      "Economics": 78,
+      "History": 74
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-11D-8779/026",
+    "name": "Nandani Adibasi",
+    "class": "11",
+    "section": "D",
+    "roll_no": 8779,
+    "roll_code": "8779/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 27,
+      "Physical Education": 45,
+      "History": 30,
+      "Political Science": 0,
+      "Geography": 16
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11D-5378/026",
+    "name": "Nandini Parihar",
+    "class": "11",
+    "section": "D",
+    "roll_no": 5378,
+    "roll_code": "5378/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 62,
+      "Physical Education": 63,
+      "History": 49,
+      "Political Science": 66,
+      "Sociology": 73
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11D-5559/026",
+    "name": "Nitin Yadav",
+    "class": "11",
+    "section": "D",
+    "roll_no": 5559,
+    "roll_code": "5559/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 61,
+      "Physical Education": 65,
+      "History": 76,
+      "Political Science": 72,
+      "Geography": 61
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11D-9165/026",
+    "name": "Ritu Kumari",
+    "class": "11",
+    "section": "D",
+    "roll_no": 9165,
+    "roll_code": "9165/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 9,
+      "Hindi": 18,
+      "History": 24,
+      "Political Science": 20,
+      "Geography": 15
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11D-10140/026",
+    "name": "Ritu Yadav",
+    "class": "11",
+    "section": "D",
+    "roll_no": 10140,
+    "roll_code": "10140/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 38,
+      "History": 59,
+      "Political Science": 31,
+      "Geography": 29
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11D-8825/026",
+    "name": "Shreya Sharma",
+    "class": "11",
+    "section": "D",
+    "roll_no": 8825,
+    "roll_code": "8825/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 62,
+      "Hindi": 69,
+      "Economics": 66,
+      "History": 79,
+      "Geography": 0,
+      "Sociology": 76
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-11D-4833/026",
+    "name": "Tanushka Shivhare",
+    "class": "11",
+    "section": "D",
+    "roll_no": 4833,
+    "roll_code": "4833/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 51,
+      "Hindi": 69,
+      "History": 73,
+      "Political Science": 71,
+      "Geography": 46,
+      "Sociology": 0
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-11D-10153/026",
+    "name": "Vishnu Singh Tomar",
+    "class": "11",
+    "section": "D",
+    "roll_no": 10153,
+    "roll_code": "10153/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 47,
+      "Hindi": 37,
+      "Applied Maths": 0,
+      "History": 68,
+      "Political Science": 43,
+      "Geography": 46
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-11D-6907/026",
+    "name": "Yash Sharma",
+    "class": "11",
+    "section": "D",
+    "roll_no": 6907,
+    "roll_code": "6907/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 35,
+      "Physical Education": 24,
+      "Applied Maths": 0,
+      "History": 40,
+      "Political Science": 21,
+      "Geography": 23
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12A-8079/026",
+    "name": "Abhishek Singh Bhadouria",
+    "class": "12",
+    "section": "A",
+    "roll_no": 8079,
+    "roll_code": "8079/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Physical Education": 67,
+      "Mathematics": 36,
+      "Physics": 27,
+      "Chemistry": 31
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12A-3489/026",
+    "name": "Aditi Bhadoriya",
+    "class": "12",
+    "section": "A",
+    "roll_no": 3489,
+    "roll_code": "3489/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Physical Education": 53,
+      "Mathematics": 28,
+      "Physics": 23,
+      "Chemistry": 29
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12A-3593/026",
+    "name": "Ankush Pal",
+    "class": "12",
+    "section": "A",
+    "roll_no": 3593,
+    "roll_code": "3593/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 35,
+      "Hindi": 17,
+      "Mathematics": 35,
+      "Physics": 18,
+      "Chemistry": 35
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12A-6420/026",
+    "name": "Ankush Rajput",
+    "class": "12",
+    "section": "A",
+    "roll_no": 6420,
+    "roll_code": "6420/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Physical Education": 0,
+      "Mathematics": 0,
+      "Physics": 0,
+      "Chemistry": 0
+    },
+    "is_marks_only": true,
+    "grade": "AB"
+  },
+  {
+    "student_id": "CCS-12A-8696/026",
+    "name": "Anshul Pathak",
+    "class": "12",
+    "section": "A",
+    "roll_no": 8696,
+    "roll_code": "8696/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Physical Education": 57,
+      "Mathematics": 49,
+      "Physics": 35,
+      "Chemistry": 32
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12A-4606/026",
+    "name": "Ayush Singh Bhadauria",
+    "class": "12",
+    "section": "A",
+    "roll_no": 4606,
+    "roll_code": "4606/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Physical Education": 55,
+      "Mathematics": 15,
+      "Physics": 9,
+      "Chemistry": 17
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12A-3551/026",
+    "name": "Ayush Singh Rajawat",
+    "class": "12",
+    "section": "A",
+    "roll_no": 3551,
+    "roll_code": "3551/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 42,
+      "Physical Education": 63,
+      "Mathematics": 24,
+      "Physics": 14,
+      "Chemistry": 23
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12A-6267/026",
+    "name": "Bhanu Pratap Singh",
+    "class": "12",
+    "section": "A",
+    "roll_no": 6267,
+    "roll_code": "6267/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 39,
+      "Physical Education": 63,
+      "Mathematics": 17,
+      "Physics": 25,
+      "Chemistry": 17
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12A-4618/026",
+    "name": "Bhavna Bhadoriya",
+    "class": "12",
+    "section": "A",
+    "roll_no": 4618,
+    "roll_code": "4618/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 53,
+      "Physical Education": 67,
+      "Mathematics": 0,
+      "Physics": 42,
+      "Chemistry": 45
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12A-10096/026",
+    "name": "Deepankar Tripathi",
+    "class": "12",
+    "section": "A",
+    "roll_no": 10096,
+    "roll_code": "10096/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Physical Education": 67,
+      "Mathematics": 34,
+      "Physics": 27,
+      "Chemistry": 31
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12A-6941/026",
+    "name": "Diksha Chahar",
+    "class": "12",
+    "section": "A",
+    "roll_no": 6941,
+    "roll_code": "6941/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Physical Education": 0,
+      "Mathematics": 0,
+      "Physics": 0,
+      "Chemistry": 0
+    },
+    "is_marks_only": true,
+    "grade": "AB"
+  },
+  {
+    "student_id": "CCS-12A-3969/026",
+    "name": "Divyansh Rajput",
+    "class": "12",
+    "section": "A",
+    "roll_no": 3969,
+    "roll_code": "3969/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Physical Education": 52,
+      "Mathematics": 35,
+      "Physics": 41,
+      "Chemistry": 23
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12A-6438/026",
+    "name": "Gaurav",
+    "class": "12",
+    "section": "A",
+    "roll_no": 6438,
+    "roll_code": "6438/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Physical Education": 68,
+      "Mathematics": 45,
+      "Physics": 11,
+      "Chemistry": 30
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12A-8855/026",
+    "name": "Kartik Tripathi",
+    "class": "12",
+    "section": "A",
+    "roll_no": 8855,
+    "roll_code": "8855/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Physical Education": 67,
+      "Mathematics": 31,
+      "Physics": 28,
+      "Chemistry": 31
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12A-10327/026",
+    "name": "Krishna Bhadouriya",
+    "class": "12",
+    "section": "A",
+    "roll_no": 10327,
+    "roll_code": "10327/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 39,
+      "Physical Education": 46,
+      "Mathematics": 30,
+      "Physics": 17,
+      "Chemistry": 11
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12A-9120/026",
+    "name": "Mohit Singh",
+    "class": "12",
+    "section": "A",
+    "roll_no": 9120,
+    "roll_code": "9120/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Physical Education": 70,
+      "Mathematics": 48,
+      "Physics": 44,
+      "Chemistry": 47
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12A-8980/026",
+    "name": "Nandani Joshi",
+    "class": "12",
+    "section": "A",
+    "roll_no": 8980,
+    "roll_code": "8980/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 28,
+      "Hindi": 0,
+      "Mathematics": 15,
+      "Physics": 23,
+      "Chemistry": 12
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12A-9982/026",
+    "name": "Neeraj Singh Rajawat",
+    "class": "12",
+    "section": "A",
+    "roll_no": 9982,
+    "roll_code": "9982/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Mathematics": 0,
+      "Physics": 0,
+      "Chemistry": 0
+    },
+    "is_marks_only": true,
+    "grade": "AB"
+  },
+  {
+    "student_id": "CCS-12A-8707/026",
+    "name": "Piyush",
+    "class": "12",
+    "section": "A",
+    "roll_no": 8707,
+    "roll_code": "8707/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Physical Education": 69,
+      "Mathematics": 41,
+      "Physics": 51,
+      "Chemistry": 36
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12A-4473/026",
+    "name": "Prashant Gurjar",
+    "class": "12",
+    "section": "A",
+    "roll_no": 4473,
+    "roll_code": "4473/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Physical Education": 58,
+      "Mathematics": 37,
+      "Physics": 42,
+      "Chemistry": 27
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12A-9930/026",
+    "name": "Raghav Singh Bhadouriya",
+    "class": "12",
+    "section": "A",
+    "roll_no": 9930,
+    "roll_code": "9930/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 34,
+      "Physical Education": 48,
+      "Mathematics": 21,
+      "Physics": 18,
+      "Chemistry": 18
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12A-4705/026",
+    "name": "Ram Kishore Singh",
+    "class": "12",
+    "section": "A",
+    "roll_no": 4705,
+    "roll_code": "4705/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 32,
+      "Physical Education": 36,
+      "Mathematics": 35,
+      "Physics": 10,
+      "Chemistry": 8
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12A-6073/026",
+    "name": "Sachin Sharma",
+    "class": "12",
+    "section": "A",
+    "roll_no": 6073,
+    "roll_code": "6073/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Physical Education": 51,
+      "Mathematics": 57,
+      "Physics": 27,
+      "Chemistry": 40
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12A-8291/026",
+    "name": "Sanskar Bhardwaj",
+    "class": "12",
+    "section": "A",
+    "roll_no": 8291,
+    "roll_code": "8291/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 60,
+      "Physical Education": 66,
+      "Mathematics": 60,
+      "Physics": 38,
+      "Chemistry": 51
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-12A-4121/026",
+    "name": "Shejal",
+    "class": "12",
+    "section": "A",
+    "roll_no": 4121,
+    "roll_code": "4121/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 54,
+      "Physical Education": 67,
+      "Mathematics": 19,
+      "Physics": 33,
+      "Chemistry": 38
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12A-8909/026",
+    "name": "Shiva Patel",
+    "class": "12",
+    "section": "A",
+    "roll_no": 8909,
+    "roll_code": "8909/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 59,
+      "Physical Education": 65,
+      "Mathematics": 72,
+      "Physics": 53,
+      "Chemistry": 57
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-12A-8946/026",
+    "name": "Shivam Prajapati",
+    "class": "12",
+    "section": "A",
+    "roll_no": 8946,
+    "roll_code": "8946/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 54,
+      "Physical Education": 62,
+      "Mathematics": 55,
+      "Physics": 38,
+      "Chemistry": 51
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12A-6251/026",
+    "name": "Shivam Sharma",
+    "class": "12",
+    "section": "A",
+    "roll_no": 6251,
+    "roll_code": "6251/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 55,
+      "Physical Education": 61,
+      "Mathematics": 61,
+      "Physics": 33,
+      "Chemistry": 44
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12A-4699/026",
+    "name": "Tanushka Mishra",
+    "class": "12",
+    "section": "A",
+    "roll_no": 4699,
+    "roll_code": "4699/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Physical Education": 69,
+      "Mathematics": 59,
+      "Physics": 51,
+      "Chemistry": 36
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-12A-8168/026",
+    "name": "Vishal Rathor",
+    "class": "12",
+    "section": "A",
+    "roll_no": 8168,
+    "roll_code": "8168/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 45,
+      "Physical Education": 63,
+      "Mathematics": 29,
+      "Physics": 17,
+      "Chemistry": 17
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12B-5491/026",
+    "name": "Abhay Gurjar",
+    "class": "12",
+    "section": "B",
+    "roll_no": 5491,
+    "roll_code": "5491/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 46,
+      "Hindi": 56,
+      "Physics": 30,
+      "Chemistry": 25,
+      "Biology": 37
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12B-3794/026",
+    "name": "Aditi Chauhan",
+    "class": "12",
+    "section": "B",
+    "roll_no": 3794,
+    "roll_code": "3794/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 56,
+      "Hindi": 72,
+      "Physics": 26,
+      "Chemistry": 26,
+      "Biology": 55
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12B-9811/026",
+    "name": "Aditya Vimal",
+    "class": "12",
+    "section": "B",
+    "roll_no": 9811,
+    "roll_code": "9811/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 43,
+      "Physical Education": 0,
+      "Physics": 12,
+      "Chemistry": 6,
+      "Biology": 24
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12B-4657/026",
+    "name": "Akshara Pandey",
+    "class": "12",
+    "section": "B",
+    "roll_no": 4657,
+    "roll_code": "4657/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 56,
+      "Hindi": 74,
+      "Physics": 0,
+      "Chemistry": 39,
+      "Biology": 59
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12B-3571/026",
+    "name": "Aman Yadav",
+    "class": "12",
+    "section": "B",
+    "roll_no": 3571,
+    "roll_code": "3571/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 20,
+      "Physical Education": 45,
+      "Physics": 4,
+      "Chemistry": 8,
+      "Biology": 16
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12B-6479/026",
+    "name": "Ananya Joshi",
+    "class": "12",
+    "section": "B",
+    "roll_no": 6479,
+    "roll_code": "6479/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 52,
+      "Physical Education": 66,
+      "Physics": 51,
+      "Chemistry": 48,
+      "Biology": 57
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-12B-8292/026",
+    "name": "Ansh Jain",
+    "class": "12",
+    "section": "B",
+    "roll_no": 8292,
+    "roll_code": "8292/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 23,
+      "Physical Education": 58,
+      "Physics": 12,
+      "Chemistry": 9,
+      "Biology": 41
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12B-6696/026",
+    "name": "Anshi Joshi",
+    "class": "12",
+    "section": "B",
+    "roll_no": 6696,
+    "roll_code": "6696/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 63,
+      "Physical Education": 70,
+      "Physics": 47,
+      "Chemistry": 57,
+      "Biology": 65
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-12B-5016/026",
+    "name": "Anushka Bhadouriya",
+    "class": "12",
+    "section": "B",
+    "roll_no": 5016,
+    "roll_code": "5016/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 28,
+      "Physical Education": 50,
+      "Physics": 17,
+      "Chemistry": 16,
+      "Biology": 23
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12B-8370/026",
+    "name": "Bharti Yadav",
+    "class": "12",
+    "section": "B",
+    "roll_no": 8370,
+    "roll_code": "8370/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 22,
+      "Physics": 9,
+      "Chemistry": 14,
+      "Biology": 23
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12B-6624/026",
+    "name": "Dev Pratap Bhardwaj",
+    "class": "12",
+    "section": "B",
+    "roll_no": 6624,
+    "roll_code": "6624/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 35,
+      "Physical Education": 0,
+      "Physics": 23,
+      "Chemistry": 46,
+      "Biology": 53
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12B-9296/026",
+    "name": "Khushi Baghel",
+    "class": "12",
+    "section": "B",
+    "roll_no": 9296,
+    "roll_code": "9296/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 54,
+      "Physics": 13,
+      "Chemistry": 8,
+      "Biology": 47
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12B-8496/026",
+    "name": "Madhuri Bradiya",
+    "class": "12",
+    "section": "B",
+    "roll_no": 8496,
+    "roll_code": "8496/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 19,
+      "Hindi": 36,
+      "Physics": 14,
+      "Chemistry": 8,
+      "Biology": 18
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12B-8382/026",
+    "name": "Mohit",
+    "class": "12",
+    "section": "B",
+    "roll_no": 8382,
+    "roll_code": "8382/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Physical Education": 45,
+      "Physics": 23,
+      "Chemistry": 20,
+      "Biology": 39
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12B-9067/026",
+    "name": "Namrata Pandey",
+    "class": "12",
+    "section": "B",
+    "roll_no": 9067,
+    "roll_code": "9067/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 38,
+      "Physical Education": 68,
+      "Physics": 12,
+      "Chemistry": 12,
+      "Biology": 40
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12B-6341/026",
+    "name": "Pankaj Kumar",
+    "class": "12",
+    "section": "B",
+    "roll_no": 6341,
+    "roll_code": "6341/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 48,
+      "Physical Education": 67,
+      "Physics": 37,
+      "Chemistry": 36,
+      "Biology": 53
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12B-9202/026",
+    "name": "Prashant Shakya",
+    "class": "12",
+    "section": "B",
+    "roll_no": 9202,
+    "roll_code": "9202/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 5,
+      "Physical Education": 0,
+      "Physics": 0,
+      "Chemistry": 5,
+      "Biology": 8
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12B-6349/026",
+    "name": "Prem",
+    "class": "12",
+    "section": "B",
+    "roll_no": 6349,
+    "roll_code": "6349/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 32,
+      "Physical Education": 59,
+      "Physics": 9,
+      "Chemistry": 6,
+      "Biology": 33
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12B-5996/026",
+    "name": "Radhika Mishra",
+    "class": "12",
+    "section": "B",
+    "roll_no": 5996,
+    "roll_code": "5996/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Physical Education": 54,
+      "Physics": 28,
+      "Chemistry": 33,
+      "Biology": 42
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12B-9023/026",
+    "name": "Sakshi",
+    "class": "12",
+    "section": "B",
+    "roll_no": 9023,
+    "roll_code": "9023/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Physical Education": 68,
+      "Physics": 25,
+      "Chemistry": 42,
+      "Biology": 56
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12B-8879/026",
+    "name": "Shreyashi",
+    "class": "12",
+    "section": "B",
+    "roll_no": 8879,
+    "roll_code": "8879/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 51,
+      "Hindi": 75,
+      "Physics": 26,
+      "Chemistry": 23,
+      "Biology": 57
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12B-8593/026",
+    "name": "Tannu Indoriya",
+    "class": "12",
+    "section": "B",
+    "roll_no": 8593,
+    "roll_code": "8593/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 41,
+      "Hindi": 34,
+      "Physics": 8,
+      "Chemistry": 8,
+      "Biology": 33
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12B-5015/026",
+    "name": "Tanushka Bhadouriya",
+    "class": "12",
+    "section": "B",
+    "roll_no": 5015,
+    "roll_code": "5015/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 36,
+      "Physical Education": 57,
+      "Physics": 14,
+      "Chemistry": 23,
+      "Biology": 24
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12B-8932/026",
+    "name": "Vaishnavi Sharma",
+    "class": "12",
+    "section": "B",
+    "roll_no": 8932,
+    "roll_code": "8932/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 41,
+      "Physical Education": 0,
+      "Physics": 28,
+      "Chemistry": 16,
+      "Biology": 42
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12B-8069/026",
+    "name": "Vanshika Rathore",
+    "class": "12",
+    "section": "B",
+    "roll_no": 8069,
+    "roll_code": "8069/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 57,
+      "Physical Education": 67,
+      "Physics": 29,
+      "Chemistry": 23,
+      "Biology": 65
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12B-8157/026",
+    "name": "Vikash Ashish",
+    "class": "12",
+    "section": "B",
+    "roll_no": 8157,
+    "roll_code": "8157/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 32,
+      "Physical Education": 56,
+      "Physics": 14,
+      "Chemistry": 28,
+      "Biology": 50
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12B-8703/026",
+    "name": "Yashraj Sharma",
+    "class": "12",
+    "section": "B",
+    "roll_no": 8703,
+    "roll_code": "8703/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 42,
+      "Physical Education": 55,
+      "Physics": 29,
+      "Chemistry": 28,
+      "Biology": 53
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12C-5490/026",
+    "name": "Aman Gurjar",
+    "class": "12",
+    "section": "C",
+    "roll_no": 5490,
+    "roll_code": "5490/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Physical Education": 0,
+      "Business Studies": 0,
+      "Accountancy": 0,
+      "Economics": 0
+    },
+    "is_marks_only": true,
+    "grade": "AB"
+  },
+  {
+    "student_id": "CCS-12C-4094/026",
+    "name": "Ansh Shivhare",
+    "class": "12",
+    "section": "C",
+    "roll_no": 4094,
+    "roll_code": "4094/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 45,
+      "Physical Education": 64,
+      "Business Studies": 78,
+      "Accountancy": 69,
+      "Economics": 78
+    },
+    "is_marks_only": true,
+    "grade": "B2"
+  },
+  {
+    "student_id": "CCS-12C-8741/026",
+    "name": "Aryan",
+    "class": "12",
+    "section": "C",
+    "roll_no": 8741,
+    "roll_code": "8741/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 33,
+      "Physical Education": 40,
+      "Business Studies": 43,
+      "Accountancy": 27,
+      "Economics": 41
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12C-9800/026",
+    "name": "Devansh Singh Bhadouriya",
+    "class": "12",
+    "section": "C",
+    "roll_no": 9800,
+    "roll_code": "9800/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 34,
+      "Physical Education": 45,
+      "Business Studies": 34,
+      "Accountancy": 0,
+      "Economics": 53
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12C-4816/026",
+    "name": "Gauri Bhadauriya",
+    "class": "12",
+    "section": "C",
+    "roll_no": 4816,
+    "roll_code": "4816/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 44,
+      "Hindi": 55,
+      "Business Studies": 69,
+      "Accountancy": 56,
+      "Economics": 59
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-12C-3826/026",
+    "name": "Himanshu Tomar",
+    "class": "12",
+    "section": "C",
+    "roll_no": 3826,
+    "roll_code": "3826/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 40,
+      "Physical Education": 52,
+      "Business Studies": 27,
+      "Accountancy": 42,
+      "Economics": 39
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12C-8838/026",
+    "name": "Ishika Soni",
+    "class": "12",
+    "section": "C",
+    "roll_no": 8838,
+    "roll_code": "8838/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 0,
+      "Physical Education": 53,
+      "Business Studies": 48,
+      "Accountancy": 42,
+      "Economics": 50
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12C-6308/026",
+    "name": "Kanishka Shivhare",
+    "class": "12",
+    "section": "C",
+    "roll_no": 6308,
+    "roll_code": "6308/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 54,
+      "Physical Education": 68,
+      "Business Studies": 78,
+      "Accountancy": 70,
+      "Economics": 66
+    },
+    "is_marks_only": true,
+    "grade": "B2"
+  },
+  {
+    "student_id": "CCS-12C-9020/026",
+    "name": "Khushi Jain",
+    "class": "12",
+    "section": "C",
+    "roll_no": 9020,
+    "roll_code": "9020/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 34,
+      "Physical Education": 51,
+      "Business Studies": 58,
+      "Accountancy": 53,
+      "Economics": 38
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12C-6831/026",
+    "name": "Mayank Tiwari",
+    "class": "12",
+    "section": "C",
+    "roll_no": 6831,
+    "roll_code": "6831/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 21,
+      "Physical Education": 36,
+      "Business Studies": 0,
+      "Accountancy": 0,
+      "Economics": 0
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12C-2797/026",
+    "name": "Prashant Tiwari",
+    "class": "12",
+    "section": "C",
+    "roll_no": 2797,
+    "roll_code": "2797/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 2,
+      "Physical Education": 28,
+      "Business Studies": 8,
+      "Accountancy": 11,
+      "Economics": 8
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12C-6486/026",
+    "name": "Shiva Yadav",
+    "class": "12",
+    "section": "C",
+    "roll_no": 6486,
+    "roll_code": "6486/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 9,
+      "Physical Education": 39,
+      "Business Studies": 12,
+      "Accountancy": 12,
+      "Economics": 5
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12C-5972/026",
+    "name": "Shobhana Tomar",
+    "class": "12",
+    "section": "C",
+    "roll_no": 5972,
+    "roll_code": "5972/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 43,
+      "Physical Education": 53,
+      "Business Studies": 27,
+      "Accountancy": 23,
+      "Economics": 24
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12C-4232/026",
+    "name": "Shreya Mishra",
+    "class": "12",
+    "section": "C",
+    "roll_no": 4232,
+    "roll_code": "4232/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 43,
+      "Physical Education": 56,
+      "Business Studies": 56,
+      "Accountancy": 53,
+      "Economics": 49
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12C-9823/026",
+    "name": "Vallabh Sharma",
+    "class": "12",
+    "section": "C",
+    "roll_no": 9823,
+    "roll_code": "9823/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Physical Education": 0,
+      "Business Studies": 0,
+      "Accountancy": 0,
+      "Economics": 0
+    },
+    "is_marks_only": true,
+    "grade": "AB"
+  },
+  {
+    "student_id": "CCS-12D-9170/026",
+    "name": "Aditya Bohare",
+    "class": "12",
+    "section": "D",
+    "roll_no": 9170,
+    "roll_code": "9170/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 20,
+      "Physical Education": 34,
+      "History": 43,
+      "Political Science": 30,
+      "Geography": 26
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12D-10179/026",
+    "name": "Akshay Singh",
+    "class": "12",
+    "section": "D",
+    "roll_no": 10179,
+    "roll_code": "10179/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 0,
+      "Physical Education": 0,
+      "History": 38,
+      "Political Science": 0
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12D-9905/026",
+    "name": "Anuj Kumar",
+    "class": "12",
+    "section": "D",
+    "roll_no": 9905,
+    "roll_code": "9905/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 27,
+      "Hindi": 0,
+      "History": 63,
+      "Political Science": 38,
+      "Geography": 49
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12D-10069/026",
+    "name": "Arun Singh",
+    "class": "12",
+    "section": "D",
+    "roll_no": 10069,
+    "roll_code": "10069/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 36,
+      "Physical Education": 41,
+      "History": 48,
+      "Political Science": 53
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12D-6747/026",
+    "name": "Arya Sharma",
+    "class": "12",
+    "section": "D",
+    "roll_no": 6747,
+    "roll_code": "6747/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 45,
+      "Physical Education": 57,
+      "History": 75,
+      "Political Science": 66,
+      "Geography": 62
+    },
+    "is_marks_only": true,
+    "grade": "C2"
+  },
+  {
+    "student_id": "CCS-12D-9902/026",
+    "name": "Avdhesh Singh",
+    "class": "12",
+    "section": "D",
+    "roll_no": 9902,
+    "roll_code": "9902/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 75,
+    "marks": {
+      "English": 18,
+      "Hindi": 0,
+      "History": 42,
+      "Political Science": 27,
+      "Geography": 29
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12D-9187/026",
+    "name": "Ayushi Yadav",
+    "class": "12",
+    "section": "D",
+    "roll_no": 9187,
+    "roll_code": "9187/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Hindi": 35,
+      "History": 34,
+      "Political Science": 23,
+      "Geography": 25
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12D-8285/026",
+    "name": "Devyani",
+    "class": "12",
+    "section": "D",
+    "roll_no": 8285,
+    "roll_code": "8285/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Physical Education": 65,
+      "History": 73,
+      "Political Science": 78,
+      "Geography": 67
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-12D-8547/026",
+    "name": "Girraj Sharma",
+    "class": "12",
+    "section": "D",
+    "roll_no": 8547,
+    "roll_code": "8547/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Physical Education": 0,
+      "History": 0,
+      "Political Science": 0,
+      "Geography": 0
+    },
+    "is_marks_only": true,
+    "grade": "AB"
+  },
+  {
+    "student_id": "CCS-12D-9797/026",
+    "name": "Karishma Bhadauriya",
+    "class": "12",
+    "section": "D",
+    "roll_no": 9797,
+    "roll_code": "9797/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 27,
+      "Physical Education": 37,
+      "History": 28,
+      "Political Science": 7,
+      "Geography": 37
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12D-9716/026",
+    "name": "Manshi",
+    "class": "12",
+    "section": "D",
+    "roll_no": 9716,
+    "roll_code": "9716/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 33,
+      "Hindi": 47,
+      "History": 63,
+      "Political Science": 56,
+      "Geography": 48
+    },
+    "is_marks_only": true,
+    "grade": "D"
+  },
+  {
+    "student_id": "CCS-12D-3469/026",
+    "name": "Raghav Dubey",
+    "class": "12",
+    "section": "D",
+    "roll_no": 3469,
+    "roll_code": "3469/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 53,
+      "Hindi": 63,
+      "History": 75,
+      "Political Science": 77,
+      "Geography": 68
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-12D-6362/026",
+    "name": "Ratan Yadav",
+    "class": "12",
+    "section": "D",
+    "roll_no": 6362,
+    "roll_code": "6362/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 23,
+      "Physical Education": 42,
+      "History": 29,
+      "Political Science": 29,
+      "Geography": 37
+    },
+    "is_marks_only": true,
+    "grade": "E"
+  },
+  {
+    "student_id": "CCS-12D-5798/026",
+    "name": "Shiva Shrivash",
+    "class": "12",
+    "section": "D",
+    "roll_no": 5798,
+    "roll_code": "5798/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 32,
+      "Physical Education": 44,
+      "History": 67,
+      "Political Science": 53,
+      "Geography": 61,
+      "Sociology": 78
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-12D-5151/026",
+    "name": "Snehlata Sengar",
+    "class": "12",
+    "section": "D",
+    "roll_no": 5151,
+    "roll_code": "5151/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 90,
+    "marks": {
+      "English": 50,
+      "Physical Education": 68,
+      "Economics": 74,
+      "History": 76,
+      "Political Science": 76
+    },
+    "is_marks_only": true,
+    "grade": "C1"
+  },
+  {
+    "student_id": "CCS-12D-6520/026",
+    "name": "Surbhi",
+    "class": "12",
+    "section": "D",
+    "roll_no": 6520,
+    "roll_code": "6520/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Physical Education": 0,
+      "History": 0,
+      "Political Science": 0,
+      "Geography": 0
+    },
+    "is_marks_only": true,
+    "grade": "AB"
+  },
+  {
+    "student_id": "CCS-12D-8897/026",
+    "name": "Vaishnavi Bhadouria",
+    "class": "12",
+    "section": "D",
+    "roll_no": 8897,
+    "roll_code": "8897/026",
+    "exam_name": "Annual Evaluation 2025-26",
+    "session": "2025-2026",
+    "attendance_percentage": 0,
+    "marks": {
+      "English": 0,
+      "Economics": 0,
+      "History": 0,
+      "Political Science": 0,
+      "Geography": 0
+    },
+    "is_marks_only": true,
+    "grade": "AB"
   }
 ]

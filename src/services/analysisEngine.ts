@@ -25,7 +25,13 @@ const SUBJECT_IMPROVEMENT_TIPS: Record<string, string> = {
   'Accountancy': 'Practice balance sheet formats and ledger entries daily; verify debit-credit balancing steps.',
   'Business Studies': 'Memorize headings and key management terms with real-world case studies.',
   'Economics': 'Draw micro and macro economic graphs neatly; learn formulas for national income and elasticity.',
-  'Sanskrit': 'Practice Sanskrit grammar (Dhatu roop, Shabda roop), sandhi rules, and shloka meanings.'
+  'Sanskrit': 'Practice Sanskrit grammar (Dhatu roop, Shabda roop), sandhi rules, and shloka meanings.',
+  'Physical Education': 'Maintain fitness training logs, learn official game rules/dimensions, and revise health physiology concepts.',
+  'Applied Maths': 'Practice commercial mathematics, statistics, numerical algorithms, and financial calculation models.',
+  'History': 'Prepare chronological timeline charts, memorize key treaties and acts, and practice source-based analytical answers.',
+  'Political Science': 'Review constitutional articles, landmark Supreme Court cases, and prepare structured essay answers.',
+  'Geography': 'Practice topographical map pointing regularly, draw geographical phenomena diagrams, and revise climate factors.',
+  'Sociology': 'Understand sociological theories with practical case studies from contemporary Indian society and memorize key definitions.'
 };
 
 export const HINDI_SUBJECT_NAMES: Record<string, string> = {
@@ -45,7 +51,13 @@ export const HINDI_SUBJECT_NAMES: Record<string, string> = {
   'Accountancy': 'लेखाशास्त्र',
   'Business Studies': 'व्यावसायिक अध्ययन',
   'Economics': 'अर्थशास्त्र',
-  'Sanskrit': 'संस्कृत'
+  'Sanskrit': 'संस्कृत',
+  'Physical Education': 'शारीरिक शिक्षा',
+  'Applied Maths': 'एप्लाइड गणित',
+  'History': 'इतिहास',
+  'Political Science': 'राजनीति विज्ञान',
+  'Geography': 'भूगोल',
+  'Sociology': 'समाजशास्त्र'
 };
 
 export const HINDI_SUBJECT_IMPROVEMENT_TIPS: Record<string, string> = {
@@ -65,7 +77,13 @@ export const HINDI_SUBJECT_IMPROVEMENT_TIPS: Record<string, string> = {
   'Accountancy': 'बैलेंस शीट और लेज़र प्रविष्टियों का दैनिक अभ्यास करें।',
   'Business Studies': 'प्रबंधन सिद्धांतों को याद करें और व्यावहारिक उदाहरणों से समझें।',
   'Economics': 'आर्थिक ग्राफ़ का अभ्यास करें और राष्ट्रीय आय के सूत्र याद करें।',
-  'Sanskrit': 'संस्कृत व्याकरण, धातु रूप, शब्द रूप और श्लोकों के अर्थ का नियमित अभ्यास करें।'
+  'Sanskrit': 'संस्कृत व्याकरण, धातु रूप, शब्द रूप और श्लोकों के अर्थ का नियमित अभ्यास करें।',
+  'Physical Education': 'स्वास्थ्य नियमों, खेल नियमावली और योग सिद्धांतों का नियमित अभ्यास करें।',
+  'Applied Maths': 'वित्तीय गणित और सांख्यिकी प्रश्नों का चरणबद्ध अभ्यास करें।',
+  'History': 'ऐतिहासिक समय-सारणी बनाएं, प्रमुख तिथियां याद करें और मानचित्र अभ्यास करें।',
+  'Political Science': 'संविधान के अनुच्छेदों और समकालीन राजनीतिक मुद्दों के बिंदुवार नोट्स बनाएं।',
+  'Geography': 'मानचित्रों पर स्थानों को चिह्नित करने का अभ्यास करें और आरेख बनाएं।',
+  'Sociology': 'समाजशास्त्रीय अवधारणाओं और भारतीय समाज के उदाहरणों का नियमित अध्ययन करें।'
 };
 
 const DEFAULT_SUBJECT_TIP = 'Revise key concepts, maintain dedicated revision notes, and solve previous year questions weekly.';
@@ -105,31 +123,88 @@ export function getTierForPercentage(pct: number, thresholds: PerformanceThresho
   }
 }
 
+function getTierForSeniorGrade(gradeStr: string): { tier: PerformanceTier; guidance: string } {
+  const g = (gradeStr || '').toUpperCase().trim();
+  if (g.startsWith('A')) {
+    return {
+      tier: 'Excellent',
+      guidance: 'Outstanding academic command. Continue focused preparations for competitive and board evaluations.'
+    };
+  } else if (g.startsWith('B')) {
+    return {
+      tier: 'Very Good',
+      guidance: 'Strong subject grasp. Regular revisions and practice tests will elevate scores further.'
+    };
+  } else if (g === 'C1') {
+    return {
+      tier: 'Good',
+      guidance: 'Good baseline progress. Focus on consolidating analytical problems and key theory topics.'
+    };
+  } else if (g === 'C2' || g === 'D') {
+    return {
+      tier: 'Needs Improvement',
+      guidance: 'Consistent topic revision, formula worksheets, and faculty consultations strongly recommended.'
+    };
+  } else {
+    return {
+      tier: 'Requires Attention',
+      guidance: 'Remedial coaching, fundamental review sessions, and dedicated mentor monitoring advised.'
+    };
+  }
+}
+
 export function analyzeStudent(student: StudentRecord, thresholds: PerformanceThresholds = DEFAULT_THRESHOLDS): StudentAnalysis {
+  const isMarksOnly = student.is_marks_only ?? (student.class === '11' || student.class === '12');
   const marksEntries = Object.entries(student.marks);
   let totalMarks = 0;
   let totalMaxMarks = 0;
 
   marksEntries.forEach(([subj, mark]) => {
     totalMarks += Number(mark) || 0;
-    const max = student.max_marks?.[subj] || 100;
-    totalMaxMarks += Number(max) || 100;
+    const max = student.max_marks?.[subj] || (isMarksOnly ? 0 : 80);
+    totalMaxMarks += Number(max) || 0;
   });
 
-  const percentage = totalMaxMarks > 0 ? Number(((totalMarks / totalMaxMarks) * 100).toFixed(1)) : 0;
-  const { tier, guidance, grade } = getTierForPercentage(percentage, thresholds);
+  const percentage = (!isMarksOnly && totalMaxMarks > 0)
+    ? Number(((totalMarks / totalMaxMarks) * 100).toFixed(1))
+    : 0;
+
+  let tier: PerformanceTier;
+  let guidance: string;
+  let grade: string;
+
+  if (isMarksOnly) {
+    grade = student.grade || 'C1';
+    const seniorTierInfo = getTierForSeniorGrade(grade);
+    tier = seniorTierInfo.tier;
+    guidance = seniorTierInfo.guidance;
+  } else {
+    const computed = getTierForPercentage(percentage, thresholds);
+    tier = computed.tier;
+    guidance = computed.guidance;
+    grade = student.grade || computed.grade;
+  }
 
   // Analyze subject level performance
+  const avgMark = marksEntries.length > 0 ? totalMarks / marksEntries.length : 0;
+
   const subjectAnalyses: SubjectAnalysis[] = marksEntries.map(([subject, markVal]) => {
     const marks = Number(markVal) || 0;
-    const maxMarks = student.max_marks?.[subject] || 100;
+    const maxMarks = student.max_marks?.[subject] || (isMarksOnly ? 0 : 80);
     const subjPct = maxMarks > 0 ? (marks / maxMarks) * 100 : 0;
-    const deviation = Number((subjPct - percentage).toFixed(1));
+    const deviation = isMarksOnly
+      ? Number((marks - avgMark).toFixed(1))
+      : Number((subjPct - percentage).toFixed(1));
 
-    // A strength is high percentage (>=75%) or above student average
-    const isStrength = subjPct >= 75 && deviation >= 0;
-    // Needs attention if below 60% or substantially below student average (-8% or more)
-    const needsAttention = subjPct < 60 || (subjPct < 70 && deviation <= -8);
+    // A strength
+    const isStrength = isMarksOnly
+      ? (marks >= 45 && deviation >= 0)
+      : (subjPct >= 75 && deviation >= 0);
+
+    // Needs attention
+    const needsAttention = isMarksOnly
+      ? (marks < 33 || deviation <= -10)
+      : (subjPct < 60 || (subjPct < 70 && deviation <= -8));
 
     const tip = SUBJECT_IMPROVEMENT_TIPS[subject] || DEFAULT_SUBJECT_TIP;
 
@@ -145,18 +220,16 @@ export function analyzeStudent(student: StudentRecord, thresholds: PerformanceTh
     };
   });
 
-  // Sort by marks to find absolute top and bottom subjects
-  const sortedByMarks = [...subjectAnalyses].sort((a, b) => b.percentage - a.percentage);
+  // Sort by marks
+  const sortedByMarks = [...subjectAnalyses].sort((a, b) => b.marks - a.marks);
   const strengths = sortedByMarks.filter(s => s.isStrength);
-  // If no subject crossed the strength threshold, pick the top 1-2 subjects
   const finalStrengths = strengths.length > 0 ? strengths.slice(0, 2) : sortedByMarks.slice(0, 1);
 
-  // Weak subjects: those needing attention, or the lowest 1-2 if none flagged
   const weak = sortedByMarks.filter(s => s.needsAttention).reverse();
-  const finalWeak = weak.length > 0 ? weak.slice(0, 2) : (percentage < 90 ? sortedByMarks.slice(-1) : []);
+  const finalWeak = weak.length > 0 ? weak.slice(0, 2) : (sortedByMarks.length > 1 ? sortedByMarks.slice(-1) : []);
 
   // Format natural voice spoken text in English, Hindi, and Hinglish
-  const spokenText = generateSpokenScripts(student, percentage, grade, tier, finalStrengths, finalWeak);
+  const spokenText = generateSpokenScripts(student, percentage, totalMarks, grade, tier, finalStrengths, finalWeak, isMarksOnly);
 
   return {
     student,
@@ -169,6 +242,7 @@ export function analyzeStudent(student: StudentRecord, thresholds: PerformanceTh
     strengths: finalStrengths,
     weakSubjects: finalWeak,
     subjectAnalyses,
+    isMarksOnly,
     spokenText,
   };
 }
@@ -176,23 +250,27 @@ export function analyzeStudent(student: StudentRecord, thresholds: PerformanceTh
 function generateSpokenScripts(
   student: StudentRecord,
   percentage: number,
+  totalMarks: number,
   grade: string,
   tier: PerformanceTier,
   strengths: SubjectAnalysis[],
-  weak: SubjectAnalysis[]
+  weak: SubjectAnalysis[],
+  isMarksOnly: boolean = false
 ) {
   const firstName = student.name.split(' ')[0] || student.name;
   const strengthNames = strengths.map(s => s.subject).join(' and ');
-  const weakNames = weak.map(w => `${w.subject} (${w.marks}/${w.maxMarks})`).join(' and ');
 
   // English narration
-  let en = `Hello ${firstName}! Welcome to City Central School. Your overall score is ${percentage} percent with Grade ${grade}. `;
+  let en = isMarksOnly
+    ? `Hello ${firstName}! Welcome to City Central School. Your total score is ${totalMarks} marks with Grade ${grade}. `
+    : `Hello ${firstName}! Welcome to City Central School. Your overall score is ${percentage} percent with Grade ${grade}. `;
+
   if (strengths.length > 0) {
     en += `You scored well in ${strengthNames}. `;
   }
   if (weak.length > 0) {
     const weakSubj = weak[0];
-    en += `However, your marks in ${weakSubj.subject} are not good, with a score of ${weakSubj.marks}. Here is your improvement tip: ${weakSubj.tip} Regular practice will help you improve! `;
+    en += `However, your marks in ${weakSubj.subject} need attention, with a score of ${weakSubj.marks} marks. Here is your improvement tip: ${weakSubj.tip} Regular practice will help you improve! `;
   } else {
     en += `All your subject marks are good and well balanced! Keep up the great consistency. `;
   }
@@ -200,7 +278,10 @@ function generateSpokenScripts(
 
   // Hindi narration
   const hindiStrengthNames = strengths.map(s => HINDI_SUBJECT_NAMES[s.subject] || s.subject).join(' और ');
-  let hi = `नमस्ते ${firstName}! सिटी सेंट्रल स्कूल में आपका स्वागत है। आपका कुल परिणाम ${percentage} प्रतिशत और ग्रेड ${grade} है। `;
+  let hi = isMarksOnly
+    ? `नमस्ते ${firstName}! सिटी सेंट्रल स्कूल में आपका स्वागत है। आपका कुल स्कोर ${totalMarks} अंक और ग्रेड ${grade} है। `
+    : `नमस्ते ${firstName}! सिटी सेंट्रल स्कूल में आपका स्वागत है। आपका कुल परिणाम ${percentage} प्रतिशत और ग्रेड ${grade} है। `;
+
   if (strengths.length > 0) {
     hi += `आपने ${hindiStrengthNames} में बहुत अच्छे अंक प्राप्त किए हैं। `;
   }
@@ -208,20 +289,23 @@ function generateSpokenScripts(
     const weakSubj = weak[0];
     const hindiSubjName = HINDI_SUBJECT_NAMES[weakSubj.subject] || weakSubj.subject;
     const hindiTip = HINDI_SUBJECT_IMPROVEMENT_TIPS[weakSubj.subject] || DEFAULT_HINDI_SUBJECT_TIP;
-    hi += `लेकिन ${hindiSubjName} में आपके अंक अच्छे नहीं हैं, आपका स्कोर ${weakSubj.marks} है। आपके लिए सुधार का सुझाव है: ${hindiTip} नियमित अभ्यास से आपके अंक अवश्य सुधरेंगे! `;
+    hi += `लेकिन ${hindiSubjName} में आपका स्कोर ${weakSubj.marks} अंक है। आपके लिए सुधार का सुझाव है: ${hindiTip} नियमित अभ्यास से आपके अंक अवश्य सुधरेंगे! `;
   } else {
     hi += `आपके सभी विषयों में अंक बहुत अच्छे हैं। इसी तरह मेहनत जारी रखें! `;
   }
   hi += `आगे भी निरंतर प्रयास करते रहें!`;
 
-  // Hinglish narration (authentic Indian school PTM tone)
-  let hinglish = `Hello ${firstName}! Aapka overall score ${percentage} percent hai with Grade ${grade}. `;
+  // Hinglish narration
+  let hinglish = isMarksOnly
+    ? `Hello ${firstName}! Aapka total score ${totalMarks} marks hai with Grade ${grade}. `
+    : `Hello ${firstName}! Aapka overall score ${percentage} percent hai with Grade ${grade}. `;
+
   if (strengths.length > 0) {
     hinglish += `Aapne ${strengthNames} mein achhe marks score kiye hain. `;
   }
   if (weak.length > 0) {
     const weakSubj = weak[0];
-    hinglish += `Lekin ${weakSubj.subject} mein aapke marks acche nahi hain, score sirf ${weakSubj.marks} hai. Is subject ke liye tip hai: ${weakSubj.tip} Regular practice se aap bohot jaldi improve kar lenge! `;
+    hinglish += `Lekin ${weakSubj.subject} mein aapka score ${weakSubj.marks} marks hai. Is subject ke liye tip hai: ${weakSubj.tip} Regular practice se aap bohot jaldi improve kar lenge! `;
   } else {
     hinglish += `Aapke saare subjects mein marks acche hain aur badhiya balance hai. Keep it up! `;
   }

@@ -18,7 +18,9 @@ export interface StudentRecord {
   session: string;
   attendance_percentage: number;
   marks: Record<string, number>; // e.g. { "Mathematics": 78, "Science": 84, ... }
-  max_marks?: Record<string, number>; // default 100
+  max_marks?: Record<string, number>; // default 80 for 6-10; omitted for 11-12
+  is_marks_only?: boolean;
+  grade?: string;
 }
 
 export type PerformanceTier = 'Excellent' | 'Very Good' | 'Good' | 'Needs Improvement' | 'Requires Attention';
@@ -52,6 +54,7 @@ export interface StudentAnalysis {
   strengths: SubjectAnalysis[];
   weakSubjects: SubjectAnalysis[];
   subjectAnalyses: SubjectAnalysis[];
+  isMarksOnly: boolean;
   spokenText: {
     en: string;
     hi: string;

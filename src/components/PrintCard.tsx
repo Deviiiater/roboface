@@ -81,13 +81,19 @@ export const PrintCard: React.FC<PrintCardProps> = ({ analysis, onClose }) => {
           {/* Overall Score Summary Highlights */}
           <div className="grid grid-cols-3 gap-4 mb-6">
             <div className="p-4 rounded-2xl bg-blue-50 border border-blue-200 text-center">
-              <span className="text-xs font-bold text-blue-700 uppercase">Overall Percentage</span>
-              <div className="text-3xl font-black text-blue-900 mt-1">{percentage}%</div>
+              <span className="text-xs font-bold text-blue-700 uppercase">
+                {analysis.isMarksOnly ? 'Total Marks Obtained' : 'Overall Percentage'}
+              </span>
+              <div className="text-3xl font-black text-blue-900 mt-1">
+                {analysis.isMarksOnly ? `${analysis.totalMarks} Marks` : `${percentage}%`}
+              </div>
             </div>
             <div className="p-4 rounded-2xl bg-indigo-50 border border-indigo-200 text-center">
-              <span className="text-xs font-bold text-indigo-700 uppercase">Total Marks</span>
+              <span className="text-xs font-bold text-indigo-700 uppercase">
+                {analysis.isMarksOnly ? 'Subjects Evaluated' : 'Total Marks'}
+              </span>
               <div className="text-3xl font-black text-indigo-900 mt-1">
-                {analysis.totalMarks} / {analysis.totalMaxMarks}
+                {analysis.isMarksOnly ? `${subjectAnalyses.length} Subjects` : `${analysis.totalMarks} / ${analysis.totalMaxMarks}`}
               </div>
             </div>
             <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-center">
@@ -122,8 +128,8 @@ export const PrintCard: React.FC<PrintCardProps> = ({ analysis, onClose }) => {
                     <tr key={subj.subject} className="hover:bg-slate-50">
                       <td className="py-2.5 px-4 font-semibold text-slate-800">{subj.subject}</td>
                       <td className="py-2.5 px-4 text-center font-bold text-slate-900">{subj.marks}</td>
-                      <td className="py-2.5 px-4 text-center text-slate-500">{subj.maxMarks}</td>
-                      <td className="py-2.5 px-4 text-center font-bold text-slate-800">{subj.percentage}%</td>
+                      <td className="py-2.5 px-4 text-center text-slate-500">{analysis.isMarksOnly ? '—' : subj.maxMarks}</td>
+                      <td className="py-2.5 px-4 text-center font-bold text-slate-800">{analysis.isMarksOnly ? '—' : `${subj.percentage}%`}</td>
                       <td className="py-2.5 px-4">
                         {subj.isStrength ? (
                           <span className="inline-flex items-center gap-1 text-emerald-700 font-bold text-xs">

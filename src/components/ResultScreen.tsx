@@ -432,12 +432,26 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
 
               <div className="my-4 flex items-baseline justify-between">
                 <div>
-                  <div className="text-5xl sm:text-6xl font-black text-white tracking-tight">
-                    {percentage}<span className="text-3xl font-semibold text-cyan-400">%</span>
-                  </div>
-                  <p className="text-xs font-semibold text-slate-400 mt-1">
-                    Total: {analysis.totalMarks} / {analysis.totalMaxMarks} Marks
-                  </p>
+                  {analysis.isMarksOnly ? (
+                    <>
+                      <div className="text-5xl sm:text-6xl font-black text-white tracking-tight flex items-baseline gap-2">
+                        {analysis.totalMarks}
+                        <span className="text-2xl font-bold text-cyan-400">Marks</span>
+                      </div>
+                      <p className="text-xs font-semibold text-slate-400 mt-1">
+                        Total Obtained Score
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <div className="text-5xl sm:text-6xl font-black text-white tracking-tight">
+                        {percentage}<span className="text-3xl font-semibold text-cyan-400">%</span>
+                      </div>
+                      <p className="text-xs font-semibold text-slate-400 mt-1">
+                        Total: {analysis.totalMarks} / {analysis.totalMaxMarks} Marks
+                      </p>
+                    </>
+                  )}
                 </div>
 
                 <div className="text-right">
@@ -463,7 +477,9 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                   {strengths.map(s => (
                     <div key={s.subject} className="text-xs text-neutral-200 font-semibold flex justify-between">
                       <span>{s.subject}</span>
-                      <span className="text-emerald-400">{s.percentage}%</span>
+                      <span className="text-emerald-400">
+                        {analysis.isMarksOnly ? `${s.marks} Marks` : `${s.percentage}%`}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -479,7 +495,9 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                     weakSubjects.map(w => (
                       <div key={w.subject} className="text-xs text-neutral-200 font-semibold flex justify-between">
                         <span>{w.subject}</span>
-                        <span className="text-amber-400">{w.percentage}%</span>
+                        <span className="text-amber-400">
+                          {analysis.isMarksOnly ? `${w.marks} Marks` : `${w.percentage}%`}
+                        </span>
                       </div>
                     ))
                   ) : (
@@ -499,7 +517,9 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                   <BookOpen className="w-4 h-4 text-cyan-400" />
                   Subject-Wise Performance
                 </h4>
-                <span className="text-xs text-neutral-400">Class Average Baseline: 70%</span>
+                <span className="text-xs text-neutral-400">
+                  {analysis.isMarksOnly ? 'Senior Evaluation Record' : 'Class Average Baseline: 70%'}
+                </span>
               </div>
 
               <div className="space-y-3">
@@ -534,11 +554,18 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                         </span>
 
                         <div className="flex items-center gap-3">
-                          <span className="text-slate-400 text-xs font-normal">
-                            Dev: {subj.deviationFromAverage >= 0 ? `+${subj.deviationFromAverage}%` : `${subj.deviationFromAverage}%`}
-                          </span>
+                          {!analysis.isMarksOnly && (
+                            <span className="text-slate-400 text-xs font-normal">
+                              Dev: {subj.deviationFromAverage >= 0 ? `+${subj.deviationFromAverage}%` : `${subj.deviationFromAverage}%`}
+                            </span>
+                          )}
                           <span className="text-white font-extrabold text-sm sm:text-base">
-                            {subj.marks} <span className="text-xs font-normal text-slate-400">/ {subj.maxMarks}</span>
+                            {subj.marks}
+                            {!analysis.isMarksOnly ? (
+                              <span className="text-xs font-normal text-slate-400"> / {subj.maxMarks}</span>
+                            ) : (
+                              <span className="text-xs font-normal text-slate-400"> Marks</span>
+                            )}
                           </span>
                         </div>
                       </div>
@@ -553,7 +580,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                               ? 'bg-gradient-to-r from-emerald-400 to-cyan-500'
                               : 'bg-gradient-to-r from-blue-500 to-indigo-500'
                           }`}
-                          style={{ width: `${Math.min(100, Math.max(5, subj.percentage))}%` }}
+                          style={{ width: `${Math.min(100, Math.max(5, analysis.isMarksOnly ? subj.marks : subj.percentage))}%` }}
                         />
                       </div>
                     </div>

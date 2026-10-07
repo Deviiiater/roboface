@@ -11,7 +11,7 @@ type AppScreen = 'home' | 'search' | 'result';
 
 export function App() {
   const [screen, setScreen] = useState<AppScreen>('home');
-  const DATASET_VERSION = 'v6_pdf_829_evaluation';
+  const DATASET_VERSION = 'v7_classes_6_to_12_all_students';
   const [students, setStudents] = useState<StudentRecord[]>(() => {
     try {
       const savedVersion = localStorage.getItem('ptm_students_version');
